@@ -27,7 +27,7 @@ library("here")
 
 ## convertendo arquivos .pdf em .png
 pdfs <- list.files(pattern = ".pdf", full.names = TRUE) # .pdf devem estar na pasta de trabalho
-for(ii in 1:length(pdfs)) pdf_convert(pdfs[ii], format = "png", dpi = 300)
+for(ii in 1:length(pdfs)) pdf_convert(pdfs[ii], format = "png", dpi = 300) 
 
 
 ## lendo arquivos '.png' gerados 
@@ -35,8 +35,10 @@ img <- list.files(pattern = ".png", full.names = TRUE)  # lista os arquivos .png
 scan_out <- nops_scan(images = img, file = FALSE)       # verificação inicial
 scan_out2 <- str_split_fixed(scan_out, " ", n = 2)      # cria banco com variavel indicando erros
 
+
 ## corrigindo as provas que nao tiveram erros 
 nops_scan(img[scan_out2[,2] != "ERROR"])                 
+
 
 ## criando pasta com os erros 
 dir.create("manual")                                    # cria pasta para correcao manual
@@ -50,6 +52,7 @@ banco <- read_excel(here("lista_alunos_turmas.xlsx"))       # cuidado com nome d
 banco <- data.frame(registration = str_pad(banco[[2]], width = 8, side="left", pad="0"), name = banco[[3]], id = banco[[3]]) 
 write.csv2(banco, "lista_alunos.csv", row.names = FALSE)  # mudar letra da turma!!!
 banco_csv <- read.csv2("lista_alunos.csv")                # mudar letra da turma!!!
+
 
 ## corrigindo e criando saidas
 objeto <- nops_eval(
