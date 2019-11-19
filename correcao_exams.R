@@ -5,14 +5,13 @@
 ##
 ## Passo a passo para correcao:
 ## 1. escanear as folhas de rosto da prova e converter para '.png'
-## 2. criar arquivo '.csv' com informacao dos alunos
-## 3. colar nas pastas os respectivos arquivos .pdf com provas escaneadas
-## 4. Mudar a pasta de trabalho para cada turma
-
-## 5. 'pt-BR2' salvar???
-
-## 6. verificar as provas com ERRO, que foram movidas para a pasta 'manual'
-## 7. enviar resultos `html` por email?
+## 2. leitura das provas usando a funcao 'nops_scan()'. (* erros na leitura?)
+## 3. criar arquivo '.csv' com informacao dos alunos, se nao existir
+## 3. correcao usando a funcao 'nops_eval()'
+## 5. *mudar a pasta de trabalho para cada prova/semestre
+## 5. *'pt-BR2' salvar???
+## 6. verificar as provas com ERRO que foram movidas para a pasta 'manual'
+## 7. enviar resultados 'html' por email?
 ##-----------------------------------------------------------------------------
 
 ## carregando pacotes
@@ -37,7 +36,7 @@ scan_out2 <- str_split_fixed(scan_out, " ", n = 2)      # cria banco com variave
 
 
 ## corrigindo as provas que nao tiveram erros 
-nops_scan(img[scan_out2[,2] != "ERROR"])                 
+nops_scan(img[scan_out2[,2] != "ERROR"])                # CORRECAO!!!    
 
 
 ## criando pasta com os erros 
