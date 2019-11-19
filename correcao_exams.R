@@ -25,13 +25,13 @@ library("here")
 ##-----------------------------------------------------------------------------
 ## correcao das provas
 
-## convertendo arquivos .pdf em .png
-pdfs <- list.files(pattern = ".pdf", full.names = TRUE) # .pdf devem estar na pasta de trabalho
+## convertendo arquivo(s) .pdf em .png para cada prova
+pdfs <- list.files(pattern = ".pdf", full.names = TRUE) # lista arquivos pdf na pasta
 for(ii in 1:length(pdfs)) pdf_convert(pdfs[ii], format = "png", dpi = 300) 
 
 
-## lendo arquivos '.png' gerados 
-img <- list.files(pattern = ".png", full.names = TRUE)  # lista os arquivos .png  
+## lendo arquivos .png e verificando erros 
+img <- list.files(pattern = ".png", full.names = TRUE)  # lista os arquivos png  
 scan_out <- nops_scan(images = img, file = FALSE)       # verificação inicial
 scan_out2 <- str_split_fixed(scan_out, " ", n = 2)      # cria banco com variavel indicando erros
 
@@ -47,27 +47,28 @@ unlink(img[scan_out2[,2] == "ERROR"]) # deletar???      # deleta provas com erro
 
 
 ## importando banco com informacao dos alunos
-# se banco estiver em '.xls' converter para '.csv'
-banco <- read_excel(here("lista_alunos_turmas.xlsx"))       # cuidado com nome do arquivo!!!
-banco <- data.frame(registration = str_pad(banco[[2]], width = 8, side="left", pad="0"), name = banco[[3]], id = banco[[3]]) 
-write.csv2(banco, "lista_alunos.csv", row.names = FALSE)  # mudar letra da turma!!!
-banco_csv <- read.csv2("lista_alunos.csv")                # mudar letra da turma!!!
+## ??? se nao existir o banco criar em '.csv' com os requisitos
+# banco <- read_excel(here("lista_alunos_turmas.xlsx")) # cuidado com nome do arquivo!!!
+# banco <- data.frame(registration = str_pad(banco[[2]], width = 8, side="left", 
+#                                            pad="0"), name = banco[[3]], id = banco[[3]]) 
+# write.csv2(banco, "lista_alunos.csv", row.names = FALSE)  
+banco_csv <- read.csv2("lista_alunos.csv")                
 
 
 ## corrigindo e criando saidas
 objeto <- nops_eval(
-  register = "lista_alunos_o.csv",
-  solutions = "/home/markus/Downloads/MAT02219EAD/2019_1/prova1/mat02219_area1_.rds",
-  scans = Sys.glob("nops_scan_*.zip"),
-  results = "corrigido_turmas",
-  eval = exams_eval(partial = FALSE, negative = FALSE),
-  #interactive = FALSE, 
-  language = "pt-BR2"
-)
+              register = here("lista_alunos.csv"),
+              solutions = here("mat02219_area1_.rds"),
+              scans = Sys.glob("nops_scan_*.zip"),
+              results = "corrigido_prova1",
+              eval = exams_eval(partial = FALSE, negative = FALSE),
+              #interactive = FALSE, 
+              language = "pt-BR2"
+          )
 
 
 ## salva informacoes da correcao
-write.csv2(objeto, "notas_finais.csv")
+write.csv2(objeto, "notas_prova1.csv")
 
 
 #------------------------------------------------------------------------------
