@@ -1,0 +1,68 @@
+---
+title: "Projeto SEAD Edital 27"
+subtitle: "Plataforma para Divulgação da Probabilidade e Estatística da UFRGS"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 1. Título
+Plataforma para Divulgação da Probabilidade e Estatística da UFRGS.
+
+
+# 2. Descrição do objeto
+Criar uma plataforma para divulgacao da "Probabilidade e Estatistica" pelo Dest/UFGRS.... em formato `HTML` a plataforma porporcionará conteúdos interativos como um livro com conceitos atualizados e/ou não abordados na disciplina MAT02219, vídeos, atividades e um blog para interação com os usuários... 
+
+Nosso interesse é desenvolver assuntos relacionados à ciência de dados e suas conexões com a disciplina MAT02219 (probabilidade e estatística). Também abordaremos como a computação se insere na prática estatística atualmente, assim introduziremos conceitos básicos em computação/programação estatística.
+
+
+# 3. Relevância
+O Recurso Digital poderá contribuir para qualificar o ensino de probabilidade e estatística em todas as esferas da Universidade, incluindo a  extensão universitária, podendo também serem explorados temas direcionados a educação básica. Inicialmente planejamos utilizar a plataforma como complemento ao ensino de MAT02219 no que tange assuntos relacionados a implementação/computação/programação de métodos estatísticos no software R. Futuramente podera ser utiizado em cursos de extensao, por futuros estudantes das disciplinas, publico em geral interessado em probabilidade, estatistica e programacao... atingindo um público bem mais amplo do que só a disciplina MAT02219.
+
+Disciplinas presenciais e à distância poderão utilizar o recurso. Atividades relacionadas a questões computacionais e programação no *software* R poderão ser realizadas online sem a necessidade de instalação de nenhum software... a integração desse tipo de atividade com o moodle demandaria muito mais recursos.
+
+
+
+# 4. Mapa de navegação, storyboard ou roteiro
+A plataforma conterá módulos para cada uma das atividades abaixo:
+
+a. Bookdown com conteúdo atualizado, voltado à ciência de dados, trazendo uma introducao a programação em estatística utilizando o software R...(mostrar parte do que esta sendo feito?)
+
+b. Vídeos estao sendo gravados sobre conceitos basicos ...podcasts?... (colocar link com exemplos?)
+
+c. blogdown??? - recurso para criacao de blogs e interacao da plataforma com o publico...
+
+d. Rexams para avaliação de atividades... (mostrar algo que ja temos?)
+
+
+
+
+
+# 5. Descrição dos recursos de interatividade
+Videos, atividades e blog???  ...
+
+
+
+# 6. Descrição da proposta de validação do Recurso Educacional Digital dentro do período de vigência deste edital
+pegar ideias do edital 25... 
+
+
+
+# 7. Inovação
+Possibilidade de ensino de computação no *software* R e avaliação de atividades de computação...   
+
+Possibilidades de uso em cursos de extensão e MOOCs  
+
+
+
+# 8. Apresentar plano e cronograma de atividades do bolsista 
+Escrever tópicos a serem abordados...  
+
+
+# 9. Referências
+
+
+
+

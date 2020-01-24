@@ -1,0 +1,117 @@
+---
+title: "Projeto SEAD Edital 27"
+subtitle: "Geração aleatória e correção automática de questões através do `R/exams`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 1. Título
+Geração aleatória e correção automática de questões através do `R/exams`.
+
+
+# 2. Descrição do objeto
+O presente projeto se destina a desenvolver um repositório para integrar a 
+criação de questões aleatorizadas de múltipla escolha com a geração de prova e 
+gabaritos, a correção, a análise do desempenho dos estudantes e o retorno da 
+atividade/correção aos estudantes.   
+
+O repositório será desenvolvido com base no *software* `R` (referência), 
+utilizando principalmente o pacote `exams` (referência). Outros pacotes e 
+funcionalidades desenvolvidas pela equipe desenvolvedora do *software* RStudio 
+(https://rstudio.com/).
+
+O recurso está inserido no temática avaliação educacional e o principal 
+objetivo pedagógico é flexibilizar o formato de avaliação para disciplinas 
+de massa. O mesmo visa também facilitar a elaboração e correção de atividades 
+de avaliação.
+
+
+# 3. Relevância
+A avaliação educacional é um tema de grande relevância e bastante complexo 
+quando se trata de disciplinas com um grande número de participantes 
+(referencias). Com o auxílio de recursos que minimizem atividades repetitivas na geração e correção professores 
+terão mais tempo para planejar o instrumento de avaliação em sí ao invés de 
+investirem seu tempo na geração das provas e corrigir manualmente.
+
+Principalmente para cursos com grande número de estudantes, presencial ou à 
+distância, o uso do recurso proposto permite aos professores preparem questões 
+de forma a aleatorizar enunciados assim como as alternativas de respostas. Outros formatos nos mais diversos 
+formatos... dessa forma a preocupação será maior com a construção das questões em sí e nos 
+resultados das avaliações
+ao invés de ...   
+
+Como forma de protótipo, o repositório poderá ser utilizado em todas as áreas que 
+fazem uso de testes de multipla escolha, principalmente em disciplinas introdutórias 
+com grande quantidade de participantes ... .  
+
+Futuros cursos de extensão, bem como MOOCs (*Massive Online Open Courses*) podem fazer 
+uso do recurso...  
+
+Contribuição com professores de outras universidades???
+
+# 4. Mapa de navegação, storyboard ou roteiro
+O repositório conterá módulos para cada uma das atividades abaixo:
+
+a. **Banco de questões**  
+    + O desenvolvimento das questões é uma tarefa complexa que exige conhecimentos sobre construção de provas múltipla escolha bem como programação no *software* `R`. Assim as questões podem ser criadas de forma a se aleatorizar... gerar provas personalizadas para cada estudante... .
+    + Outros formatos de questões além de múltipla escolha podem ser explorados no futuro. Por exemplo questões do tipo aberta e utilizando algum mecanismo de análise de sentimento para avaliar as respostas. Ou questões computacionais envolvendo códigos em `R`... .
+    + Juntamente  com a criação dos enunciados e alternativas de respostas, a construção do gabarito da questão já é feita de maneira integrada... .
+    + Estressar/testar as questões e finalização do banco com as questões que já foram completamente testadas... .
+
+
+b. **Geração das provas**  
+    + O recurso já está sendo utilizado na disciplina MAT02219 com provas geradas em formato `pdf` e impressas. Dessa forma os estudantes resolvem as questões e preenchem uma grade de respostas a ser corrigida. Também há a possibilidade de serem geradas provas em formato digital, assim avaliações podem ser realizadas em qualquer dispositivos eletrônicos (e possibilidade  à distância), onde a correção será automática. Por exemplo, o moodle possui opção para importas questões no formato `XML` que podem ser geradas através do pacote `exams`... .
+    + Uma vez que o banco das questões esta organizado e as questões, a cada geração das provas basta escolher os tópicos e quantidades de questões por tópicos, quantidade de versões da prova, entre outras opções, e então o professor terá a quantidade e formato de provas que desejar... .  
+
+
+c. **Correção das provas** 
+    + Com o recurso a correção se torna um trabalho puramente mecânico. No formato impresso, a correção é feita com a leitura das provas feita em qualquer escaner e o reconhecimento das respostas é realizada pelo próprio pacote `exams` através de um *software* de reconhecimento ótico de caracteres. Para questões geradas nos formatos digitais, a correção é automaticamente apoś a finalização da atividade pelo estudante.  
+
+
+d. **Avaliação e resultados**  
+    + Um dos resultados são relatórios individuais, hoje em formato `HTML` com o resultado (incluir exemplo?) do aluno... .
+    + Outra possibilidade é a facilidade de avaliar o intstrumento de avaliação, o nível das questões, ..., pois todas as informações de acertos e erros por estudante, por turmas e por questão estarão automaticamente disponíveis...  
+
+
+
+# 5. Descrição dos recursos de interatividade
+Retorno da correção ao estudante???  
+
+Gabaritos e solucionários seriam interatividade? 
+
+Responder dúvidas e discutir através de fóruns ou mesmo presencialmente...
+
+
+# 6. Descrição da proposta de validação do Recurso Educacional Digital dentro do período de vigência deste edital
+pegar ieias do edital 25... 
+
+
+
+# 7. Inovação
+Possibilidade de integração com o moodle  
+
+O ensino de computação estatística depende de recursos que atualmente o moodle não fornece... avaliar questões computacionais por exemplo 
+
+Possibilidades de uso em cursos de extensão e MOOCs  
+
+
+
+
+# 8. Apresentar plano e cronograma de atividades do bolsista 
+Escrever tópicos a serem abordados...  
+
+
+# 9. Referências
+Achim Zeileis, Nikolaus Umlauf, Friedrich Leisch (2014). Flexible Generation of E-Learning Exams in R: Moodle Quizzes, OLAT Assessments, and Beyond. Journal of Statistical Software 58(1), 1-36.
+
+
+Bettina Gruen, Achim Zeileis (2009). Automatic Generation of Exams in R. Journal of Statistical Software 29(10), 1-14
+
+
+R Core Team (2019). R: A language and environment for statistical computing. R Foundation for
+  Statistical Computing, Vienna, Austria. URL https://www.R-project.org/.
+  
+  
