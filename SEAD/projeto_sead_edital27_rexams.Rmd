@@ -25,8 +25,8 @@ funcionalidades desenvolvidas pela equipe desenvolvedora do *software* RStudio
 
 O recurso está inserido no temática avaliação educacional e o principal 
 objetivo pedagógico é flexibilizar o formato de avaliação para disciplinas 
-de massa. O mesmo visa também facilitar a elaboração e correção de atividades 
-de avaliação.
+de massa. O mesmo visa facilitar a elaboração e correção de atividades 
+de avaliação. Além do processo de geração e correção, a criação das questões é parte essencial no processo de flexibilização das avaliações. Inicialmente nosso objetivo é aplicar as avaliação geradas com o auxílio do `R/exams` nas turmas à distância da disciplina MAT02219 - Probabilidade e Estatística.
 
 
 # 3. Relevância
