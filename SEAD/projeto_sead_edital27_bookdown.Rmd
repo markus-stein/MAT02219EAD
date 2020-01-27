@@ -19,30 +19,46 @@ O presente projeto tem por objetivo criar uma plataforma para divulgação da
 complementar o ensino de estatística na disciplina MAT02219 - Probabilidade 
 e Estatística – modalidade ensino à distância (EAD).
 
-
-A plataforma será criada em formato `HTML` com o auxílio do pacote `blogdown` (https://bookdown.org/yihui/blogdown/), do software estatístico `R` 
+A plataforma será criada em formato `HTML` com o auxílio do pacote `blogdown` 
+(https://bookdown.org/yihui/blogdown/), do software estatístico `R` 
 (https://www.r-project.org/). Ela incluirá conteúdos interativos como um livro 
-com conceitos atualizados e que não são abordados na disciplina MAT02219 e um 
-conjunto de atividades, vídeos e um blog para interação com os usuários. 
+com conceitos básicos e conteúdo atualizado, complementares aos abordados na 
+disciplina MAT02219, um conjunto de atividades, vídeos e um `blog` para 
+interação com os usuários. 
 
 Nosso interesse ao complementar o conteúdo da disciplina MAT02219 é desenvolver 
 assuntos relacionados à ciência de dados e como ela tem modificado a maneira de 
-se pensar a probabilidade e a estatística. Principalmente abordaremos como a 
-computação se insere na prática estatística atualmente, assim como 
+se pensar e fazer a probabilidade e a estatística. Principalmente, abordaremos 
+como a computação se insere na prática estatística atualmente, também 
 introduziremos conceitos básicos em computação/programação estatística.
 
-
-
+Outro objetivo da plataforma é a divulgação do Departamento de Estatística e a 
+promoção da área como uma poderosa ferramenta para resolução de problemas em 
+análise de dados. Por ser um recurso disponível livremente na internet, o 
+público se torna muito mais amplo do que os estudantes da disciplina MAT02219-EAD.
+Além da disponibilização de conteúdos, o `blog` terá papel importante como 
+espaço de discussões e divulgação de assuntos relacionados a probabilidade, a 
+estatística para dentro e fora da Universidade.
 
 
 # 3. Relevância
-O Recurso Digital poderá contribuir para qualificar o ensino de probabilidade e estatística em todas as esferas da Universidade, incluindo a  extensão universitária, podendo também serem explorados temas direcionados à educação básica. Inicialmente utilizaremos a plataforma como complemento ao ensino de MAT02219 no que tange assuntos relacionados à implementação/computação/programação de métodos estatísticos no software R. Futuramente poderá também ser utilizada em cursos de extensao, por futuros estudantes das disciplinas, público em geral interessado em probabilidade, estatistica e programação, atingindo um público bastante amplo.
+Colocar dados da disciplina...
 
-Disciplinas presenciais e à distância poderão de beneficiar do recurso. 
+O recurso digital poderá contribuir para qualificar o ensino de probabilidade e 
+estatística em todas as esferas da Universidade, incluindo a extensão 
+universitária, podendo também serem explorados temas direcionados à educação 
+básica. Inicialmente utilizaremos a plataforma como complemento ao ensino de 
+MAT02219 no que tange assuntos relacionados à implementação/computação/programação 
+de métodos estatísticos no software `R`. O conteúdo produzido poderá também ser 
+utilizado como base em cursos de extensao, por futuros estudantes da disciplina 
+MAT02219, público em geral interessado em probabilidade, estatística e 
+programação em `R`, atingindo dessa forma um público bastante amplo.
+
+Disciplinas presenciais e à distância poderão se beneficiar do recurso. 
 Introduzir atividades relacionadas a questões computacionais e programação 
-no *software* R poderão ser realizadas online, sem a necessidade de instalação 
-de nenhum software. A integração desse tipo de atividade com o moodle 
-demandaria muito mais recursos.
+no *software* `R` poderão ser realizadas online, sem a necessidade de instalação 
+de qualquer *software*. A integração desse tipo de atividade com plataforma 
+educacionais, como o moodle por exemplo, demandaria muito mais recursos.
 
 
 
@@ -50,28 +66,37 @@ demandaria muito mais recursos.
 A plataforma ficará hospedada no endereço https://www.ufrgs.br/probabilidade-estatistica/ 
 e conterá módulos para cada uma das atividades abaixo:
 
-a. Livro digital - criado com base no pacote `bookdown`, com conteúdo 
-atualizado voltado à ciência de dados, trazendo uma introduçãoo a programação 
-em estatística utilizando o software `R`. 
+a. **Livro digital** - criado com base no pacote `bookdown` (https://bookdown.org/), 
+com conteúdo atualizado voltado à ciência de dados, trazendo uma introdução à 
+programação em estatística utilizando o software `R`. Parte do livro já está 
+concluída e sendo revisada (referencia a bolsa anterior).
 
-b. Atividades - exercícios farão parte do livro e serão criados com o auxílio 
-do pacote `R/exams`. Disponibilizaremos atividades para os usuários praticarem 
-tanto conceitos teóricos quanto práticos e computação. (mostrar algo que ja temos?)
+b. **Atividades** - exercícios farão parte do livro e serão criados com o auxílio 
+do pacote `exams`. Disponibilizaremos atividades para os usuários trabalharem questões 
+conceituais, teoria e prática e computação em `R`. (mostrar algo que ja temos?)
 
-b. Vídeos - assuntos gerais e conceitos básicos para complementação do conteúdo 
-que já vem sendo desenvolvido para a disciplina MAT02219-EAD são temas para 
-discussões. Resoluções de exercícios e conteúdos em formato `podcasts` também 
-poderão fazer parte desse recurso. (colocar link com exemplos?)
+c. **Vídeos e *podcasts* ** - assuntos gerais e conceitos básicos para 
+complementação do conteúdo que já vem sendo desenvolvido para a disciplina 
+MAT02219-EAD são temas para discussões. Resoluções de exercícios e conteúdos 
+em formato `podcasts` também poderão fazer parte desse módulo do recurso. 
+(colocar link com exemplos?)
 
-c. *Blog* - blogdown??? - recurso para criacao de blogs e interacao da plataforma com o publico...
-
-
-
+d. ***Blog*** - o pacote `blogdown` permite a criação de páginas em formato 
+`HTML` que incluem recursos para criação e edição de `posts` no formato de 
+um `blog`. Com isso a plataforma abrirá um canal de interacao com o público. 
+As postagens serão moderadas pela equipe de professores que estiverem 
+encarregados das turmas de MAT02219-EAD e prioritariamente serão abordados 
+temas que envolvam a probabilidade e a estatística na UFRGS.
 
 
 
 # 5. Descrição dos recursos de interatividade
-Videos, atividades e blog???  ...
+O recurso proposto nesse projeto, por se tratar de uma plataforma `online` com 
+conteúdo de aprendizagem e divulgação...
+através de um livro digital com atividades, os usuários navegarão pelos conteúdos 
+e atividades, assim como a correção. 
+
+Recurso muito utilizado atualmente para promoção e divulgação de idéias o blog???  ... naturalmente 
 
 
 
