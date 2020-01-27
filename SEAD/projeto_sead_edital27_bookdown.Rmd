@@ -52,14 +52,16 @@ e conterá módulos para cada uma das atividades abaixo:
 
 a. Livro digital - criado com base no pacote `bookdown`, com conteúdo 
 atualizado voltado à ciência de dados, trazendo uma introduçãoo a programação 
-em estatística utilizando o software R. 
+em estatística utilizando o software `R`. 
 
-b. Atividades - como parte do livro e com o aux do pacote `R/exams` disponibilizaremos 
-atividades para os usuarios  avaliação de atividades... (mostrar algo que ja temos?)
+b. Atividades - exercícios farão parte do livro e serão criados com o auxílio 
+do pacote `R/exams`. Disponibilizaremos atividades para os usuários praticarem 
+tanto conceitos teóricos quanto práticos e computação. (mostrar algo que ja temos?)
 
 b. Vídeos - assuntos gerais e conceitos básicos para complementação do conteúdo 
 que já vem sendo desenvolvido para a disciplina MAT02219-EAD são temas para 
-discussões. Conteúdo em formato `podcasts` também poderão fazer parte desse recurso. (colocar link com exemplos?)
+discussões. Resoluções de exercícios e conteúdos em formato `podcasts` também 
+poderão fazer parte desse recurso. (colocar link com exemplos?)
 
 c. *Blog* - blogdown??? - recurso para criacao de blogs e interacao da plataforma com o publico...
 
