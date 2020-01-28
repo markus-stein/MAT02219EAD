@@ -104,20 +104,33 @@ uso da probabilidade e estatística na ciência e no nosso cotidiano.
 
 
 # 6. Descrição da proposta de validação do Recurso Educacional Digital dentro do período de vigência deste edital
-As etapas de desenvolvimento da plataforma são as seguintes:
-a. Desenvolvimento da página principal em formato `blogdown`: meses 1 a 4.
-b. Finalização do livro eletrônico no formato bookdown: meses 1 a 6.
-c. Documentação das funções, gravação de vídeos-tutoriais: meses 1 a 6.
-d. Disponibilização da plataforma: mês 6.
+As etapas de desenvolvimento da plataforma são as seguintes:  
+a. Desenvolvimento da página principal em formato `blogdown`: meses 1 a 4.  
+b. Finalização do livro eletrônico no formato `bookdown`: meses 1 a 6.  
+c. Documentação das funções, gravação de vídeos: meses 1 a 6.  
+d. Disponibilização da plataforma: mês 6.  
 e. Validação da plataforma: meses 6 a 11.
 
 A validação da plataforma será feita por meio de pesquisa de usuários (alunos e professores) com turmas da disciplina Probabilidade e Estatística – modalidade EAD – no semestre 2020/2. Serão avaliados os aspectos de conteúdo da plataforma, layout, acessibilidade, facilidade do uso, entre outros. 
 
 
 # 7. Inovação
-Possibilidade de ensino de computação no *software* R e avaliação de atividades de computação...   
+O ensino de computação estatística utilizando o `R` têm sido cada vez mais 
+incentivada em sala de aula porém ainda não existe um conteúdo que sirva como 
+referência do Departamento do Estatística. Dessa forma a plataforma servirá 
+para suprir essa demanda, principalmente na formação complementar dos estudantes 
+de MAT02219-EAD.
 
-Possibilidades de uso em cursos de extensão e MOOCs  
+Um aspecto importante que uma plataforma criada com base no *software* `R` é a 
+facilidade para se desenvolver recursos de aprendizagem em programação no próprio 
+`R`. O pacote `blogdown` possibilita a integração de diversos formatos de 
+conteúdos em `HTML` e têm sido muito utilizado por cientistas de dados. 
+
+Outra possibilidade de uso da plataforma será em cursos de extensão e MOOCs 
+(*Massive Online Open Courses*). A extensão universitária como forma de cursos 
+são muito comuns na Universidade e módulos específicos poderão ser criados 
+conforme a demanda. Um escopo e cronograma devem ser definidos em cada 
+proposta.
 
 
 
