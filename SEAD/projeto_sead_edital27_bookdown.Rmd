@@ -91,18 +91,27 @@ temas que envolvam a probabilidade e a estatística na UFRGS.
 
 
 # 5. Descrição dos recursos de interatividade
-O recurso proposto nesse projeto, por se tratar de uma plataforma `online` com 
-conteúdo de aprendizagem e divulgação...
-através de um livro digital com atividades, os usuários navegarão pelos conteúdos 
-e atividades, assim como a correção. 
+O usuário da plataforma 'Probabilidade e Estatística' navegará interativamente 
+nas páginas do livro eletrônico e poderá resolver os exercícios propostos. 
+Dúvidas e sugestões serão recebidas pela equipe mantedora da plataforma. Fóruns 
+também poderão ser abertos para discussões sobre tópicos específicos. Por fim, 
+dúvidas e discussões podem ser temas para vídeos e *podcasts*.
 
-Recurso muito utilizado atualmente para promoção e divulgação de idéias o blog???  ... naturalmente 
-
+Além disso, uma maneira de interação com a comunidade em geral será o *blog* 
+mantido na plataforma. Temas atuais ligados a ciência de dados e programação 
+serão propostos à comunidade a fim de fomentar a reflexão sobre o impacto do 
+uso da probabilidade e estatística na ciência e no nosso cotidiano.
 
 
 # 6. Descrição da proposta de validação do Recurso Educacional Digital dentro do período de vigência deste edital
-pegar ideias do edital 25... 
+As etapas de desenvolvimento da plataforma são as seguintes:
+a. Desenvolvimento da página principal em formato `blogdown`: meses 1 a 4.
+b. Finalização do livro eletrônico no formato bookdown: meses 1 a 6.
+c. Documentação das funções, gravação de vídeos-tutoriais: meses 1 a 6.
+d. Disponibilização da plataforma: mês 6.
+e. Validação da plataforma: meses 6 a 11.
 
+A validação da plataforma será feita por meio de pesquisa de usuários (alunos e professores) com turmas da disciplina Probabilidade e Estatística – modalidade EAD – no semestre 2020/2. Serão avaliados os aspectos de conteúdo da plataforma, layout, acessibilidade, facilidade do uso, entre outros. 
 
 
 # 7. Inovação
