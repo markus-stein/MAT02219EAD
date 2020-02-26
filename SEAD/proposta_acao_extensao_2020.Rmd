@@ -16,9 +16,9 @@ Plataforma (Ambiente Web) para Divulgação da Probabilidade e Estatística da U
 Criação de uma plataforma para divulgação da Probabilidade e Estatística na era 
 da ciência de dados a todos os interessados dentro e fora da Universidade. De 
 forma colaborativa, além dos professores do Departamento de Estatística (Dest) 
-poderão desenvolver conteúdos pesquisadores, estudantes e público em geral interessado 
-em ciência de dados, tendo como foco a discussão de 
-conceitos básicos em Probabilidade e Estatistica através do software R.
+poderão desenvolver conteúdos pesquisadores, estudantes e público em geral 
+interessado em ciência de dados, tendo como foco a discussão de conceitos 
+básicos em Probabilidade e Estatistica através do software R.
 
 
 # 2. Descrição do objeto
