@@ -1,0 +1,60 @@
+---
+title: "Plano Aula 01"
+author: "Markus Stein"
+date: "25 January 2021"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm} 
+\pagestyle{fancyplain} 
+\lhead{\includegraphics[height=1.5cm]{LogoIME.png}}
+\rhead{\includegraphics[height=1.5cm]{images.jpeg}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02219 - Probabilidade e Estatística - 2020/2
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introdução  
+
+## Apresentação do professor  
+
+\vspace{0.5cm}
+
+
+## O que sabemos sobre Probabilidade e Estatística?  
+
+\vspace{0.5cm}
+
+## O que é a disciplina de Probabilidade e Estatística?  
+* Probabilidade e Estatística = introdução à:
+  + Estatística descritiva + 
+  + Probabilidade + 
+  + Inferência Estatística (Paramétrica) (Clássica)  
+
+* População $\times$ amostra  
+* Inferência Estatística - indução $\times$ dedução  
+
+\vspace{0.5cm}
+
+## Apresentação da disciplina  
+* Ler o plano de ensino!!!  
+
+
+\vspace{1.0cm}
+
+***
+## Ler slides da semana 1.
+## Fazer lista de exercícios
+## Fazer o Quiz da semana 1 - vale nota!!!
+***
