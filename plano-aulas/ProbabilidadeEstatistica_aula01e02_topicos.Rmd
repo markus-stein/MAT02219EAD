@@ -106,7 +106,7 @@ Veremos critérios para calcular tamanhos de amostras ao longo da dsiciplina.
 
 ## Referências e Links interessantes
 
-### Como baixar o livro "Estatística Básica" dos autores **Bussab e Moretin**???
+### Como baixar o livro "Estatística Básica" dos autores **Bussab e Morettin**???
 
 * O acesso é livre através do Sabi+ (https://www.ufrgs.br/bibliotecas/pesquisa/bibliografia-eletronica/). 
 
