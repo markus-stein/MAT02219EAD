@@ -1,5 +1,5 @@
 ---
-title: "Plano Aula 01"
+title: "Plano Aula 01 e 02"
 # author: "Markus Stein"
 # date: "25 January 2021"
 output: pdf_document
@@ -8,7 +8,7 @@ header-includes:
     - \usepackage{fancyhdr}
 always_allow_html: yes
 ---
-\addtolength{\headheight}{1.0cm} 
+<!-- \addtolength{\headheight}{1.0cm}  -->
 \pagestyle{fancyplain} 
 \lhead{\includegraphics[height=1.5cm]{logoIME.png}}
 \rhead{\includegraphics[height=1.5cm]{logoEAD.png}}
@@ -25,13 +25,11 @@ MAT02219 - Probabilidade e Estatística - 2020/2
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Introdução  
+## Introdução  
 
-## Apresentação do professor  
+### Apresentação do professor  
 
-\vspace{0.5cm}
-
-## Apresentação da disciplina  
+### Apresentação da disciplina  
 * Ler o plano de ensino!!!  
 * Ler os slides de boas vindas!!!
 
@@ -45,9 +43,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## População $\times$ amostra  (Seção 10.2, Livro Bussab e Morettin)
 
-### Variáveis (Aleatórias)
-
-Qual a população em estudo (variável)?  
+### Variáveis (Aleatórias). Qual a população em estudo (variável)?  
 
 **Exemplo 1**: $X$: duração de vida de um tipo de lâmpada, $X \in (0, \infty)$.
 <!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$.   -->
@@ -67,11 +63,11 @@ Qual a população em estudo (variável)?
   + finita (censo) *versus* infinita (modelos = distribuições de probabilidade).
   + $X$ é uma v.a. de interesse, e assumiremos $X \sim f(x; \theta)$.  
   
-* **Amostra** $\rightarrow$ estatísticas ($\overline X$, $S^2$, $p$, ...)  
+* **Amostra** $\Rightarrow$ estatísticas ($\overline X$, $S^2$, $p$, ...)  
   + Toda a estatística é uma variável (também aleatória)!!!   
 
-## Amostragem - Como obter amostras?  (Seção 10.4, Livro Bussab e Morettin)
 
+## Amostragem - Como obter amostras?  (Seção 10.4, Livro Bussab e Morettin)
 ### Principais tipos de amostragem 
 * **Probabilística** *versus* **não probabilística**;  
 * Com ou sem **reposição**.
@@ -110,7 +106,7 @@ Veremos critérios para calcular tamanhos de amostras ao longo da dsiciplina.
 
 ## Referências e Links interessantes
 
-### Como baixar o livro do Bussab e Moretin???
+### Como baixar o livro "Estatística Básica" dos autores **Bussab e Moretin**???
 
 * O acesso é livre através do Sabi+ (https://www.ufrgs.br/bibliotecas/pesquisa/bibliografia-eletronica/). 
 
