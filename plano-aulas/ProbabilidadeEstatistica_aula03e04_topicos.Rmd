@@ -70,7 +70,7 @@ table(x)
     + Regra epírica: $k = \sqrt{n}$
     + Regra de Sturges: $k = 1 + 3,32 \times \log n$
 
-## Representações Gráficas
+## Representações Gráficas (Seção 2.3, Livro Bussab e Morettin)
 * Gráficos $\times$ tabelas
 
 ### Principais tipos de gráficos
@@ -83,7 +83,7 @@ table(x)
 ## Normas de apresentação de tabelas e gráficos
 * Tabelas: Título, cabeçalho, formato, ...
 * Gráficos: Título, nome nos eixos, ...
-    + Trabalhos técnicos, monografias, ..., devem respeitar normas estabelecidas pela Associação Brasileira de Normas Técnicas (ABNT).
+    + Trabalhos técnicos, trabalhos de conclusão de curso, monografias, ..., devem respeitar normas estabelecidas pela Associação Brasileira de Normas Técnicas (ABNT).
 
 
 

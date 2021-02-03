@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2021.1.27)  3 FEB 2021 14:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2021.1.27)  3 FEB 2021 16:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1003,26 +1003,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./logoIME.png> <./logoEAD.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 278.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 279.
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png used on input line 278.
+Package pdftex.def Info: logoIME.png used on input line 279.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png used on input line 278.
+Package pdftex.def Info: logoEAD.png used on input line 279.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 278.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 279.
 (./ProbabilidadeEstatistica_aula03e04_topicos.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 278.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 278.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 278.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 279.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 279.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 279.
  ) 
 Here is how much of TeX's memory you used:
  13481 strings out of 494944
- 193925 string characters out of 6180677
- 298170 words of memory out of 5000000
+ 194005 string characters out of 6180677
+ 299209 words of memory out of 5000000
  16526 multiletter control sequences out of 15000+600000
  55745 words of font info for 68 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1037,8 +1037,8 @@ ype1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msbm10.pfb>
-Output written on ProbabilidadeEstatistica_aula03e04_topicos.pdf (2 pages, 3357
-92 bytes).
+Output written on ProbabilidadeEstatistica_aula03e04_topicos.pdf (2 pages, 3358
+28 bytes).
 PDF statistics:
  123 PDF objects out of 1000 (max. 8388607)
  104 compressed objects within 2 object streams
