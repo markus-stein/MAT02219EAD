@@ -26,65 +26,76 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # Estatística Descritiva
+Qual o tipo de variável?  
 
-## Distribuição de Frequências  
+**Exemplo 1**: Variável em estudo ($X$): duração de vida de um tipo de lâmpada, $X \in (0, \infty)$.
+<!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$. -->
 
-### Tabelas  
-<!-- * Ler o plano de ensino!!!   -->
-<!-- * Ler os slides de boas vindas!!! -->
+**Exemplo 2**: Variável em estudo ($X$): PIB do Brasil, $X \in \mathbb{R}$.
+<!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$. -->
 
-<!-- ### O que sabemos sobre Probabilidade e Estatística?   -->
-
-<!-- ### O que é a disciplina de Probabilidade e Estatística?   -->
-<!-- * Probabilidade e Estatística = introdução à: -->
-<!--   + Estatística descritiva +  -->
-<!--   + Teoria da probabilidade +  -->
-<!--   + Inferência Estatística (Paramétrica) (Clássica) - indução $\times$ dedução   -->
-
-<!-- ## População $\times$ amostra  (Seção 10.2, Livro Bussab e Morettin) -->
-
-<!-- ### Variáveis (Aleatórias). Qual a população em estudo (variável)?   -->
-
-<!-- **Exemplo 1**: $X$: duração de vida de um tipo de lâmpada, $X \in (0, \infty)$. -->
-<!-- <!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$.   --> -->
-
-<!-- **Exemplo 2**: $X$: PIB do Brasil, $X \in \mathbb{R}$. -->
-<!-- <!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$.   --> -->
-
-<!-- **Exemplo 3**: $X$: avaliação do governo, positiva ou negativa, $X \in \{0, 1\}$. -->
-<!-- <!-- , $X \sim Bernoulli(\pi)$. $E(X) = \pi$.   --> -->
+**Exemplo 3**: $X$: avaliação do governo, positiva ou negativa, $X \in \{0, 1\}$.
+<!-- , $X \sim Bernoulli(\pi)$. $E(X) = \pi$. -->
 
 <!-- **Exemplo 4**: $Y$ (consumo) e $X$ (renda), ... -->
-<!-- <!-- $E(Y) = \alpha + \beta X$.   --> -->
+<!-- $E(Y) = \alpha + \beta X$. -->
 
 <!-- \vspace{0.5cm} -->
 
-<!-- * **População** $\Rightarrow$ parâmetros ($\mu$, $\sigma^2$, $\pi$, ...)   -->
-<!--   + finita (censo) *versus* infinita (modelos = distribuições de probabilidade). -->
-<!--   + $X$ é uma v.a. de interesse, e assumiremos $X \sim f(x; \theta)$.   -->
+## Distribuição de Frequências (Seção 2.2, Livro Bussab e Morettin)
 
-<!-- * **Amostra** $\Rightarrow$ estatísticas ($\overline X$, $S^2$, $p$, ...)   -->
-<!--   + Toda a estatística é uma variável (também aleatória)!!!    -->
+### Tabelas (de distribuições) de frequências
+
+* Frequências **absolutas** $\times$ **relativas**.
+
+* Frequências **simples** $\times$ **acumuladas**.
+
+* Interpretações?
+
+No software `R` o comando `table()` retorna as frequências absolutas simples.  
+**Exemplo 4**: Variável em estudo - número de filhos por casal (Slides 1-2 página 4).
+```{r exemplo}
+x <- rep(0:6, c(55, 60, 112, 82, 31, 8, 2))
+table(x)
+```
+
+* Frequências *por ponto* $\times$ *por intervalo*;
+    + *sem* perda de informação $\times$ *com* perda de informação.
+    
+* Para variáveis **numéricas contínuas**, ou **discretas** com muitos valores diferentes (mais do que 15),
+    + como construir intervalos? (Slides da disciplina)
+
+* Quantas classes/intervalos devemos usar?
+    + k: número de intervalos.
+    + Regra epírica: $k = \sqrt{n}$
+    + Regra de Sturges: $k = 1 + 3,32 \times \log n$
+
+## Representações Gráficas
+* Gráficos $\times$ tabelas
+
+### Principais tipos de gráficos
+* Variáveis qualitativas: gráfico de barras, ou setores ("pizza");
+* Variáveis quantitativas: gráfico de colunas, linhas, diagrama de pareto histograma, polígono de frequências.
+
+ (o `R` usa a regra de Sturges para construir o histograma, comando `hist()`)
 
 
-<!-- ## Amostragem - Como obter amostras?  (Seção 10.4, Livro Bussab e Morettin) -->
-<!-- ### Principais tipos de amostragem  -->
-<!-- * **Probabilística** *versus* **não probabilística**;   -->
-<!-- * Com ou sem **reposição**. -->
+## Normas de apresentação de tabelas e gráficos
+* Tabelas: Título, cabeçalho, formato, ...
+* Gráficos: Título, nome nos eixos, ...
+    + Trabalhos técnicos, monografias, ..., devem respeitar normas estabelecidas pela Associação Brasileira de Normas Técnicas (ABNT).
 
-<!-- ### Amostra aleatória simples (a.a.s.) (Seção 10.5, Livro Bussab e Morettin) -->
-<!-- * Importante!!! Na disciplina supomos a.a.s. para todos os problemas(?).   -->
 
-<!-- <!-- $=$ v.a. idependentes e identicamente distribuídas (i.i.d.)    --> -->
 
-<!-- * **sorteio** aleatório $\times$ **geração** de números (pseudo) aleatórios;   -->
-<!--     + tabela de números aleatórios(?)   -->
+## Cuidado para não ser enganado por gráficos (nem enganar)!
+Podemos usar nosso conhecimento para ajudar a não propagar representações gráficas que distorcem a comportamento real dos dados.
 
-<!-- \vspace{0.2cm} -->
+
+\vspace{0.5cm}
 
 
 ***
-## Ler slides e ver vídeo da semana 2.
+## Ler slides e ver vídeos da semana 2.
 ## Fazer lista de exercícios 1-2 e 1-3.
 ## Fazer o Quiz da semana 2 - VALE NOTA!!!
 ***
