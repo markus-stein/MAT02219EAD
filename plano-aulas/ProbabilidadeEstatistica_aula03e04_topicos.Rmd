@@ -74,7 +74,7 @@ table(x)
 * Gráficos $\times$ tabelas
 
 ### Principais tipos de gráficos
-* Variáveis qualitativas: gráfico de barras, ou setores ("pizza");
+* Variáveis qualitativas: gráfico de barras, ou setores ("pizza"), ...(nuvem de palavras);
 * Variáveis quantitativas: gráfico de colunas, linhas, diagrama de pareto histograma, polígono de frequências.
 
  (o `R` usa a regra de Sturges para construir o histograma, comando `hist()`)
