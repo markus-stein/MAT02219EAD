@@ -1,4 +1,6 @@
 # MAT02219 - Probabilidade e Estat[istica - EAD
-### Repositório para notas de aula, materiais relacionados ao R/Exams e coisas que vamos testando na disciplina.
 
-Notas de aula em: MAT002219EAD/notas-de-aula
+Disciplina "MAT02219 - Probabilidade e Estatística" no formato à distância (EAD)
+
+Planos de aula baseados no livro "Estatística Básica", dos autores Bussab e 
+Morettin, em: [MAT002219EAD/plano-aulas](/plano-aulas))
