@@ -28,13 +28,13 @@ knitr::opts_chunk$set(echo = TRUE)
 # Estatística Descritiva
 Qual o tipo de variável?  
 
-**Exemplo 1**: Variável em estudo ($X$): duração de vida de um tipo de lâmpada, $X \in (0, \infty)$.
+**Exemplo 1**: Variável em estudo ($X$) - duração de vida de um tipo de lâmpada, $X \in (0, \infty)$.
 <!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$. -->
 
-**Exemplo 2**: Variável em estudo ($X$): PIB do Brasil, $X \in \mathbb{R}$.
+**Exemplo 2**: Variável em estudo ($X$) - PIB do Brasil, $X \in \mathbb{R}$.
 <!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$. -->
 
-**Exemplo 3**: $X$: avaliação do governo, positiva ou negativa, $X \in \{0, 1\}$.
+**Exemplo 3**: Variável em estudo ($X$) - avaliação do governo, positiva ou negativa, $X \in \{0, 1\}$.
 <!-- , $X \sim Bernoulli(\pi)$. $E(X) = \pi$. -->
 
 <!-- **Exemplo 4**: $Y$ (consumo) e $X$ (renda), ... -->
@@ -50,30 +50,36 @@ Qual o tipo de variável?
 
 * Frequências **simples** $\times$ **acumuladas**.
 
-* Interpretações?
+* Interpretações??? (Slides 1-2, página 10)
 
+\vspace{0.5cm}
+
+**Exemplo 4**: Variável em estudo - número de filhos por casal (Slides 1-2 página 4).  
 No software `R` o comando `table()` retorna as frequências absolutas simples.  
-**Exemplo 4**: Variável em estudo - número de filhos por casal (Slides 1-2 página 4).
+
 ```{r exemplo}
-x <- rep(0:6, c(55, 60, 112, 82, 31, 8, 2))
+x <- c(2, 5, 6, 0, 4, 4, 3, 4, 2, 2, 3, 3, 5, 3, 5, 1, 2, 4, 2, 3, 5, 4, 3, 3, 2, 3, 0, 4, 4, 3, 4, 0, 2, 0, 2, 3, 3, 1, 2, 4, 2, 2, 4, 4, 2, 2, 2, 3, 3, 3, 2, 2, 3, 1, 2, 0, 1, 3, 1, 2, 2, 2, 0, 3, 3, 4, 2, 2, 1, 3, 3, 1, 2, 3, 1, 1, 3, 2, 2, 0, 3, 2, 1, 3, 0, 3, 2, 2, 1, 2, 2, 2, 3, 2, 2, 1, 2, 2, 3, 0, 1, 0, 3, 2, 2, 1, 0, 2, 0, 2, 1, 4, 0, 3, 3, 3, 3, 3, 3, 0, 4, 3, 1, 2, 3, 2, 0, 2, 5, 3, 1, 0, 0, 2, 1, 3, 3, 2, 2, 0, 2, 2, 2, 3, 2, 3, 3, 1, 1, 3, 1, 2, 2, 0, 2, 4, 2, 2, 2, 3, 1, 2, 3, 2, 0, 3, 2, 1, 2, 3, 3, 1, 0, 4, 1, 2, 1, 3, 4, 4, 0, 0, 1, 1, 3, 4, 1, 2, 1, 4, 6, 0, 0, 3, 1, 2, 4, 0, 2, 2, 1, 5, 2, 0, 1, 3, 0, 1, 1, 0, 3, 2, 2, 2, 0, 3, 2, 2, 4, 5, 2, 0, 1, 0, 2, 3, 3, 0, 2, 2, 1, 3, 3, 1, 2, 2, 0, 1, 2, 1, 1, 1, 3, 2, 2, 2, 2, 2, 5, 0, 2, 2, 3, 1, 0, 2, 2, 2, 1, 3, 2, 0, 1, 4, 1, 4, 2, 3, 2, 3, 3, 3, 1, 2, 2, 1, 2, 4, 0, 4, 2, 2, 1, 1, 2, 2, 2, 0, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 0, 0, 3, 0, 0, 3, 2, 3, 0, 0, 3, 3, 4, 0, 4, 2, 2, 4, 3, 4, 2, 1, 1, 2, 0, 0, 0, 4, 3, 3, 2, 0, 0, 2, 1, 3, 2, 2, 3, 0, 0, 3, 3, 0, 3, 0, 1, 2, 2, 1, 3)
 table(x)
 ```
 
+\vspace{0.5cm}
+
 * Frequências *por ponto* $\times$ *por intervalo*;
     + *sem* perda de informação $\times$ *com* perda de informação.
+
+### Como construir intervalos? (Slides 1-2, página 13)
     
 * Para variáveis **numéricas contínuas**, ou **discretas** com muitos valores diferentes (mais do que 15),
-    + como construir intervalos? (Slides da disciplina)
 
-* Quantas classes/intervalos devemos usar?
-    + k: número de intervalos.
+* Quantas classes/intervalos devemos usar? $k$: número de intervalos.
     + Regra epírica: $k = \sqrt{n}$
     + Regra de Sturges: $k = 1 + 3,32 \times \log n$
+
 
 ## Representações Gráficas (Seção 2.3, Livro Bussab e Morettin)
 * Gráficos $\times$ tabelas
 
-### Principais tipos de gráficos
+### Principais tipos de gráficos (Slides 1-3, página 3)
 * Variáveis qualitativas: gráfico de barras, ou setores ("pizza"), ...(nuvem de palavras);
 * Variáveis quantitativas: gráfico de colunas, linhas, diagrama de pareto histograma, polígono de frequências.
 
