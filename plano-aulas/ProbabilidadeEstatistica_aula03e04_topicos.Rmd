@@ -108,3 +108,13 @@ Podemos usar nosso conhecimento para ajudar a não propagar representações gr�
 
 <!-- Definição **A.A.S**: Seja $X_1, X_2, \ldots, X_n$ uma a.a.s. de tamanho $n$ de $X \sim f(x; \theta)$, então $X_1 \sim f(x; \theta)$, ..., $X_n \sim f(x; \theta)$ e $X_i$ e $X_j$ são independentes para todo $i \neq j$. -->
 
+\vspace{0.5cm}
+
+Exercício 6 da Lista 1-2 e 1-3:
+```{r exemplo2, fig.width=4, fig.height=3, fig.align='center'}
+x <- c(4, 5, 5, 6, 7, 8, 9, 17, 16, 10, 7, 9, 12, 14, 13, 8, 10, 6, 8, 15, 13, 17, 9, 5, 8, 4, 15, 17, 8, 11, 8, 10, 12, 13, 11, 8, 7, 6, 5, 16, 15, 9, 8, 9, 14, 13, 7, 8, 5, 8)
+table(x)
+barplot(table(x))
+```
+
+Como incluir título e nomes nos eixos???
