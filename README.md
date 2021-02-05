@@ -6,7 +6,7 @@ Disciplina "Probabilidade e Estatística" no formato à distância (EAD).
 Morettin, em: [MAT002219EAD/plano-aulas](/plano-aulas).
     + Para leitura baixar os arquivos `.pdf`.
     
-* Primeiro contato com o software `R`: como baixar e iniciar o `R`? Baixar o arquivo em [MAT02219EAD/R-exams/TutorialR.html](/cloud/project/R-exams/TutorialR.html)
+* Primeiro contato com o software `R`: como baixar e iniciar o `R`? Baixar o arquivo em [MAT02219EAD/R-exams/TutorialR.html](R-exams/TutorialR.html)
     + baixe o arquivo no bot'ao download e visualize no navegador de sua preferência.
     
 
