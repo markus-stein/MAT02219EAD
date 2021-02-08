@@ -1,0 +1,140 @@
+---
+title: "Plano Aula 05 e 06"
+# author: "Markus Stein"
+# date: "08 February 2021"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+<!-- \addtolength{\headheight}{1.0cm}  -->
+\pagestyle{fancyplain} 
+\lhead{\includegraphics[height=1.5cm]{logoIME.png}}
+\rhead{\includegraphics[height=1.5cm]{logoEAD.png}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02219 - Probabilidade e Estatística - 2020/2
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# (... cont.) Estatística Descritiva
+
+
+## Medidas Descritivas (capítulo 3, Livro Bussab e Morettin)
+* Tabelas e gráficos $\times$ resumos numéricos (medidas descritivas)
+        + Qual o tipo de variável?
+        
+<!-- **Exemplo 1**: Variável em estudo ($X$) - duração de vida de um tipo de lâmpada, $X \in (0, \infty)$. -->
+<!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$. -->
+
+<!-- **Exemplo 2**: Variável em estudo ($X$) - PIB do Brasil, $X \in \mathbb{R}$. -->
+<!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$. -->
+
+<!-- **Exemplo 3**: Variável em estudo ($X$) - avaliação do governo, positiva ou negativa, $X \in \{0, 1\}$. -->
+<!-- , $X \sim Bernoulli(\pi)$. $E(X) = \pi$. -->
+
+<!-- **Exemplo 4**: $Y$ (consumo) e $X$ (renda), ... -->
+<!-- $E(Y) = \alpha + \beta X$. -->
+
+<!-- \vspace{0.5cm} -->
+
+### Medidas de posição (ou localização) (Seção 3.1, Livro Bussab e Morettin)
+* Média aritmética: ponderada $\times$ simples;
+    + outros tipos de médias.
+    + para nós *média = média aritmética simples*
+* Mediana
+* Moda
+
+* Interpretações???
+
+### Medidas separatrizes (Seção 3.3, Livro Bussab e Morettin)
+* Quantis:
+    + Quartis, decis, percentis
+
+### Medidas de dispersão (Seção 3.2, Livro Bussab e Morettin)
+* Amplitude total
+* Amplitude interquartílica
+* Variância
+* Desvio padrão
+
+### Medidas de formato (slides 1-4, página 50)
+* Assimetria e curtose
+
+<!-- \vspace{0.5cm} -->
+
+<!-- **Exemplo 4**: Variável em estudo - número de filhos por casal (Slides 1-2 página 4).   -->
+<!-- No software `R` o comando `table()` retorna as frequências absolutas simples.   -->
+
+<!-- ```{r exemplo} -->
+<!-- x <- c(2, 5, 6, 0, 4, 4, 3, 4, 2, 2, 3, 3, 5, 3, 5, 1, 2, 4, 2, 3, 5, 4, 3, 3, 2, 3, 0, 4, 4, 3, 4, 0, 2, 0, 2, 3, 3, 1, 2, 4, 2, 2, 4, 4, 2, 2, 2, 3, 3, 3, 2, 2, 3, 1, 2, 0, 1, 3, 1, 2, 2, 2, 0, 3, 3, 4, 2, 2, 1, 3, 3, 1, 2, 3, 1, 1, 3, 2, 2, 0, 3, 2, 1, 3, 0, 3, 2, 2, 1, 2, 2, 2, 3, 2, 2, 1, 2, 2, 3, 0, 1, 0, 3, 2, 2, 1, 0, 2, 0, 2, 1, 4, 0, 3, 3, 3, 3, 3, 3, 0, 4, 3, 1, 2, 3, 2, 0, 2, 5, 3, 1, 0, 0, 2, 1, 3, 3, 2, 2, 0, 2, 2, 2, 3, 2, 3, 3, 1, 1, 3, 1, 2, 2, 0, 2, 4, 2, 2, 2, 3, 1, 2, 3, 2, 0, 3, 2, 1, 2, 3, 3, 1, 0, 4, 1, 2, 1, 3, 4, 4, 0, 0, 1, 1, 3, 4, 1, 2, 1, 4, 6, 0, 0, 3, 1, 2, 4, 0, 2, 2, 1, 5, 2, 0, 1, 3, 0, 1, 1, 0, 3, 2, 2, 2, 0, 3, 2, 2, 4, 5, 2, 0, 1, 0, 2, 3, 3, 0, 2, 2, 1, 3, 3, 1, 2, 2, 0, 1, 2, 1, 1, 1, 3, 2, 2, 2, 2, 2, 5, 0, 2, 2, 3, 1, 0, 2, 2, 2, 1, 3, 2, 0, 1, 4, 1, 4, 2, 3, 2, 3, 3, 3, 1, 2, 2, 1, 2, 4, 0, 4, 2, 2, 1, 1, 2, 2, 2, 0, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 0, 0, 3, 0, 0, 3, 2, 3, 0, 0, 3, 3, 4, 0, 4, 2, 2, 4, 3, 4, 2, 1, 1, 2, 0, 0, 0, 4, 3, 3, 2, 0, 0, 2, 1, 3, 2, 2, 3, 0, 0, 3, 3, 0, 3, 0, 1, 2, 2, 1, 3) -->
+<!-- table(x) -->
+<!-- ``` -->
+
+<!-- \vspace{0.5cm} -->
+
+### Dados Não Agrupados $\times$ Dados* Frequências *por ponto* $\times$ *por intervalo*;
+* medidas descritivas podem ser calculadas mesmo quando os dados são apresentados apenas em forma de tabelas de frequências;
+        + *com* perda de informação $\times$ *sem* perda de informação.
+        
+        
+## Análise Exploratória de Dados (AED)
+        
+<!-- ### Como construir intervalos? (Slides 1-2, página 13) -->
+
+<!-- * Para variáveis **numéricas contínuas**, ou **discretas** com muitos valores diferentes (mais do que 15), -->
+
+<!-- * Quantas classes/intervalos devemos usar? $k$: número de intervalos. -->
+<!--     + Regra epírica: $k = \sqrt{n}$ -->
+<!--     + Regra de Sturges: $k = 1 + 3,32 \times \log n$ -->
+
+
+<!-- ## Representações Gráficas (Seção 2.3, Livro Bussab e Morettin) -->
+<!-- * Gráficos $\times$ tabelas -->
+
+<!-- ### Principais tipos de gráficos (Slides 1-3, página 3) -->
+<!-- * Variáveis qualitativas: gráfico de barras, ou setores ("pizza"), ...(nuvem de palavras); -->
+<!-- * Variáveis quantitativas: gráfico de colunas, linhas, diagrama de pareto histograma, polígono de frequências. -->
+
+<!--  (o `R` usa a regra de Sturges para construir o histograma, comando `hist()`) -->
+
+
+<!-- ## Normas de apresentação de tabelas e gráficos -->
+<!-- * Tabelas: Título, cabeçalho, formato, ... -->
+<!-- * Gráficos: Título, nome nos eixos, ... -->
+<!--     + Trabalhos técnicos, trabalhos de conclusão de curso, monografias, ..., devem respeitar normas estabelecidas pela Associação Brasileira de Normas Técnicas (ABNT). -->
+
+
+
+<!-- ## Cuidado para não ser enganado por gráficos (nem enganar)! -->
+<!-- Podemos usar nosso conhecimento para ajudar a não propagar representações gráficas que distorcem a comportamento real dos dados. -->
+
+
+<!-- \vspace{0.5cm} -->
+
+
+***
+## Ler slides e ver vídeos da semana 3.
+## Fazer lista de exercícios 1-4 e 1-5.
+## Fazer o Quiz da semana 3 - VALE NOTA!!!
+***
+
+<!-- Definição **A.A.S**: Seja $X_1, X_2, \ldots, X_n$ uma a.a.s. de tamanho $n$ de $X \sim f(x; \theta)$, então $X_1 \sim f(x; \theta)$, ..., $X_n \sim f(x; \theta)$ e $X_i$ e $X_j$ são independentes para todo $i \neq j$. -->
+
+<!-- \vspace{0.5cm} -->
+
+<!-- Exercício 6 da Lista 1-2 e 1-3: -->
+<!-- ```{r exemplo2, fig.width=4, fig.height=3, fig.align='center'} -->
+<!-- x <- c(4, 5, 5, 6, 7, 8, 9, 17, 16, 10, 7, 9, 12, 14, 13, 8, 10, 6, 8, 15, 13, 17, 9, 5, 8, 4, 15, 17, 8, 11, 8, 10, 12, 13, 11, 8, 7, 6, 5, 16, 15, 9, 8, 9, 14, 13, 7, 8, 5, 8) -->
+<!-- table(x) -->
+<!-- barplot(table(x)) -->
+<!-- ``` -->
+
+<!-- Como incluir título e nomes nos eixos??? -->
