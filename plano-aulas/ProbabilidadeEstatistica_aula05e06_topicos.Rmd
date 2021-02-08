@@ -94,8 +94,19 @@ Qual o grau de dispersão/variabilidade/espalhamento dos dados?
         
         
 ## Análise Exploratória de Dados (AED)
+
+### Resumo de Cinco Números
+* O que os quartis, juntamente com o mínimo e o máximo, nos dizem sobre a simetria dos dados?
+    + Dispersão inferior e superior
         
-<!-- ### Como construir intervalos? (Slides 1-2, página 13) -->
+### Valores atípicos (*Outliers*)? (Slides 1-2, página 13) -->
+Como identificar valores que fogem ao comportamento da maioria da maioria das observações?
+* 
+
+### Gráfico de Caixa (*Boxplot*)
+* Reúne informações sobre posição, dispersão, simetria, valores atípicos, ...
+* Calcular a cerca (limite) inferior e a cerca (limite) superior:
+
 
 <!-- * Para variáveis **numéricas contínuas**, ou **discretas** com muitos valores diferentes (mais do que 15), -->
 
