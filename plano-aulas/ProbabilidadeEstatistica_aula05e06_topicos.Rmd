@@ -29,8 +29,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ## Medidas Descritivas (capítulo 3, Livro Bussab e Morettin)
-* Tabelas e gráficos $\times$ resumos numéricos (medidas descritivas)
-        + Qual o tipo de variável?
+* Tabelas e gráficos $\times$ resumos numéricos (medidas descritivas).
+* Como descrever o comportamento dos dados usando apenas números?
+    + Para que tipos de variáveis podemos calcular?
         
 <!-- **Exemplo 1**: Variável em estudo ($X$) - duração de vida de um tipo de lâmpada, $X \in (0, \infty)$. -->
 <!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$. -->
@@ -47,26 +48,29 @@ knitr::opts_chunk$set(echo = TRUE)
 <!-- \vspace{0.5cm} -->
 
 ### Medidas de posição (ou localização) (Seção 3.1, Livro Bussab e Morettin)
+Onde se concentra a maioria dos dados
 * Média aritmética: ponderada $\times$ simples;
-    + outros tipos de médias.
-    + para nós *média = média aritmética simples*
-* Mediana
-* Moda
-
-* Interpretações???
+    + outros tipos de médias: geométrica, harmônica, ...;
+    + em estatística: $\overline x =$ *média aritmética simples*.
+* Mediana ($Md$)
+* Moda ($Mo$)
+    + Interpretações???
 
 ### Medidas separatrizes (Seção 3.3, Livro Bussab e Morettin)
-* Quantis:
-    + Quartis, decis, percentis
+* Quantis: quartis, decis, percentis;
+    + dividem os dados em grupos de mesma frequência.
 
-### Medidas de dispersão (Seção 3.2, Livro Bussab e Morettin)
-* Amplitude total
-* Amplitude interquartílica
-* Variância
-* Desvio padrão
+### Medidas de dispersão (ou variabilidade) (Seção 3.2, Livro Bussab e Morettin)
+Qual o grau de dispersão/variabilidade/espalhamento dos dados?  
+* Amplitude total ($a_t$)
+* Amplitude interquartílica ($a_q$)
+* Variância ($s^2$)
+* Desvio padrão ($s$)
+* Coeficiente de variação ($cv$)
 
 ### Medidas de formato (slides 1-4, página 50)
 * Assimetria e curtose
+    + Medidas de posição e dispersão são as duas principais, mas outras medidas podem ser de interesse ao se comparar distribuições de dados.
 
 <!-- \vspace{0.5cm} -->
 
@@ -80,9 +84,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <!-- \vspace{0.5cm} -->
 
-### Dados Não Agrupados $\times$ Dados* Frequências *por ponto* $\times$ *por intervalo*;
+### Dados Não Agrupados $\times$ Dados Agrupados em classe (slides 1-4, página 57)
 * medidas descritivas podem ser calculadas mesmo quando os dados são apresentados apenas em forma de tabelas de frequências;
-        + *com* perda de informação $\times$ *sem* perda de informação.
+    + *com* perda de informação $\times$ *sem* perda de informação.
         
         
 ## Análise Exploratória de Dados (AED)

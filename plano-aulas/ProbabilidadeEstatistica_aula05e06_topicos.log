@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2021.1.27)  8 FEB 2021 11:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2021.1.27)  8 FEB 2021 13:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -961,12 +961,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 <logoIME.png, id=4, 521.95pt x 226.8475pt>
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png used on input line 197.
+Package pdftex.def Info: logoIME.png used on input line 198.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 <logoEAD.png, id=5, 313.17pt x 154.77824pt>
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png used on input line 197.
+Package pdftex.def Info: logoEAD.png used on input line 198.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -977,42 +977,44 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./logoIME.png> <./logoEAD.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 199.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 200.
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png used on input line 199.
+Package pdftex.def Info: logoIME.png used on input line 200.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png used on input line 199.
+Package pdftex.def Info: logoEAD.png used on input line 200.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 199.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 200.
 (./ProbabilidadeEstatistica_aula05e06_topicos.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 199.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 199.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 199.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 200.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 200.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 200.
  ) 
 Here is how much of TeX's memory you used:
- 12991 strings out of 494944
- 186769 string characters out of 6180677
- 288498 words of memory out of 5000000
- 16044 multiletter control sequences out of 15000+600000
- 59780 words of font info for 69 fonts, out of 8000000 for 9000
+ 12998 strings out of 494944
+ 186864 string characters out of 6180677
+ 288512 words of memory out of 5000000
+ 16042 multiletter control sequences out of 15000+600000
+ 55971 words of font info for 73 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 35i,15n,43p,1012b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/shar
-e/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/te
-xmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr
-17.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmsy10.pfb>
-Output written on ProbabilidadeEstatistica_aula05e06_topicos.pdf (2 pages, 3142
-59 bytes).
+ 35i,15n,43p,1020b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/f
+onts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
+Output written on ProbabilidadeEstatistica_aula05e06_topicos.pdf (2 pages, 3232
+47 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
  25 named destinations out of 1000 (max. 500000)
  12387 words of extra memory for PDF output out of 14400 (max. 10000000)
 
