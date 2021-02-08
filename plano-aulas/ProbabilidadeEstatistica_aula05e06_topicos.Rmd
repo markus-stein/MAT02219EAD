@@ -48,13 +48,16 @@ knitr::opts_chunk$set(echo = TRUE)
 <!-- \vspace{0.5cm} -->
 
 ### Medidas de posição (ou localização) (Seção 3.1, Livro Bussab e Morettin)
-Onde se concentra a maioria dos dados
+Onde está o centro da distribuição de frequências? Ou qual o valor central dos dados? Ou onde se concentra a maioria dos dados?  
+
 * Média aritmética: ponderada $\times$ simples;
     + outros tipos de médias: geométrica, harmônica, ...;
     + em estatística: $\overline x =$ *média aritmética simples*.
 * Mediana ($Md$)
 * Moda ($Mo$)
-    + Interpretações???
+    + Interpretações???  
+
+No `R` podemos calcular média e mediana usando as funções `mean()` e `median()`. E para moda?
 
 ### Medidas separatrizes (Seção 3.3, Livro Bussab e Morettin)
 * Quantis: quartis, decis, percentis;
@@ -62,6 +65,7 @@ Onde se concentra a maioria dos dados
 
 ### Medidas de dispersão (ou variabilidade) (Seção 3.2, Livro Bussab e Morettin)
 Qual o grau de dispersão/variabilidade/espalhamento dos dados?  
+
 * Amplitude total ($a_t$)
 * Amplitude interquartílica ($a_q$)
 * Variância ($s^2$)
