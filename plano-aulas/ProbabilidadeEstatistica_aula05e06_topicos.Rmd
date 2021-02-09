@@ -27,64 +27,48 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # (... cont.) Estatística Descritiva
 
-
 ## Medidas Descritivas (capítulo 3, Livro Bussab e Morettin)
 * Tabelas e gráficos $\times$ resumos numéricos (medidas descritivas).
 * Como descrever o comportamento dos dados usando apenas números?
     + Para que tipos de variáveis podemos calcular?
         
-<!-- **Exemplo 1**: Variável em estudo ($X$) - duração de vida de um tipo de lâmpada, $X \in (0, \infty)$. -->
-<!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$. -->
-
-<!-- **Exemplo 2**: Variável em estudo ($X$) - PIB do Brasil, $X \in \mathbb{R}$. -->
-<!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$. -->
-
-<!-- **Exemplo 3**: Variável em estudo ($X$) - avaliação do governo, positiva ou negativa, $X \in \{0, 1\}$. -->
-<!-- , $X \sim Bernoulli(\pi)$. $E(X) = \pi$. -->
-
-<!-- **Exemplo 4**: $Y$ (consumo) e $X$ (renda), ... -->
-<!-- $E(Y) = \alpha + \beta X$. -->
-
-<!-- \vspace{0.5cm} -->
-
 ### Medidas de posição (ou localização) (Seção 3.1, Livro Bussab e Morettin)
-Onde está o centro da distribuição de frequências? Ou qual o valor central dos dados? Ou onde se concentra a maioria dos dados?  
+Onde está o centro da distribuição de frequências? Ou qual o valor central dos dados? Ou qual o valor de maior frequência?  
 
-* Média aritmética: ponderada $\times$ simples;
+* Média aritmética: ponderada $\times$ simples; em estatística, $\overline x =$ *média aritmética simples*.
     + outros tipos de médias: geométrica, harmônica, ...;
-    + em estatística: $\overline x =$ *média aritmética simples*.
-* Mediana ($Md$)
-* Moda ($Mo$)
+* Mediana ($md$)
+* Moda ($mo$)
     + Interpretações???  
 
-No `R` podemos calcular média e mediana usando as funções `mean()` e `median()`. E para moda?
+**Exemplo 1**: Variável em estudo - tempos (em segundos) de
+reação a um alarme de incêndio (Slides 1-4 página 17). Qual o tipo de variável?  
+
+No software `R` podemos calcular média e mediana usando as funções `mean()` e `median()`. (E para moda?)
+
+```{r exemplo,results='hold'}
+x <- c(12, 9, 11, 7, 9, 14, 6, 10)
+mean(x); median(x); names(table(x))[which.max(table(x))]
+```
 
 ### Medidas separatrizes (Seção 3.3, Livro Bussab e Morettin)
 * Quantis: quartis, decis, percentis;
     + dividem os dados em grupos de mesma frequência.
+* Quartis: três valores que dividem as observações em quatro grupos, $q_1, q_2 = md, q_3$.
 
 ### Medidas de dispersão (ou variabilidade) (Seção 3.2, Livro Bussab e Morettin)
 Qual o grau de dispersão/variabilidade/espalhamento dos dados?  
 
-* Amplitude total ($a_t$)
-* Amplitude interquartílica ($a_q$)
-* Variância ($s^2$)
-* Desvio padrão ($s$)
-* Coeficiente de variação ($cv$)
+* Amplitude total ($a_t$) e amplitude interquartílica ($a_q$);
+* Variância ($s^2$) e desvio padrão ($s$);
+* Coeficiente de variação ($cv$).
+
+No `R` os comandos `var()` e `sd()` calculam a variância e o desvio padrão (ambos usam denominador $n-1$).
 
 ### Medidas de formato (slides 1-4, página 50)
-* Assimetria e curtose
-    + Medidas de posição e dispersão são as duas principais, mas outras medidas podem ser de interesse ao se comparar distribuições de dados.
-
-<!-- \vspace{0.5cm} -->
-
-<!-- **Exemplo 4**: Variável em estudo - número de filhos por casal (Slides 1-2 página 4).   -->
-<!-- No software `R` o comando `table()` retorna as frequências absolutas simples.   -->
-
-<!-- ```{r exemplo} -->
-<!-- x <- c(2, 5, 6, 0, 4, 4, 3, 4, 2, 2, 3, 3, 5, 3, 5, 1, 2, 4, 2, 3, 5, 4, 3, 3, 2, 3, 0, 4, 4, 3, 4, 0, 2, 0, 2, 3, 3, 1, 2, 4, 2, 2, 4, 4, 2, 2, 2, 3, 3, 3, 2, 2, 3, 1, 2, 0, 1, 3, 1, 2, 2, 2, 0, 3, 3, 4, 2, 2, 1, 3, 3, 1, 2, 3, 1, 1, 3, 2, 2, 0, 3, 2, 1, 3, 0, 3, 2, 2, 1, 2, 2, 2, 3, 2, 2, 1, 2, 2, 3, 0, 1, 0, 3, 2, 2, 1, 0, 2, 0, 2, 1, 4, 0, 3, 3, 3, 3, 3, 3, 0, 4, 3, 1, 2, 3, 2, 0, 2, 5, 3, 1, 0, 0, 2, 1, 3, 3, 2, 2, 0, 2, 2, 2, 3, 2, 3, 3, 1, 1, 3, 1, 2, 2, 0, 2, 4, 2, 2, 2, 3, 1, 2, 3, 2, 0, 3, 2, 1, 2, 3, 3, 1, 0, 4, 1, 2, 1, 3, 4, 4, 0, 0, 1, 1, 3, 4, 1, 2, 1, 4, 6, 0, 0, 3, 1, 2, 4, 0, 2, 2, 1, 5, 2, 0, 1, 3, 0, 1, 1, 0, 3, 2, 2, 2, 0, 3, 2, 2, 4, 5, 2, 0, 1, 0, 2, 3, 3, 0, 2, 2, 1, 3, 3, 1, 2, 2, 0, 1, 2, 1, 1, 1, 3, 2, 2, 2, 2, 2, 5, 0, 2, 2, 3, 1, 0, 2, 2, 2, 1, 3, 2, 0, 1, 4, 1, 4, 2, 3, 2, 3, 3, 3, 1, 2, 2, 1, 2, 4, 0, 4, 2, 2, 1, 1, 2, 2, 2, 0, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 0, 0, 3, 0, 0, 3, 2, 3, 0, 0, 3, 3, 4, 0, 4, 2, 2, 4, 3, 4, 2, 1, 1, 2, 0, 0, 0, 4, 3, 3, 2, 0, 0, 2, 1, 3, 2, 2, 3, 0, 0, 3, 3, 0, 3, 0, 1, 2, 2, 1, 3) -->
-<!-- table(x) -->
-<!-- ``` -->
+* Assimetria e curtose:
+    + medidas de posição e dispersão são as duas principais, quando ha simetria nos dados; 
+    + mas sob assimetria outras medidas podem ser de interesse ao se comparar distribuições de dados.
 
 <!-- \vspace{0.5cm} -->
 
@@ -94,50 +78,28 @@ Qual o grau de dispersão/variabilidade/espalhamento dos dados?
         
         
 ## Análise Exploratória de Dados (AED)
-
-### Resumo de Cinco Números
+### Resumo de Cinco Números (Slides 1-5, página 3)
 * O que os quartis, juntamente com o mínimo e o máximo, nos dizem sobre a simetria dos dados?
-    + Dispersão inferior e superior
+    + Cinco números: $\left( x_{(1)}, q_1, q_2, q_3 \right.$ e $\left. x_{(n)} \right)$
+    + Dispersão inferior e dispersão superior: $di = q_2 - x_{(1)}$ e $ds = x_{(n)} - q_2$.
         
-### Valores atípicos (*Outliers*)? (Slides 1-2, página 13) -->
-Como identificar valores que fogem ao comportamento da maioria da maioria das observações?
-* 
+### Valores atípicos (*Outliers*) (Slides 1-5, página 10)
+Como identificar valores que fogem ao comportamento da maioria da maioria das observações?  
 
-### Gráfico de Caixa (*Boxplot*)
-* Reúne informações sobre posição, dispersão, simetria, valores atípicos, ...
 * Calcular a cerca (limite) inferior e a cerca (limite) superior:
+    + $ci = q_1 - 1,5 \times a_q$ e $cs = q_1 + 1,5 \times a_q$;
+* Valores compreendidos entre as cercas (limites) são chamados *valores adjacentes*; 
+* Valores abaixo de $ci$ e acima de $cs$ são chamados *outliers* ou *valores atípicos*. 
+    
+### Gráfico de Caixa (*Boxplot*) (Seção 3.2, Livro Bussab e Morettin)
+* Reúne informações sobre posição, dispersão, simetria, valores atípicos, ...
 
 
-<!-- * Para variáveis **numéricas contínuas**, ou **discretas** com muitos valores diferentes (mais do que 15), -->
+## Qual a melhor maneira de descrever conjuntos de observações? 
+* Tabelas. gráficos, medidas resumo, ... depende do tipo de variável;
+    + o que vemos na disciplina é apenas uma introdução a essas ideias.
 
-<!-- * Quantas classes/intervalos devemos usar? $k$: número de intervalos. -->
-<!--     + Regra epírica: $k = \sqrt{n}$ -->
-<!--     + Regra de Sturges: $k = 1 + 3,32 \times \log n$ -->
-
-
-<!-- ## Representações Gráficas (Seção 2.3, Livro Bussab e Morettin) -->
-<!-- * Gráficos $\times$ tabelas -->
-
-<!-- ### Principais tipos de gráficos (Slides 1-3, página 3) -->
-<!-- * Variáveis qualitativas: gráfico de barras, ou setores ("pizza"), ...(nuvem de palavras); -->
-<!-- * Variáveis quantitativas: gráfico de colunas, linhas, diagrama de pareto histograma, polígono de frequências. -->
-
-<!--  (o `R` usa a regra de Sturges para construir o histograma, comando `hist()`) -->
-
-
-<!-- ## Normas de apresentação de tabelas e gráficos -->
-<!-- * Tabelas: Título, cabeçalho, formato, ... -->
-<!-- * Gráficos: Título, nome nos eixos, ... -->
-<!--     + Trabalhos técnicos, trabalhos de conclusão de curso, monografias, ..., devem respeitar normas estabelecidas pela Associação Brasileira de Normas Técnicas (ABNT). -->
-
-
-
-<!-- ## Cuidado para não ser enganado por gráficos (nem enganar)! -->
-<!-- Podemos usar nosso conhecimento para ajudar a não propagar representações gráficas que distorcem a comportamento real dos dados. -->
-
-
-<!-- \vspace{0.5cm} -->
-
+\vspace{0.5cm}
 
 ***
 ## Ler slides e ver vídeos da semana 3.
@@ -156,4 +118,14 @@ Como identificar valores que fogem ao comportamento da maioria da maioria das ob
 <!-- barplot(table(x)) -->
 <!-- ``` -->
 
-<!-- Como incluir título e nomes nos eixos??? -->
+**Exemplo 4**: Variável em estudo - gasto (em reais) em supermercado por pessoa (Slides 1-5, página 18). Qual o tipo de variável?  
+
+No `R` as funções `summary()` e `boxplot()` retornam o resumo de cinco números e o gráfico de caixas.
+
+```{r exemplo2}
+x <- c(9.26, 10.81, 3.11, 85.76, 70.32, 82.70, 18.43, 19.54, 23.04, 24.47, 26.24, 26.26, 24.58, 28.38, 28.06, 28.08, 25.13, 27.65, 32.03, 36.37, 19.27, 19.50, 18.36, 52.75, 61.22, 86.37, 93.34, 22.22, 20.16, 20.59, 54.80, 59.07, 50.39, 45.40, 44.08, 44.67, 38.64, 42.97, 46.69, 48.65, 39.16, 41.02, 38.98, 15.62, 13.78, 15.23, 8.88, 12.69, 17.00, 17.39)
+summary(x)
+boxplot(x)
+```
+
+Como incluir título e nomes nos eixos???
