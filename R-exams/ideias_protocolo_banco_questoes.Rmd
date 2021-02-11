@@ -1,0 +1,63 @@
+---
+title: "Colaboração na criação de questões usando `R`-`exams`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Construção do Banco de Questões
+* Objetivos: 
+    + criar questões usando o pacote `exams` do `R`;
+    + construir um protocolo 
+
+* Para colaboração na criação de banco/questões é fundamental ter um procedimento uniforme:
+    + Na criação e teste das questões;
+    + Na revisão e inclusão da versão final
+
+* Nossas questões serão todas aleatorizadas no banco final.
+
+### Passos 
+
+**1. Nome das questões**  
+
+* devem indicar: 
+    + tipo da questão do `exams`; 
+    + área do conteúdo da disciplina; 
+    + contexto ou área do conhecimento
+    + e nível de dificuldade?
+    
+* Por exemplo: `s_amostragem-definicoes_quais-corretas.Rmd`.
+    + `s` - para questão *single-choice*;
+    + `amostragem-definicoes` - a área do conteúdo;
+    + `quais-corretas` - nesse caso diz o tipo de pergunta no enunciado (*se trata de uma questão teórica*).
+
+* Outro exemplo: `s_IC-2medias_fosforo-solo.Rmd`.    
+
+
+**2. Criação das questões**
+
+* Arquivos `.Rmd`;
+
+
+**3. Teste das questões**
+
+* *stress-test*.
+
+
+**4. Revisão das questões**
+
+* Importante outras pessoas (além de quem desenvolveu) testem as questões antes de serem incluídas no banco final.
+
+
+**5. Inclusão da versão final no banco**
+
+
+
+### Referências
+* Zeileis A, Umlauf N, Leisch F (2014). Flexible Generation of E-Learning Exams in R: Moodle Quizzes, OLAT Assessments, and Beyond. Journal of Statistical Software, 58(1), 1–36. - https://www.jstatsoft.org/article/view/v058i01
+
+* R/exams: A One-for-All Exams Generator: Written Exams, Online Tests, and Live Quizzes with R - https://eeecon.uibk.ac.at/~zeileis/papers/eRum-2018.pdf
+
+* Stress Testing Dynamic R/exams Exercises - http://www.r-exams.org/tutorials/stresstest/
