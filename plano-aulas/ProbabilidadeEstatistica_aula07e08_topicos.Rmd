@@ -68,8 +68,8 @@ Conjunto de possíveis resultados do experimento.
 * Teoremas/Propriedades  (seção 5.2, Livro Bussab e Morettin)
 
 ## Probabilidade Condicional e Independência (seção 5.3, Livro Bussab e Morettin)
-* Eventos condicionados: probabilidade de ocorrer $A$ dado que $B$ ocorreu, $P(\left. A \right| B) = \frac{P(a \cap B)}{B}$;
-    + eventos independentes $P(\left. A \right| B) = P(A) \times P(B)$.
+* Eventos condicionados: probabilidade de ocorrer $A$ dado que $B$ ocorreu, $P(\left. A \right| B) = \frac{P(A \cap B)}{P(B)}$;
+    + eventos independentes $P(A \cap B) = P(A) \times P(B)$, então $P(\left. A \right| B) = P(A)$.
 
 ## Teorema da Probailidade Total e Teorema de Bayes (seção 5.4, Livro Bussab e Morettin)
 * Partição do espaço amostral: seja $B_1, B_2, B_3, \ldots, B_k$ (para $k \in \mathbb{N}$) uma partição do espaço amostral $\Omega$, então
@@ -88,7 +88,7 @@ $$ P(A) = \sum_{i=1}^k P(A \cap B_i) = \sum_{i=1}^k P(B_i) \times P(\left. A \ri
 *"Também é possível calcular a probabilidade de ocorrência de uma partição $B_i$ dado que um evento $A$ ocorreu."*
 
 **Teorema**: Seja $A$ um evento definido no espaço amostral $\Omega$ associado ao experimento $E$ e $B_1, B_2, B_3, \ldots, B_k$ uma partição de $\Omega$, então
-$$ P (\left. B_i \right| A) = \frac{P(B_i \ cap A)}{P(A)} = \frac{P(B_i) \times P(\left. A \right| B_i)}{\sum_{i=1}^k P(B_i) \times P(\left. A \right| B_i)}.$$
+$$ P (\left. B_i \right| A) = \frac{P(B_i \cap A)}{P(A)} = \frac{P(B_i) \times P(\left. A \right| B_i)}{\sum_{i=1}^k P(B_i) \times P(\left. A \right| B_i)}.$$
 
 * Probabilidade subjetiva (seção 5.5, Livro Bussab e Morettin)
 * Thomas Bayes $\Rightarrow$ Inferência Bayesiana (diferente da visão clássica de inferência, não cobrimos no curso);
