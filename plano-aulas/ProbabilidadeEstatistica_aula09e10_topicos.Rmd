@@ -30,7 +30,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Relembrar:
 
 * Introdução
-    + população, amostra;
+    + população e amostra;
     + tipos de estudos;
     + amostragem;
 
@@ -47,6 +47,9 @@ Relembrar:
     + probabilidade condicional e independência;
     + teoremas da probabilidade total e de Bayes.
     
+\vspace{0.5cm}
+
+Usar o **formulário** para resolução das questões.
 
 \vspace{0.5cm}
 
@@ -55,7 +58,7 @@ Relembrar:
 \vspace{0.5cm}
 
 ***
-## Rever planos, slides e vídeos.
+## Rever planos de aula, slides e vídeos.
 ## Fazer o simulado para a prova 1 - VALE PONTO EXTRA!!!
 ## Fazer a prova 1 até o dia 28/02.
 ***

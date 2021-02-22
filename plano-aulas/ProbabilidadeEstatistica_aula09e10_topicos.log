@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.21)  21 FEB 2021 20:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.21)  22 FEB 2021 09:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -538,12 +538,12 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 <logoIME.png, id=20, 521.95pt x 226.8475pt>
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 159.
+Package pdftex.def Info: logoIME.png  used on input line 163.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 <logoEAD.png, id=21, 313.17pt x 154.77824pt>
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png  used on input line 159.
+Package pdftex.def Info: logoEAD.png  used on input line 163.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -560,12 +560,12 @@ ftex.map}
 .aux)
 Package rerunfilecheck Info: File `ProbabilidadeEstatistica_aula09e10_topicos.o
 ut' has not changed.
-(rerunfilecheck)             Checksum: 12C9F6E6035D181479B240A032214F25;1006.
+(rerunfilecheck)             Checksum: 82D7B59D832EDFAAE584CDF8169F50B0;1052.
  ) 
 Here is how much of TeX's memory you used:
  10050 strings out of 480971
- 147757 string characters out of 5906168
- 452745 words of memory out of 5000000
+ 147773 string characters out of 5906168
+ 453753 words of memory out of 5000000
  27094 multiletter control sequences out of 15000+600000
  437049 words of font info for 51 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -577,8 +577,8 @@ m/lmbx10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/pu
 blic/lm/lmbx12.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/ty
 pe1/public/lm/lmr10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fon
 ts/type1/public/lm/lmr17.pfb>
-Output written on ProbabilidadeEstatistica_aula09e10_topicos.pdf (1 page, 27389
-7 bytes).
+Output written on ProbabilidadeEstatistica_aula09e10_topicos.pdf (1 page, 27480
+6 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  49 compressed objects within 1 object stream
