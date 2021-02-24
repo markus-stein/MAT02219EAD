@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.21)  24 FEB 2021 07:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.21)  24 FEB 2021 07:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -535,19 +535,27 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
 (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 176--178
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 173.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 173.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 173.
 
+Underfull \hbox (badness 10000) in paragraph at lines 172--175
+[]\T1/lmr/m/n/10 slides: []$https : / / github . com / markus -[] stein / MAT02
+219EAD / blob / master / exercicios -[] resolvidos /
  []
 
-<logoIME.png, id=24, 521.95pt x 226.8475pt>
+<logoIME.png, id=25, 521.95pt x 226.8475pt>
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 178.
+Package pdftex.def Info: logoIME.png  used on input line 179.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
-<logoEAD.png, id=25, 313.17pt x 154.77824pt>
+<logoEAD.png, id=26, 313.17pt x 154.77824pt>
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png  used on input line 178.
+Package pdftex.def Info: logoEAD.png  used on input line 179.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -560,36 +568,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pd
 ftex.map}
 
- <./logoIME.png> <./logoEAD.png>]
-File: logoIME.png Graphic file (type png)
-<use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 182.
-(pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
-File: logoEAD.png Graphic file (type png)
-<use logoEAD.png>
-Package pdftex.def Info: logoEAD.png  used on input line 182.
-(pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 55.02469pt, for example:
-(fancyhdr)                \setlength{\headheight}{55.02469pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-43.02469pt}.
-
-[2] (./ProbabilidadeEstatistica_aula09e10_topicos.aux)
+ <./logoIME.png> <./logoEAD.png>] (./ProbabilidadeEstatistica_aula09e10_topicos
+.aux)
 Package rerunfilecheck Info: File `ProbabilidadeEstatistica_aula09e10_topicos.o
 ut' has not changed.
 (rerunfilecheck)             Checksum: 528152C1312A99794C9723D3F06FAEEF;1217.
  ) 
 Here is how much of TeX's memory you used:
- 10055 strings out of 480971
- 147851 string characters out of 5906168
- 453798 words of memory out of 5000000
- 27096 multiletter control sequences out of 15000+600000
- 437049 words of font info for 51 fonts, out of 8000000 for 9000
+ 10082 strings out of 480971
+ 148140 string characters out of 5906168
+ 455798 words of memory out of 5000000
+ 27114 multiletter control sequences out of 15000+600000
+ 449080 words of font info for 66 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,15n,74p,427b,475s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,15n,74p,427b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.
 enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-t
 s1.enc}<c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/l
@@ -597,11 +589,11 @@ m/lmbx10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/pu
 blic/lm/lmbx12.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/ty
 pe1/public/lm/lmr10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fon
 ts/type1/public/lm/lmr17.pfb>
-Output written on ProbabilidadeEstatistica_aula09e10_topicos.pdf (2 pages, 2758
-06 bytes).
+Output written on ProbabilidadeEstatistica_aula09e10_topicos.pdf (1 page, 27598
+4 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
+ 68 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

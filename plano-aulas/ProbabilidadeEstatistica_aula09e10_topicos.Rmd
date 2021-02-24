@@ -55,7 +55,7 @@ Usar o **formulário** para resolução das questões.
 
 **Boa avaliação!!!**
 
-\vspace{0.5cm}
+<!-- \vspace{0.5cm} -->
 
 ***
 ## Rever planos de aula, slides e vídeos.
@@ -63,12 +63,12 @@ Usar o **formulário** para resolução das questões.
 ## Fazer a prova 1 até o dia 28/02.
 ***
 
-\vspace{0.5cm}
+<!-- \vspace{0.5cm} -->
 
 
 ## Exercícios resolvidos
 * Probabilidade e sorteio sequencial, sem reposição
-    + slides:  
+    + slides: https://github.com/markus-stein/MAT02219EAD/blob/master/exercicios-resolvidos/exercicio-resolvido_sorteio-sequencial-caixas.pdf
     + video: 
 
 
