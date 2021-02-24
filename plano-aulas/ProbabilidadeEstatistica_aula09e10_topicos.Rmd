@@ -61,16 +61,29 @@ Usar o **formulário** para resolução das questões.
 ## Rever planos de aula, slides e vídeos.
 ## Fazer o simulado para a prova 1 - VALE PONTO EXTRA!!!
 ## Fazer a prova 1 até o dia 28/02.
-***
+***  
 
-<!-- \vspace{0.5cm} -->
 
+\clearpage
+
+
+\vspace{5.0cm}
 
 ## Exercícios resolvidos
+
+
+\vspace{2.0cm}
+
+## Exercícios resolvidos
+Pasta com slides de soluções de exercícios: em https://github.com/markus-stein/MAT02219EAD/tree/master/exercicios-resolvidos
+
 * Probabilidade e sorteio sequencial, sem reposição
     + slides: https://github.com/markus-stein/MAT02219EAD/blob/master/exercicios-resolvidos/exercicio-resolvido_sorteio-sequencial-caixas.pdf
-    + video: 
+    + video: https://youtu.be/G27cskmrTyw
 
+<!-- * Probabilidade e sorteio sequencial, sem reposição -->
+<!--     + slides: https://github.com/markus-stein/MAT02219EAD/blob/master/exercicios-resolvidos/exercicio-resolvido_sorteio-sequencial-caixas.pdf -->
+<!--     + video: https://youtu.be/G27cskmrTyw -->
 
 
 
