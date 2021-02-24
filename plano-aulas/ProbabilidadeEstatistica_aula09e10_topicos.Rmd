@@ -63,6 +63,19 @@ Usar o **formulário** para resolução das questões.
 ## Fazer a prova 1 até o dia 28/02.
 ***
 
+\vspace{0.5cm}
+
+
+## Exercícios resolvidos
+* Probabilidade e sorteio sequencial, sem reposição
+    + slides:  
+    + video: 
+
+
+
+
+
+
 <!-- Definição **A.A.S**: Seja $X_1, X_2, \ldots, X_n$ uma a.a.s. de tamanho $n$ de $X \sim f(x; \theta)$, então $X_1 \sim f(x; \theta)$, ..., $X_n \sim f(x; \theta)$ e $X_i$ e $X_j$ são independentes para todo $i \neq j$. -->
 
 <!-- \vspace{0.5cm} -->
