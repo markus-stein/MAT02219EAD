@@ -84,6 +84,11 @@ Pasta com slides de soluções de exercícios: em https://github.com/markus-stei
 * Probabilidade condicional de dois eventos
     + slides: https://github.com/markus-stein/MAT02219EAD/blob/master/exercicios-resolvidos/exercicio-resolvido_probabilidade-condicional-conceito-concurso.pdf
     + video: em breve
+    
+* Probabilidade Sorteio Condicional
+    + slides: https://github.com/markus-stein/MAT02219EAD/blob/master/exercicios-resolvidos/exercicio-resolvido_probabilidade-sorteio-condicional-urna-duas-moedas.pdf
+    + video: em breve
+
 
 <!-- * Probabilidade e sorteio sequencial, sem reposição -->
 <!--     + slides: https://github.com/markus-stein/MAT02219EAD/blob/master/exercicios-resolvidos/exercicio-resolvido_sorteio-sequencial-caixas.pdf -->

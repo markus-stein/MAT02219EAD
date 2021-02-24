@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.21)  24 FEB 2021 09:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.21)  24 FEB 2021 14:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -575,13 +575,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 195--198
 219EAD / blob / master / exercicios -[] resolvidos /
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--209
+[]\T1/lmr/m/n/10 slides: []$https : / / github . com / markus -[] stein / MAT02
+219EAD / blob / master / exercicios -[] resolvidos /
+ []
+
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 202.
+Package pdftex.def Info: logoIME.png  used on input line 213.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png  used on input line 202.
+Package pdftex.def Info: logoEAD.png  used on input line 213.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -601,7 +607,7 @@ ut' has not changed.
 Here is how much of TeX's memory you used:
  10087 strings out of 480971
  148222 string characters out of 5906168
- 452843 words of memory out of 5000000
+ 453843 words of memory out of 5000000
  27116 multiletter control sequences out of 15000+600000
  449080 words of font info for 66 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -613,11 +619,11 @@ m/lmbx10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/pu
 blic/lm/lmbx12.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/ty
 pe1/public/lm/lmr10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fon
 ts/type1/public/lm/lmr17.pfb>
-Output written on ProbabilidadeEstatistica_aula09e10_topicos.pdf (2 pages, 2774
-41 bytes).
+Output written on ProbabilidadeEstatistica_aula09e10_topicos.pdf (2 pages, 2775
+63 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
  15 named destinations out of 1000 (max. 500000)
  59 words of extra memory for PDF output out of 10000 (max. 10000000)
 
