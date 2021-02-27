@@ -1,0 +1,70 @@
+---
+title: "Comentários para resolução de exercício boxplot no R"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\pagestyle{fancyplain} 
+\lhead{\includegraphics[height=1.5cm]{logoIME.png}}
+\rhead{\includegraphics[height=1.5cm]{logoEAD.png}}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+
+## Exercício 15 da lista 1.4 e 1.6
+
+a) Os dados da empresa $A$ são inseridos no `R` criando um objeto, aqui chamado de `dados`, na forma
+```{r dados-steup}
+dados <- c( 1.8, 2.5, 0.4, 1.9, 4.4, 2.2, 3.5, 0.2, 0.9, 1.1, 1.7, 1.2, 2.3, 1.9, 
+            0.8, 1.5, 1.7, 1.4, 3.2, 15.1, 2.1, 1.4, 0.5, 0.9, 1.7, 0.5, 0.8, 
+            1.4, 1.8, 2.0, 1.1, 1.0, 0.8, 1.4, 2.1, 3.7)
+n <- length(dados)
+```
+*(por fim usamos o comando `length()` para guardar número de observação no objeto `n`)*   
+
+Para calcular as cercas temos $n = `r n`$ e podemos obter os quartis  
+
+* manualmente, ordenando os dados com o comando `order()` e calculando as posições,
+no nosso caso temos (*comando `mean()` para calcualr médias*)
+```{r quantile1}
+dados_ord <- dados[order(dados)]
+dados_ord
+q1 <- mean( dados_ord[n/4], dados_ord[(n/4)+1])
+q2 <- mean( dados_ord[n/2], dados_ord[(n/2)+1])
+q3 <- mean( dados_ord[3*n/4], dados_ord[(3*n/4)+1])
+aq <- q3 - q1
+```
+assim, $q_1 = `r format(round(q1+0.00001, 2), digits=2)  `$ $q_2 = `r round(q2, 2)`$ e $q_3 = `r round(q3, 2)`$. E amplitude interquartílica $a_q = `r q3 - q1`$. Além dos mínimos e máximos, $EI = `r min(dados)`$ e $ES = `r max(dados)`$ (*comandos `min()` e `max()`*).
+
+* ou usando o comando `quantile()` (*o método utilizado pelo `R` pode diferir um pouco do resultados com as fórmulas que usamos na disciplina*)
+```{r quantile2}
+quantile(dados)
+```
+Assim a cerca inferior $CI = `r q1 - 1.5 * aq`$ e a superior $CS = `r q3 + 1.5 * aq`$.
+
+\clearpage
+\vspace{1cm}
+
+Por fim, para construir o boxplot utilizamos o comando `boxplot()`,
+```{r dados}
+boxplot(dados)
+```
+
+b) Dado que a empresa $B$ apresentou $q_1 = 1,6$, $q_2 = 2,8$, $q_3 = 4,2$, e $EI = 0,4$ e $ES = 8,8$, então podemos comparar (*as duas primeiras perguntas são fundamentais para a resposta*)
+
+* Qual empresa tende a apresentar maior/menor deslocamento entre o trabalho e a residência dos funcionário? Ou seja, qual empresa possui maior/menor mediana?
+
+* Em qUal empresa o deslocamente various mais/menos? Indicar qual empresa possui maior/menor amplitude interquartílica.
+
+* A distribuição dos deslocamentos tende a ser mais/menos uniforme em qual empresa? Falar sobre (as)simetria.
+
+* Quais os menores e maiores deslocamentos? São atípicos? Comentar mínimos e máximos de cada empresa, e valores atípicos/*outliers*.
+
+
+\vspace{1cm}
+
+
+---
+Primeiro contato com o software `R`: como baixar e iniciar o `R`? em https://htmlpreview.github.io/?https://github.com/markus-stein/MAT02219EAD/blob/master/R-exams/TutorialR.html
