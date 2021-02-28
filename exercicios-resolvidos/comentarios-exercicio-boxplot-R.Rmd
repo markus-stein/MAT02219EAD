@@ -48,15 +48,15 @@ Assim a cerca inferior $CI = `r q1 - 1.5 * aq`$ e a superior $CS = `r q3 + 1.5 *
 \vspace{1cm}
 
 Por fim, para construir o boxplot utilizamos o comando `boxplot()`,
-```{r dados}
+```{r dados, fig.height=5, fig.width=6, fig.align='center'}
 boxplot(dados)
 ```
 
 b) Dado que a empresa $B$ apresentou $q_1 = 1,6$, $q_2 = 2,8$, $q_3 = 4,2$, e $EI = 0,4$ e $ES = 8,8$, então podemos comparar (*as duas primeiras perguntas são fundamentais para a resposta*)
 
-* Qual empresa tende a apresentar maior/menor deslocamento entre o trabalho e a residência dos funcionário? Ou seja, qual empresa possui maior/menor mediana?
+* Qual empresa tende a apresentar maior/menor deslocamento entre o trabalho e a residência dos funcionários? Ou seja, qual empresa possui maior/menor mediana, quartis,...?
 
-* Em qUal empresa o deslocamente various mais/menos? Indicar qual empresa possui maior/menor amplitude interquartílica.
+* Em qUal empresa o deslocamento variou mais/menos? Indicar qual empresa possui maior/menor amplitude interquartílica.
 
 * A distribuição dos deslocamentos tende a ser mais/menos uniforme em qual empresa? Falar sobre (as)simetria.
 
