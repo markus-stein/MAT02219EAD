@@ -1,0 +1,88 @@
+---
+title: "Plano Aula 11 e 12"
+# author: "Markus Stein"
+# date: "01 March 2021"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+<!-- \addtolength{\headheight}{1.0cm}  -->
+\pagestyle{fancyplain} 
+\lhead{\includegraphics[height=1.5cm]{logoIME.png}}
+\rhead{\includegraphics[height=1.5cm]{logoEAD.png}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02219 - Probabilidade e Estatística - 2020/2
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+(...continuiação probabilidade)
+# Variáveis Aleatórias
+* Geralmente denotados por $X$, $Y$, ...
+    + O espaço amostral é sempre um conjunto numérico. $X: \Omega \rightarrow \Omega_X$
+
+**Exemplo 1**: $X$: duração de vida de um tipo de lâmpada, $X \in (0, \infty)$.
+<!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$.   -->
+
+**Exemplo 2**: $X$: PIB do Brasil, $X \in \mathbb{R}$.
+<!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$.   -->
+
+**Exemplo 3**: $X$: avaliação do governo, positiva ou negativa, $X \in \{0, 1\}$.
+<!-- , $X \sim Bernoulli(\pi)$. $E(X) = \pi$.   -->
+
+**Exemplo 4**: $Y$ (consumo) e $X$ (renda), ...
+<!-- $E(Y) = \alpha + \beta X$.   -->
+
+## Variáveis aleatórias discretas (capítulo 6, Livro Bussab e Morettin)
+Definição:
+
+### Função (Massa) de Probabilidade
+
+### Valor Médio ou Esperança da Variável (seção 6.3, Livro Bussab e Morettin)
+* Proprieadades
+* Variância
+
+### Função de Distribuição (Acumulada) de Probabilidade
+
+### Pirncipais Modelos de V.A. Discretas
+
+
+\vspace{0.5cm}
+
+***
+## Ler slides e ver vídeos da semana 6.
+## Fazer lista de exercícios 2-1.
+## Fazer o Quiz da semana 6 - VALE NOTA!!!
+***  
+
+
+<!-- Definição **A.A.S**: Seja $X_1, X_2, \ldots, X_n$ uma a.a.s. de tamanho $n$ de $X \sim f(x; \theta)$, então $X_1 \sim f(x; \theta)$, ..., $X_n \sim f(x; \theta)$ e $X_i$ e $X_j$ são independentes para todo $i \neq j$. -->
+
+<!-- \vspace{0.5cm} -->
+
+<!-- Exercício 6 da Lista 1-2 e 1-3: -->
+<!-- ```{r exemplo2, fig.width=4, fig.height=3, fig.align='center'} -->
+<!-- x <- c(4, 5, 5, 6, 7, 8, 9, 17, 16, 10, 7, 9, 12, 14, 13, 8, 10, 6, 8, 15, 13, 17, 9, 5, 8, 4, 15, 17, 8, 11, 8, 10, 12, 13, 11, 8, 7, 6, 5, 16, 15, 9, 8, 9, 14, 13, 7, 8, 5, 8) -->
+<!-- table(x) -->
+<!-- barplot(table(x)) -->
+<!-- ``` -->
+
+<!-- **Exemplo 4**: Variável em estudo - gasto (em reais) em supermercado por pessoa (Slides 1-5, página 18). Qual o tipo de variável?   -->
+
+<!-- No `R` as funções `summary()` e `boxplot()` retornam o resumo de cinco números e o gráfico de caixas. -->
+
+<!-- ```{r exemplo2} -->
+<!-- x <- c(9.26, 10.81, 3.11, 85.76, 70.32, 82.70, 18.43, 19.54, 23.04, 24.47, 26.24, 26.26, 24.58, 28.38, 28.06, 28.08, 25.13, 27.65, 32.03, 36.37, 19.27, 19.50, 18.36, 52.75, 61.22, 86.37, 93.34, 22.22, 20.16, 20.59, 54.80, 59.07, 50.39, 45.40, 44.08, 44.67, 38.64, 42.97, 46.69, 48.65, 39.16, 41.02, 38.98, 15.62, 13.78, 15.23, 8.88, 12.69, 17.00, 17.39) -->
+<!-- summary(x) -->
+<!-- boxplot(x) -->
+<!-- ``` -->
+
+<!-- Como incluir título e nomes nos eixos??? -->
