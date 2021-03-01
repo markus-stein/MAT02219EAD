@@ -26,8 +26,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 (...continuiação probabilidade)
 # Variáveis Aleatórias
-* Geralmente denotados por $X$, $Y$, ...
-    + O espaço amostral é sempre um conjunto numérico. $X: \Omega \rightarrow \Omega_X$
+* Geralmente denotadas por $X$, $Y$, $Z$, ...
+    + Definição **variável aleatória (v.a.)**: denominamos variável aleatória a função que transforma um espaço amostral qualquer em um espaço amostral numérico, $X: \Omega \rightarrow \Omega_X$, um subconjunto dos números reais.
+    + discretas $\times$ contínuas;
 
 **Exemplo 1**: $X$: duração de vida de um tipo de lâmpada, $X \in (0, \infty)$.
 <!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$.   -->
@@ -35,27 +36,35 @@ knitr::opts_chunk$set(echo = TRUE)
 **Exemplo 2**: $X$: PIB do Brasil, $X \in \mathbb{R}$.
 <!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$.   -->
 
-**Exemplo 3**: $X$: avaliação do governo, positiva ou negativa, $X \in \{0, 1\}$.
-<!-- , $X \sim Bernoulli(\pi)$. $E(X) = \pi$.   -->
+**Exemplo 3**: $X$: número de avaliações positivas em uma pesquisa de avaliação do governo. $X:$ $\in \{0, 1, \ldots, n\}$.
+<!-- , $X \sim Bernoulli(\pi)$. $E(X) = \pi$.   -->, 
 
 **Exemplo 4**: $Y$ (consumo) e $X$ (renda), ...
 <!-- $E(Y) = \alpha + \beta X$.   -->
 
+
+
 ## Variáveis aleatórias discretas (capítulo 6, Livro Bussab e Morettin)
-Definição:
+Definição **v.a. discreta**: ... $\Omega_X \subseteq \mathbb{N}$...
 
 ### Função (Massa) de Probabilidade
+Definição **função de probabilidade**: ... $p(x) = P(X=x)$... $p(x) \geq 0$, para todo $x \in \Omega_X$, e $\sum_{x \in \Omega_X} p(x) = 1$.
 
-### Valor Médio ou Esperança da Variável (seção 6.3, Livro Bussab e Morettin)
+
+### Valor Médio (ou Esperança da Variável) e variância (seção 6.3, Livro Bussab e Morettin)
+* Valor esperado/médio, esperança matemática ou simplesmente média - $E(X)$
+* Variância - $V(X)$
+
+
 * Proprieadades
-* Variância
+    + $E(aX + b) = a E(X) + b$ (*porque?*)
 
 ### Função de Distribuição (Acumulada) de Probabilidade
 
 ### Pirncipais Modelos de V.A. Discretas
 
 
-\vspace{0.5cm}
+<!-- \vspace{0.5cm} -->
 
 ***
 ## Ler slides e ver vídeos da semana 6.
