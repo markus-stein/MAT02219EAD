@@ -26,10 +26,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # Variáveis Aleatórias (V.A.)
-* (*...continuiação probabilidade...*)
+* (*...continuação de probabilidade...*)
 * Geralmente denotadas por $X$, $Y$, $Z$, ...
-    + Definição **variável aleatória (v.a.)**: denominamos variável aleatória a função que transforma um espaço amostral qualquer em um espaço amostral numérico, $X: \Omega \rightarrow \Omega_X$, um subconjunto dos números reais.
     + discretas $\times$ contínuas;
+
+Definição **variável aleatória (v.a.)**: denominamos variável aleatória a função (ou regra) que transforma um espaço amostral qualquer, $\Omega$, em um espaço amostral numérico, $\Omega_X$, $X: \Omega \rightarrow \Omega_X$, que será um subconjunto dos números reais.
 
 **Exemplo 1**: $X$: duração de vida de um tipo de lâmpada, $X \in (0, \infty)$.
 <!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$.   -->
@@ -37,8 +38,8 @@ knitr::opts_chunk$set(echo = TRUE)
 **Exemplo 2**: $X$: PIB do Brasil, $X \in \mathbb{R}$.
 <!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$.   -->
 
-**Exemplo 3**: $X$: número de avaliações positivas em uma pesquisa de avaliação do governo. $X:$ $\in \{0, 1, \ldots, n\}$.
-<!-- , $X \sim Bernoulli(\pi)$. $E(X) = \pi$.   -->, 
+**Exemplo 3**: $X$: número de avaliações positivas em uma pesquisa de avaliação do governo. $X\in \{0, 1, \ldots, n\}$.
+<!-- , $X \sim Bernoulli(\pi)$. $E(X) = \pi$.   -->
 
 **Exemplo 4**: $Y$ (consumo) e $X$ (renda), ...
 <!-- $E(Y) = \alpha + \beta X$.   -->
@@ -46,14 +47,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ## Variáveis aleatórias discretas (capítulo 6, Livro Bussab e Morettin)
-Definição **v.a. discreta**: ... $\Omega_X \subseteq \mathbb{N}$...
+Definição **$v.a.$ discreta**: quando o espaço amostral associado a uma $v.a.$ assumir somente valores inteiros, finitos ou infinitos, $\Omega_X \subseteq \mathbb{Z}$, denominamos v.a. discreta.
 
 **(... cont.) Exemplo 3**: $E$: observar o número de avaliaçõe positivas, assumindo igual probabilidade de avaliação positiva (P) ou não (N) (... lançar uma moeda honesta 3 vezes...). Assim, $X: \Omega = \left\{ (PPP), (PPN), (PNP), \ldots (NNN) \right\} \rightarrow \Omega_X = \left\{ 0, 1, 2, 3 \right\}$.
 
 * Como representar distribuições de probabilidade? Por funções, visualmente por tabelas e gráficos, medidas resumo, ... .
 
 ### Função (Massa) de Probabilidade
-Definição **função de probabilidade**: A função $p: \Omega_X \rightarrow  [0,1]$, dada por $p(x) = P(X=x)$... $p(x) \geq 0$, para todo $x \in \Omega_X$, e $\sum_{x \in \Omega_X} p(x) = 1$ é denominada função (massa) de probabilidade.
+Definição **função de probabilidade**: A função $p: \Omega_X \rightarrow  [0,1]$, dada por $p(x) = P(X=x)$, tal que $p(x) \geq 0$, para todo $x \in \Omega_X$, e $\sum_{x \in \Omega_X} p(x) = 1$, é denominada função (massa) de probabilidade.
 
 
 ### Valor Médio (ou Esperança da Variável) e variância (seção 6.3, Livro Bussab e Morettin)
@@ -70,7 +71,8 @@ Definição **função de distribuição**: a função $F: \Omega_X \rightarrow 
 
 
 ### Pirncipais Modelos de V.A. Discretas (seção 6.6, Livro Bussab e Morettin)
-Porque usar modelos? Facilitam nos cálculos quando os problemas se encaixam em modelos paramétricos.
+* Porque usar modelos? Facilitam nos cálculos quando os problemas se encaixam em modelos (paramétricos).
+    + **Parâmetros**: se um modelo se encaixa em nosso problema, basta identificar os paâmetros do modelo.
 
 * Modelo Uniforme discreto, Modelo Bernoulli e binomial, modelo hipergeométrico e modelo Poisson.
 

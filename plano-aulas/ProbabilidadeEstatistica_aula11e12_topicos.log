@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.2)  2 MAR 2021 15:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.2)  2 MAR 2021 16:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -562,12 +562,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 <logoIME.png, id=40, 521.95pt x 226.8475pt>
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 226.
+Package pdftex.def Info: logoIME.png  used on input line 228.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 <logoEAD.png, id=41, 313.17pt x 154.77824pt>
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png  used on input line 226.
+Package pdftex.def Info: logoEAD.png  used on input line 228.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 
 Package fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -582,17 +582,17 @@ ftex.map}
 
  <./logoIME.png> <./logoEAD.png>]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-45.
+54.
 (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 286.
+Package pdftex.def Info: logoIME.png  used on input line 295.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png  used on input line 286.
+Package pdftex.def Info: logoEAD.png  used on input line 295.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 
 Package fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -637,8 +637,8 @@ y10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/
 lm/lmsy7.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/pu
 blic/lm/lmtt10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/ty
 pe1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ProbabilidadeEstatistica_aula11e12_topicos.pdf (2 pages, 3687
-46 bytes).
+Output written on ProbabilidadeEstatistica_aula11e12_topicos.pdf (2 pages, 3688
+53 bytes).
 PDF statistics:
  139 PDF objects out of 1000 (max. 8388607)
  115 compressed objects within 2 object streams
