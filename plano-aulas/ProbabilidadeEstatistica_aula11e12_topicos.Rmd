@@ -8,7 +8,7 @@ header-includes:
     - \usepackage{fancyhdr}
 always_allow_html: yes
 ---
-<!-- \addtolength{\headheight}{1.0cm}  -->
+\addtolength{\headheight}{1.0cm}
 \pagestyle{fancyplain} 
 \lhead{\includegraphics[height=1.5cm]{logoIME.png}}
 \rhead{\includegraphics[height=1.5cm]{logoEAD.png}}
@@ -24,8 +24,9 @@ MAT02219 - Probabilidade e Estatística - 2020/2
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-(...continuiação probabilidade)
-# Variáveis Aleatórias
+
+# Variáveis Aleatórias (V.A.)
+* (*...continuiação probabilidade...*)
 * Geralmente denotadas por $X$, $Y$, $Z$, ...
     + Definição **variável aleatória (v.a.)**: denominamos variável aleatória a função que transforma um espaço amostral qualquer em um espaço amostral numérico, $X: \Omega \rightarrow \Omega_X$, um subconjunto dos números reais.
     + discretas $\times$ contínuas;
@@ -47,24 +48,46 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Variáveis aleatórias discretas (capítulo 6, Livro Bussab e Morettin)
 Definição **v.a. discreta**: ... $\Omega_X \subseteq \mathbb{N}$...
 
+**(... cont.) Exemplo 3**: $E$: observar o número de avaliaçõe positivas, assumindo igual probabilidade de avaliação positiva (P) ou não (N) (... lançar uma moeda honesta 3 vezes...). Assim, $X: \Omega = \left\{ (PPP), (PPN), (PNP), \ldots (NNN) \right\} \rightarrow \Omega_X = \left\{ 0, 1, 2, 3 \right\}$.
+
+* Como representar distribuições de probabilidade? Por funções, visualmente por tabelas e gráficos, medidas resumo, ... .
+
 ### Função (Massa) de Probabilidade
-Definição **função de probabilidade**: ... $p(x) = P(X=x)$... $p(x) \geq 0$, para todo $x \in \Omega_X$, e $\sum_{x \in \Omega_X} p(x) = 1$.
+Definição **função de probabilidade**: A função $p: \Omega_X \rightarrow  [0,1]$, dada por $p(x) = P(X=x)$... $p(x) \geq 0$, para todo $x \in \Omega_X$, e $\sum_{x \in \Omega_X} p(x) = 1$ é denominada função (massa) de probabilidade.
 
 
 ### Valor Médio (ou Esperança da Variável) e variância (seção 6.3, Livro Bussab e Morettin)
-* Valor esperado/médio, esperança matemática ou simplesmente média - $E(X)$
-* Variância - $V(X)$
+* Valor esperado/médio, esperança matemática ou simplesmente média - $E(X) = \sum_{ \forall x \in \Omega_X } x \times p(x)$;
+* Variância - $V(X) = \sum_{ \forall x \in \Omega_X } \left[ x - E(X) \right]^2 \times p(x)$;
+* Proprieadades, (*seção 6.4, Livro Bussab e Morettin*)
+    + $E(aX + b) = a E(X) + b$ (*porque?*);
+    + $V(aX + b) = a^2 V(X)$ (*?*).
+
+### Função de Distribuição (Acumulada) de Probabilidade (seção 6.5, Livro Bussab e Morettin)
+Definição **função de distribuição**: a função $F: \Omega_X \rightarrow  [0,1]$ tal que $F(x) = P(X \leq  x) = \sum_{ \forall y \leq x } P(x = y)  = \sum_{ \forall y \leq x } p(y)$ é denominada funçao de distribuição (acumulada).
+
+* Propriedades: $lim_{x \rightarrow \infty} F(x) = 1$ e $lim_{x \rightarrow - \infty} F(x) = 0$.
 
 
-* Proprieadades
-    + $E(aX + b) = a E(X) + b$ (*porque?*)
+### Pirncipais Modelos de V.A. Discretas (seção 6.6, Livro Bussab e Morettin)
+Porque usar modelos? Facilitam nos cálculos quando os problemas se encaixam em modelos paramétricos.
 
-### Função de Distribuição (Acumulada) de Probabilidade
+* Modelo Uniforme discreto, Modelo Bernoulli e binomial, modelo hipergeométrico e modelo Poisson.
 
-### Pirncipais Modelos de V.A. Discretas
+No `R` os comandos `dbinom()`, `pbinom()` e `rbinom()` são utilizados para calcular a função de probabilidade, função de distribuição e gerar números aleatórios segundo uma distribuição binomial. Exemplo: slides 2-1 página 30. 
+```{r}
+n <- 3
+x <- 0:n
+p <- 0.6
+px <- dbinom(x, n, p)
+px
+```
+
+(para a distribuição Hypergeométrica, `dhyper()`, `phyper()` e `rhyper()`, e para Poisson, `dpois()`, `ppois()` e `rpois()`)
 
 
-<!-- \vspace{0.5cm} -->
+
+\vspace{0.5cm}
 
 ***
 ## Ler slides e ver vídeos da semana 6.
