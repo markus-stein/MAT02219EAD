@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.2)  2 MAR 2021 16:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.2)  2 MAR 2021 17:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -582,17 +582,17 @@ ftex.map}
 
  <./logoIME.png> <./logoEAD.png>]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-54.
+57.
 (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 295.
+Package pdftex.def Info: logoIME.png  used on input line 300.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png  used on input line 295.
+Package pdftex.def Info: logoEAD.png  used on input line 300.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 
 Package fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -605,14 +605,14 @@ Package fancyhdr Warning: \headheight is too small (40.45274pt):
 [2] (./ProbabilidadeEstatistica_aula11e12_topicos.aux)
 Package rerunfilecheck Info: File `ProbabilidadeEstatistica_aula11e12_topicos.o
 ut' has not changed.
-(rerunfilecheck)             Checksum: C7A6BACBA6588602ECCE992BF947562B;3186.
+(rerunfilecheck)             Checksum: 08BA8824BD926BFE5DAB3D2ECA98E4DD;3196.
  ) 
 Here is how much of TeX's memory you used:
- 10615 strings out of 480971
- 156868 string characters out of 5906169
- 468429 words of memory out of 5000000
- 27625 multiletter control sequences out of 15000+600000
- 453662 words of font info for 68 fonts, out of 8000000 for 9000
+ 10617 strings out of 480971
+ 156897 string characters out of 5906169
+ 468431 words of memory out of 5000000
+ 27626 multiletter control sequences out of 15000+600000
+ 453981 words of font info for 69 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  71i,15n,74p,636b,405s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.
@@ -636,12 +636,13 @@ b><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lms
 y10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/
 lm/lmsy7.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/pu
 blic/lm/lmtt10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/ty
-pe1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ProbabilidadeEstatistica_aula11e12_topicos.pdf (2 pages, 3688
-53 bytes).
+pe1/public/lm/lmtti10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on ProbabilidadeEstatistica_aula11e12_topicos.pdf (2 pages, 3867
+06 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
+ 143 PDF objects out of 1000 (max. 8388607)
+ 118 compressed objects within 2 object streams
  21 named destinations out of 1000 (max. 500000)
  83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

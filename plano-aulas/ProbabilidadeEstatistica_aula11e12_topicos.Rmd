@@ -70,18 +70,20 @@ Definição **função de distribuição**: a função $F: \Omega_X \rightarrow 
 * Propriedades: $lim_{x \rightarrow \infty} F(x) = 1$ e $lim_{x \rightarrow - \infty} F(x) = 0$.
 
 
-### Pirncipais Modelos de V.A. Discretas (seção 6.6, Livro Bussab e Morettin)
-* Porque usar modelos? Facilitam nos cálculos quando os problemas se encaixam em modelos (paramétricos).
-    + **Parâmetros**: se um modelo se encaixa em nosso problema, basta identificar os paâmetros do modelo.
+### Pirncipais Modelos para V.A. Discretas (seção 6.6, Livro Bussab e Morettin)
+* Porque usar modelos de distribuição de probabilidades? Facilitam nos cálculos quando os problemas se encaixam em modelos (paramétricos);
+    + **Parâmetros**: quando um modelo se "encaixa" em nosso problema, basta identificar os parâmetros do modelo;
+    + então saberemos funções de probabilidade e distribuição, esperança, variância, ..., mais rapidamente.
 
-* Modelo Uniforme discreto, Modelo Bernoulli e binomial, modelo hipergeométrico e modelo Poisson.
+* Modelo Uniforme discreto, Modelo *Bernoulli* e *binomial*, modelo *hipergeométrico* e modelo *Poisson*.
 
-No `R` os comandos `dbinom()`, `pbinom()` e `rbinom()` são utilizados para calcular a função de probabilidade, função de distribuição e gerar números aleatórios segundo uma distribuição binomial. Exemplo: slides 2-1 página 30. 
+No `R` os comandos `dbinom()`, `pbinom()` e `rbinom()` são utilizados para calcular a função de probabilidade, função de distribuição e gerar números aleatórios segundo uma distribuição binomial. Exemplo: $X:$ número de peças perfeitas (P) em uma amostra de $n=3$ peças,  com probabilidade de sucesso, $p = 0,6$  (*slides 2-1, página 30*).
+
 ```{r}
-n <- 3
-x <- 0:n
-p <- 0.6
-px <- dbinom(x, n, p)
+n <- 3                  # num. de ensaios Bernoulli
+x <- 0:n                # possíveis valores de X
+p <- 0.6                # probabilidade de sucesso
+px <- dbinom(x, n, p)   # funcao de probabilidade de X 
 px
 ```
 
