@@ -53,41 +53,29 @@ Definição **$v.a.$ discreta**: quando o espaço amostral associado a uma $v.a.
 
 * Como representar distribuições de probabilidade? Por funções, visualmente por tabelas e gráficos, medidas resumo, ... .
 
-### Função (Massa) de Probabilidade
+### 1. Função (Massa) de Probabilidade
 Definição **função de probabilidade**: A função $p: \Omega_X \rightarrow  [0,1]$, dada por $p(x) = P(X=x)$, tal que $p(x) \geq 0$, para todo $x \in \Omega_X$, e $\sum_{x \in \Omega_X} p(x) = 1$, é denominada função (massa) de probabilidade.
 
 
-### Valor Médio (ou Esperança da Variável) e variância (seção 6.3, Livro Bussab e Morettin)
+### 2. Valor Médio (ou Esperança da Variável) e variância (seção 6.3, Livro Bussab e Morettin)
 * Valor esperado/médio, esperança matemática ou simplesmente média - $E(X) = \sum_{ \forall x \in \Omega_X } x \times p(x)$;
 * Variância - $V(X) = \sum_{ \forall x \in \Omega_X } \left[ x - E(X) \right]^2 \times p(x)$;
 * Proprieadades, (*seção 6.4, Livro Bussab e Morettin*)
     + $E(aX + b) = a E(X) + b$ (*porque?*);
     + $V(aX + b) = a^2 V(X)$ (*?*).
 
-### Função de Distribuição (Acumulada) de Probabilidade (seção 6.5, Livro Bussab e Morettin)
+### 3. Função de Distribuição (Acumulada) de Probabilidade (seção 6.5, Livro Bussab e Morettin)
 Definição **função de distribuição**: a função $F: \Omega_X \rightarrow  [0,1]$ tal que $F(x) = P(X \leq  x) = \sum_{ \forall y \leq x } P(x = y)  = \sum_{ \forall y \leq x } p(y)$ é denominada funçao de distribuição (acumulada).
 
 * Propriedades: $lim_{x \rightarrow \infty} F(x) = 1$ e $lim_{x \rightarrow - \infty} F(x) = 0$.
 
 
-### Pirncipais Modelos para V.A. Discretas (seção 6.6, Livro Bussab e Morettin)
+### Principais Modelos para V.A. Discretas (seção 6.6, Livro Bussab e Morettin)
 * Porque usar modelos de distribuição de probabilidades? Facilitam nos cálculos quando os problemas se encaixam em modelos (paramétricos);
     + **Parâmetros**: quando um modelo se "encaixa" em nosso problema, basta identificar os parâmetros do modelo;
     + então saberemos funções de probabilidade e distribuição, esperança, variância, ..., mais rapidamente.
 
 * Modelo Uniforme discreto, Modelo *Bernoulli* e *binomial*, modelo *hipergeométrico* e modelo *Poisson*.
-
-No `R` os comandos `dbinom()`, `pbinom()` e `rbinom()` são utilizados para calcular a função de probabilidade, função de distribuição e gerar números aleatórios segundo uma distribuição binomial. Exemplo: $X:$ número de peças perfeitas (P) em uma amostra de $n=3$ peças,  com probabilidade de sucesso, $p = 0,6$  (*slides 2-1, página 30*).
-
-```{r}
-n <- 3                  # num. de ensaios Bernoulli
-x <- 0:n                # possíveis valores de X
-p <- 0.6                # probabilidade de sucesso
-px <- dbinom(x, n, p)   # funcao de probabilidade de X 
-px
-```
-
-(para a distribuição Hypergeométrica, `dhyper()`, `phyper()` e `rhyper()`, e para Poisson, `dpois()`, `ppois()` e `rpois()`)
 
 
 
@@ -102,7 +90,27 @@ px
 
 <!-- Definição **A.A.S**: Seja $X_1, X_2, \ldots, X_n$ uma a.a.s. de tamanho $n$ de $X \sim f(x; \theta)$, então $X_1 \sim f(x; \theta)$, ..., $X_n \sim f(x; \theta)$ e $X_i$ e $X_j$ são independentes para todo $i \neq j$. -->
 
-<!-- \vspace{0.5cm} -->
+\vspace{0.5cm}
+
+Exemplo: $X:$ número de peças perfeitas (P) em uma amostra de $n=3$ peças,  com probabilidade de sucesso, $p = 0,6$  (*slides 2-1, página 30*).
+
+No `R` os comandos `dbinom()`, `pbinom()` e `rbinom()` são utilizados para calcular a função de probabilidade, função de distribuição e gerar números aleatórios segundo uma distribuição binomial. 
+
+```{r}
+n <- 3                  # num. de ensaios Bernoulli
+x <- 0:n                # possíveis valores de X
+p <- 0.6                # probabilidade de sucesso
+px <- dbinom(x, n, p)   # funcao de probabilidade de X 
+px
+```
+E em forma de gráfico  
+```{r, fig.height=4, fig.width=4, fig.align='center'}
+plot(x, px, type = "h")            # grafico da distribuicao de probabilidade
+```
+
+(*para a distribuição Hypergeométrica, `dhyper()`, `phyper()` e `rhyper()`, e para Poisson, `dpois()`, `ppois()` e `rpois()`*)
+
+
 
 <!-- Exercício 6 da Lista 1-2 e 1-3: -->
 <!-- ```{r exemplo2, fig.width=4, fig.height=3, fig.align='center'} -->
