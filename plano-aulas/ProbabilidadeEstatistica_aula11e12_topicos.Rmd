@@ -28,7 +28,8 @@ knitr::opts_chunk$set(echo = TRUE)
 # Variáveis Aleatórias (V.A.)
 * (*...continuação de probabilidade...*)
 * Geralmente denotadas por $X$, $Y$, $Z$, ...
-    + discretas $\times$ contínuas;
+    +  $X$ letra **maiúscula** denota a v.a. *versus* $x$ letra **minúscula** que denota um particular valor que a v.a. pode assumir;
+    + discretas $\times$ contínuas.
 
 Definição **variável aleatória (v.a.)**: denominamos variável aleatória a função (ou regra) que transforma um espaço amostral qualquer, $\Omega$, em um espaço amostral numérico, $\Omega_X$, $X: \Omega \rightarrow \Omega_X$, que será um subconjunto dos números reais.
 
@@ -77,7 +78,7 @@ Definição **função de distribuição**: a função $F: \Omega_X \rightarrow 
 
 * Modelo Uniforme discreto, Modelo *Bernoulli* e *binomial*, modelo *hipergeométrico* e modelo *Poisson*.
 
-
+**(... cont.) Exemplo 3**: $X \sim Binomial(n, \pi)$. Então $p(x)= {n \choose \pi} \pi^x (1-\pi)^{n-x}$, $F(x)=$?, $E(X) = n \times \pi$ e $V(X) = n \times \pi \times (1-\pi)$.
 
 \vspace{0.5cm}
 
@@ -92,7 +93,7 @@ Definição **função de distribuição**: a função $F: \Omega_X \rightarrow 
 
 \vspace{0.5cm}
 
-Exemplo: $X:$ número de peças perfeitas (P) em uma amostra de $n=3$ peças,  com probabilidade de sucesso, $p = 0,6$  (*slides 2-1, página 30*).
+Exemplo: $X:$ número de peças perfeitas (P) em uma amostra de $n=3$ peças, com probabilidade de sucesso $p = 0,6$  (*slides 2-1, página 30*).
 
 No `R` os comandos `dbinom()`, `pbinom()` e `rbinom()` são utilizados para calcular a função de probabilidade, função de distribuição e gerar números aleatórios segundo uma distribuição binomial. 
 
