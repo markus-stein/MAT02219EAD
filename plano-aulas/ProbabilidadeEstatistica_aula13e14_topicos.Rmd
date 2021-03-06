@@ -1,0 +1,126 @@
+---
+title: "Plano Aula 11 e 12"
+# author: "Markus Stein"
+# date: "01 March 2021"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm}
+\pagestyle{fancyplain} 
+\lhead{\includegraphics[height=1.5cm]{logoIME.png}}
+\rhead{\includegraphics[height=1.5cm]{logoEAD.png}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02219 - Probabilidade e Estatística - 2020/2
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### (cont... Variáveis Aleatórias)
+## Variáveis aleatórias contínuas (capítulo 7, Livro Bussab e Morettin)
+Definição **$v.a.$ contínua**: 
+<!-- quando o espaço amostral associado a uma $v.a.$ assumir somente valores inteiros, finitos ou infinitos, $\Omega_X \subseteq \mathbb{Z}$, denominamos v.a. discreta. -->
+
+
+**Exemplo 1**: $X$: duração de vida de um tipo de lâmpada, $X \in (0, \infty)$.
+<!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$.   -->
+
+**Exemplo 2**: $X$: PIB do Brasil, $X \in \mathbb{R}$.
+<!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$.   -->
+
+**Exemplo 4**: $Y$ (consumo) e $X$ (renda), ...
+<!-- $E(Y) = \alpha + \beta X$.   -->
+
+
+
+
+<!-- **(... cont.) Exemplo 3**: $E$: observar o número de avaliaçõe positivas, assumindo igual probabilidade de avaliação positiva (P) ou não (N) (... lançar uma moeda honesta 3 vezes...). Assim, $X: \Omega = \left\{ (PPP), (PPN), (PNP), \ldots (NNN) \right\} \rightarrow \Omega_X = \left\{ 0, 1, 2, 3 \right\}$. -->
+
+<!-- * Como representar distribuições de probabilidade? Por funções, visualmente por tabelas e gráficos, medidas resumo, ... . -->
+
+<!-- ### 1. Função (Massa) de Probabilidade -->
+<!-- Definição **função de probabilidade**: A função $p: \Omega_X \rightarrow  [0,1]$, dada por $p(x) = P(X=x)$, tal que $p(x) \geq 0$, para todo $x \in \Omega_X$, e $\sum_{x \in \Omega_X} p(x) = 1$, é denominada função (massa) de probabilidade. -->
+
+
+<!-- ### 2. Valor Médio (ou Esperança da Variável) e variância (seção 6.3, Livro Bussab e Morettin) -->
+<!-- * Valor esperado/médio, esperança matemática ou simplesmente média - $E(X) = \sum_{ \forall x \in \Omega_X } x \times p(x)$; -->
+<!-- * Variância - $V(X) = \sum_{ \forall x \in \Omega_X } \left[ x - E(X) \right]^2 \times p(x)$; -->
+<!-- * Proprieadades, (*seção 6.4, Livro Bussab e Morettin*) -->
+<!--     + $E(aX + b) = a E(X) + b$ (*porque?*); -->
+<!--     + $V(aX + b) = a^2 V(X)$ (*?*). -->
+
+<!-- ### 3. Função de Distribuição (Acumulada) de Probabilidade (seção 6.5, Livro Bussab e Morettin) -->
+<!-- Definição **função de distribuição**: a função $F: \Omega_X \rightarrow  [0,1]$ tal que $F(x) = P(X \leq  x) = \sum_{ \forall y \leq x } P(x = y)  = \sum_{ \forall y \leq x } p(y)$ é denominada funçao de distribuição (acumulada). -->
+
+<!-- * Propriedades: $lim_{x \rightarrow \infty} F(x) = 1$ e $lim_{x \rightarrow - \infty} F(x) = 0$. -->
+
+
+<!-- ### Principais Modelos para V.A. Discretas (seção 6.6, Livro Bussab e Morettin) -->
+<!-- * Porque usar modelos de distribuição de probabilidades? Facilitam nos cálculos quando os problemas se encaixam em modelos (paramétricos); -->
+<!--     + **Parâmetros**: quando um modelo se "encaixa" em nosso problema, basta identificar os parâmetros do modelo; -->
+<!--     + então saberemos funções de probabilidade e distribuição, esperança, variância, ..., mais rapidamente. -->
+
+<!-- * Modelo Uniforme discreto, Modelo *Bernoulli* e *binomial*, modelo *hipergeométrico* e modelo *Poisson*. -->
+
+<!-- **(... cont.) Exemplo 3**: $X \sim Binomial(n, \pi)$. Então $p(x)= {n \choose \pi} \pi^x (1-\pi)^{n-x}$, $F(x)=?$, $E(X) = n \times \pi$ e $V(X) = n \times \pi \times (1-\pi)$. -->
+
+\vspace{0.5cm}
+
+***
+## Ler slides e ver vídeos da semana 7.
+## Fazer lista de exercícios 2-2.
+## Fazer o Quiz da semana 7 - VALE NOTA!!!
+***  
+
+
+<!-- Definição **A.A.S**: Seja $X_1, X_2, \ldots, X_n$ uma a.a.s. de tamanho $n$ de $X \sim f(x; \theta)$, então $X_1 \sim f(x; \theta)$, ..., $X_n \sim f(x; \theta)$ e $X_i$ e $X_j$ são independentes para todo $i \neq j$. -->
+
+<!-- \vspace{0.5cm} -->
+
+<!-- Exemplo: $X:$ número de peças perfeitas (P) em uma amostra de $n=3$ peças,  com probabilidade de sucesso, $p = 0,6$  (*slides 2-1, página 30*). -->
+
+<!-- No `R` os comandos `dbinom()`, `pbinom()` e `rbinom()` são utilizados para calcular a função de probabilidade, função de distribuição e gerar números aleatórios segundo uma distribuição binomial.  -->
+
+<!-- ```{r} -->
+<!-- n <- 3                  # num. de ensaios Bernoulli -->
+<!-- x <- 0:n                # possíveis valores de X -->
+<!-- p <- 0.6                # probabilidade de sucesso -->
+<!-- px <- dbinom(x, n, p)   # funcao de probabilidade de X  -->
+<!-- px -->
+<!-- ``` -->
+<!-- E em forma de gráfico   -->
+<!-- ```{r, fig.height=4, fig.width=4, fig.align='center'} -->
+<!-- plot(x, px, type = "h")            # grafico da distribuicao de probabilidade -->
+<!-- ``` -->
+
+<!-- (*para a distribuição Hypergeométrica, `dhyper()`, `phyper()` e `rhyper()`, e para Poisson, `dpois()`, `ppois()` e `rpois()`*) -->
+
+
+
+<!-- Exercício 6 da Lista 1-2 e 1-3: -->
+<!-- ```{r exemplo2, fig.width=4, fig.height=3, fig.align='center'} -->
+<!-- x <- c(4, 5, 5, 6, 7, 8, 9, 17, 16, 10, 7, 9, 12, 14, 13, 8, 10, 6, 8, 15, 13, 17, 9, 5, 8, 4, 15, 17, 8, 11, 8, 10, 12, 13, 11, 8, 7, 6, 5, 16, 15, 9, 8, 9, 14, 13, 7, 8, 5, 8) -->
+<!-- table(x) -->
+<!-- barplot(table(x)) -->
+<!-- ``` -->
+
+<!-- **Exemplo 4**: Variável em estudo - gasto (em reais) em supermercado por pessoa (Slides 1-5, página 18). Qual o tipo de variável?   -->
+
+<!-- No `R` as funções `summary()` e `boxplot()` retornam o resumo de cinco números e o gráfico de caixas. -->
+
+<!-- ```{r exemplo2} -->
+<!-- x <- c(9.26, 10.81, 3.11, 85.76, 70.32, 82.70, 18.43, 19.54, 23.04, 24.47, 26.24, 26.26, 24.58, 28.38, 28.06, 28.08, 25.13, 27.65, 32.03, 36.37, 19.27, 19.50, 18.36, 52.75, 61.22, 86.37, 93.34, 22.22, 20.16, 20.59, 54.80, 59.07, 50.39, 45.40, 44.08, 44.67, 38.64, 42.97, 46.69, 48.65, 39.16, 41.02, 38.98, 15.62, 13.78, 15.23, 8.88, 12.69, 17.00, 17.39) -->
+<!-- summary(x) -->
+<!-- boxplot(x) -->
+<!-- ``` -->
+
+<!-- Como incluir título e nomes nos eixos??? -->
