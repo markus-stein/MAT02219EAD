@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.6)  8 MAR 2021 10:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.6)  8 MAR 2021 11:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -642,7 +642,7 @@ ut' has not changed.
 Here is how much of TeX's memory you used:
  10626 strings out of 480971
  157535 string characters out of 5906169
- 468448 words of memory out of 5000000
+ 469448 words of memory out of 5000000
  27632 multiletter control sequences out of 15000+600000
  453981 words of font info for 69 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -670,8 +670,8 @@ lm/lmsy7.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/pu
 blic/lm/lmtt10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/ty
 pe1/public/lm/lmtti10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/f
 onts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ProbabilidadeEstatistica_aula11e12_topicos.pdf (3 pages, 3957
-31 bytes).
+Output written on ProbabilidadeEstatistica_aula11e12_topicos.pdf (3 pages, 3963
+52 bytes).
 PDF statistics:
  153 PDF objects out of 1000 (max. 8388607)
  125 compressed objects within 2 object streams

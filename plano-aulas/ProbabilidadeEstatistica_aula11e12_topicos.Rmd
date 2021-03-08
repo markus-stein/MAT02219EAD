@@ -60,7 +60,7 @@ Definição **função de probabilidade**: A função $p: \Omega_X \rightarrow  
 
 ### 2. Valor Médio (ou Esperança da Variável) e variância (seção 6.3, Livro Bussab e Morettin)
 * Valor esperado/médio, esperança matemática ou simplesmente média - $E(X) = \sum_{ \forall x \in \Omega_X } x \times p(x)$;
-* Variância - $V(X) = \sum_{ \forall x \in \Omega_X } \left[ x - E(X) \right]^2 \times p(x)$;
+* Variância - $V(X) = E \left\{ \left[ x - E(X) \right]^2 \right\} = E(X^2) - \left[ E(X) \right]^2 = \sum_{ \forall x \in \Omega_X } \left[ x - E(X) \right]^2 \times p(x)$;
 * Proprieadades, (*seção 6.4, Livro Bussab e Morettin*)
     + $E(aX + b) = a E(X) + b$ (*porque?*);
     + $V(aX + b) = a^2 V(X)$ (*?*).
