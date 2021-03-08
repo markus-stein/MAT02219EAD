@@ -54,7 +54,7 @@ Definição **$v.a.$ discreta**: quando o espaço amostral associado a uma $v.a.
 
 * Como representar distribuições de probabilidade? Por funções, visualmente por tabelas e gráficos, medidas resumo, ... .
 
-### 1. Função (Massa) de Probabilidade
+### 1. Função (Massa) de Probabilidade (f.m.p)
 Definição **função de probabilidade**: A função $p: \Omega_X \rightarrow  [0,1]$, dada por $p(x) = P(X=x)$, tal que $p(x) \geq 0$, para todo $x \in \Omega_X$, e $\sum_{x \in \Omega_X} p(x) = 1$, é denominada função (massa) de probabilidade.
 
 
