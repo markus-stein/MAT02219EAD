@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.6)  6 MAR 2021 11:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.6)  8 MAR 2021 10:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -536,15 +536,20 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 94.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 94.
-<logoIME.png, id=24, 521.95pt x 226.8475pt>
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+09.
+(c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+<logoIME.png, id=28, 521.95pt x 226.8475pt>
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 121.
+Package pdftex.def Info: logoIME.png  used on input line 140.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
-<logoEAD.png, id=25, 313.17pt x 154.77824pt>
+<logoEAD.png, id=29, 313.17pt x 154.77824pt>
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png  used on input line 121.
+Package pdftex.def Info: logoEAD.png  used on input line 140.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 
 Package fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -561,33 +566,41 @@ ftex.map}
 .aux)
 Package rerunfilecheck Info: File `ProbabilidadeEstatistica_aula13e14_topicos.o
 ut' has not changed.
-(rerunfilecheck)             Checksum: 125DE61F2D06F5EDAD10F35CA07DB319;1351.
+(rerunfilecheck)             Checksum: EB0661DC3543CD37981D631BB21B65B2;1635.
  ) 
 Here is how much of TeX's memory you used:
- 10049 strings out of 480971
- 147315 string characters out of 5906169
- 449839 words of memory out of 5000000
- 27085 multiletter control sequences out of 15000+600000
- 442718 words of font info for 63 fonts, out of 8000000 for 9000
+ 10085 strings out of 480971
+ 148290 string characters out of 5906169
+ 451907 words of memory out of 5000000
+ 27115 multiletter control sequences out of 15000+600000
+ 443083 words of font info for 64 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  71i,15n,74p,504b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.
-enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-m
-athsy.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/l
-m/lm-mathit.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/d
-vips/lm/lm-ec.enc}<c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/typ
-e1/public/lm/lmbx10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fon
-ts/type1/public/lm/lmbx12.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-di
-st/fonts/type1/public/lm/lmmi10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/te
-xmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/Markus/AppData/Roaming/TinyT
-eX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/Markus/AppData/Roaming/
-TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/Markus/AppData/Ro
-aming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ProbabilidadeEstatistica_aula13e14_topicos.pdf (1 page, 28297
-0 bytes).
+{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mat
+hit.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/
+lm-rm.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/l
+m/lm-mathsy.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/d
+vips/lm/lm-mathex.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts
+/enc/dvips/lm/lm-ts1.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fo
+nts/enc/dvips/lm/lm-ec.enc}<c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/
+fonts/type1/public/lm/lmbx10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf
+-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX
+/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/Users/Markus/AppData/Roaming/T
+inyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/Users/Markus/AppData/Roa
+ming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi5.pfb><c:/Users/Markus/AppDat
+a/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/Users/Markus/A
+ppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/Mar
+kus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/User
+s/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/
+Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pf
+b><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lms
+y7.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/a
+msfonts/symbols/msbm10.pfb>
+Output written on ProbabilidadeEstatistica_aula13e14_topicos.pdf (1 page, 31538
+8 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 110 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
+ 14 named destinations out of 1000 (max. 500000)
+ 59 words of extra memory for PDF output out of 10000 (max. 10000000)
 

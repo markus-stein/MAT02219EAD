@@ -1,7 +1,7 @@
 ---
-title: "Plano Aula 11 e 12"
+title: "Plano Aula 13 e 14"
 # author: "Markus Stein"
-# date: "01 March 2021"
+# date: "08 March 2021"
 output: pdf_document
     # toc: yes
 header-includes:
@@ -27,8 +27,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### (cont... Variáveis Aleatórias)
 ## Variáveis aleatórias contínuas (capítulo 7, Livro Bussab e Morettin)
-Definição **$v.a.$ contínua**: 
-<!-- quando o espaço amostral associado a uma $v.a.$ assumir somente valores inteiros, finitos ou infinitos, $\Omega_X \subseteq \mathbb{Z}$, denominamos v.a. discreta. -->
+Definição **$v.a.$ contínua**: quando o espaço amostral associado a uma $v.a.$ puder assumir valores reais, $\Omega_X \subseteq \mathbb{R}$, ou infinito, denominamos v.a. contínua.
 
 
 **Exemplo 1**: $X$: duração de vida de um tipo de lâmpada, $X \in (0, \infty)$.
@@ -37,7 +36,7 @@ Definição **$v.a.$ contínua**:
 **Exemplo 2**: $X$: PIB do Brasil, $X \in \mathbb{R}$.
 <!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$.   -->
 
-**Exemplo 4**: $Y$ (consumo) e $X$ (renda), ...
+**Exemplo 3**: $Y$ (consumo) e $X$ (renda), ...
 <!-- $E(Y) = \alpha + \beta X$.   -->
 
 
@@ -45,10 +44,10 @@ Definição **$v.a.$ contínua**:
 
 <!-- **(... cont.) Exemplo 3**: $E$: observar o número de avaliaçõe positivas, assumindo igual probabilidade de avaliação positiva (P) ou não (N) (... lançar uma moeda honesta 3 vezes...). Assim, $X: \Omega = \left\{ (PPP), (PPN), (PNP), \ldots (NNN) \right\} \rightarrow \Omega_X = \left\{ 0, 1, 2, 3 \right\}$. -->
 
-<!-- * Como representar distribuições de probabilidade? Por funções, visualmente por tabelas e gráficos, medidas resumo, ... . -->
+* Como representar a distribuição de probabilidade de uma v.a. contínua?
 
-<!-- ### 1. Função (Massa) de Probabilidade -->
-<!-- Definição **função de probabilidade**: A função $p: \Omega_X \rightarrow  [0,1]$, dada por $p(x) = P(X=x)$, tal que $p(x) \geq 0$, para todo $x \in \Omega_X$, e $\sum_{x \in \Omega_X} p(x) = 1$, é denominada função (massa) de probabilidade. -->
+### 1. (Função) Densidade (de Probabilidade)
+Definição **função densidade de probabilidade**: A função $f: \Omega_X \rightarrow  [0,1]$, dada por $f(x) = P(X=x)$, tal que $f(x) \geq 0$, para todo $x \in \Omega_X$, e $\int_{x \in \Omega_X} f(x) = 1$, é denominada função densidade de probabilidade.
 
 
 <!-- ### 2. Valor Médio (ou Esperança da Variável) e variância (seção 6.3, Livro Bussab e Morettin) -->
