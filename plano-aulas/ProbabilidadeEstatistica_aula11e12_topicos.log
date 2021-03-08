@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.6)  8 MAR 2021 12:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.8)  8 MAR 2021 13:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -581,23 +581,28 @@ Package fancyhdr Warning: \headheight is too small (40.45274pt):
 ftex.map}
 
  <./logoIME.png> <./logoEAD.png>]
+Underfull \hbox (badness 1521) in paragraph at lines 264--267
+[]\T1/lmr/bx/n/10 modelo \T1/lmr/m/n/10 = \T1/lmr/bx/n/10 família de dis-tribui
+ções\T1/lmr/m/n/10 , difer-entes val-ores para os parâmet-ros re-tor-nam
+ []
+
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 265.
+(amsmath)                 on input line 274.
 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-92.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
+02.
 (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 317.
+Package pdftex.def Info: logoIME.png  used on input line 323.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png  used on input line 317.
+Package pdftex.def Info: logoEAD.png  used on input line 323.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 
 Package fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -615,15 +620,15 @@ nk-2-1.pdf Graphic file (type pdf)
 <use ProbabilidadeEstatistica_aula11e12_topicos_files/figure-latex/unnamed-chun
 k-2-1.pdf>
 Package pdftex.def Info: ProbabilidadeEstatistica_aula11e12_topicos_files/figur
-e-latex/unnamed-chunk-2-1.pdf  used on input line 319.
+e-latex/unnamed-chunk-2-1.pdf  used on input line 329.
 (pdftex.def)             Requested size: 289.09251pt x 289.09251pt.
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 325.
+Package pdftex.def Info: logoIME.png  used on input line 335.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png  used on input line 325.
+Package pdftex.def Info: logoEAD.png  used on input line 335.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 
 Package fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -670,8 +675,8 @@ lm/lmsy7.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/pu
 blic/lm/lmtt10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/ty
 pe1/public/lm/lmtti10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/f
 onts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ProbabilidadeEstatistica_aula11e12_topicos.pdf (3 pages, 3966
-09 bytes).
+Output written on ProbabilidadeEstatistica_aula11e12_topicos.pdf (3 pages, 3968
+57 bytes).
 PDF statistics:
  153 PDF objects out of 1000 (max. 8388607)
  125 compressed objects within 2 object streams
