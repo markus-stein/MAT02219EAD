@@ -39,38 +39,45 @@ Definição **$v.a.$ contínua**: quando o espaço amostral associado a uma $v.a
 **Exemplo 3**: $Y$ (consumo) e $X$ (renda), ...
 <!-- $E(Y) = \alpha + \beta X$.   -->
 
-
-
-
-<!-- **(... cont.) Exemplo 3**: $E$: observar o número de avaliaçõe positivas, assumindo igual probabilidade de avaliação positiva (P) ou não (N) (... lançar uma moeda honesta 3 vezes...). Assim, $X: \Omega = \left\{ (PPP), (PPN), (PNP), \ldots (NNN) \right\} \rightarrow \Omega_X = \left\{ 0, 1, 2, 3 \right\}$. -->
+* Geralmente os espaços amostrais, $\Omega$, de experimentos envolvendo observação de v.a. contínuas coincidem com o espaço da própria v.a., $\Omega_X$.
+    + No **exemplo 1**: $\Omega = \Omega_X = (0, \infty)$
+    + No **exemplo 2**: $\Omega = \Omega_X = \mathbb{R}$
 
 * Como representar a distribuição de probabilidade de uma v.a. contínua?
 
-### 1. (Função) Densidade (de Probabilidade)
-Definição **função densidade de probabilidade**: A função $f: \Omega_X \rightarrow  [0,1]$, dada por $f(x) = P(X=x)$, tal que $f(x) \geq 0$, para todo $x \in \Omega_X$, e $\int_{x \in \Omega_X} f(x) = 1$, é denominada função densidade de probabilidade.
+### 1. Função Densidade de Probabilidade  (f.d.p)
+Definição **função densidade de probabilidade**: a função $f: \Omega_X \rightarrow  [0,1]$ não negativa, $f(x) \geq 0$  para todo $x \in (- \infty, \infty)$, e $\int_{- \infty}^{ \infty} f(x) \: dx = 1$, é denominada função densidade de probabilidade.
+
+* Probabilidades estão associadas à áreas para v.a. contínuas.
+    + A probabilidade de uma v.a. contínua assumir um particular valor é igual a zero, $P(X=x) = 0$ para todos $X \in \Omega_X$.
+
+### 2. Esperança e Variância (seção 7.2, Livro Bussab e Morettin)
+* Valor esperado, ou média - $E(X) = \int_{- \infty}^{ \infty} x \: f(x) \: dx$;
+* Variância - $V(X) =  E \left\{ \left[ x - E(X) \right]^2 \right\} = E(X^2) - \left[ E(X) \right]^2 = \int_{- \infty}^{ \infty} \left[ x - E(X) \right]^2 \: f(x) \: dx$;
+* Proprieadades: ... .
+
+### 3. Função de Distribuição (Acumulada) de Probabilidade (seção 7.3, Livro Bussab e Morettin)
+Definição **função de distribuição**: a função $F: \Omega_X \rightarrow  [0,1]$ tal que $F(x) = P(X \leq  x) = \int_{- \infty}^{x} f(y) \: dy$ é denominada funçao de distribuição (acumulada).
+
+* Propriedades: $lim_{x \rightarrow \infty} F(x) = 1$ e $lim_{x \rightarrow - \infty} F(x) = 0$;
+    + $P(a \leq X \leq b) = F(b) - F(a)$;
+    + $F(x)$ existe para todos os números reais, diferente da f.d.p..
+
+### Principais Modelos para V.A. Contínuas (seção 7.4, Livro Bussab e Morettin)
+* Modelos?
+    + Distribuição Uniforme, distribuição Exponencial e distribuição Normal. Na área 3 veremos a distribuição *t*, distribuição *qui quadrado* e a distribuição *F*.
+
+* **Modelo Normal** ou Distribuição de Gauss:
+    + é uma das mais importantes distribuições de probabilidade em Estatística;
+    + Como calcular probabilidades? Modelo **normal padrão**, usando **valores tabelados**;
+    + **Padronização**: se $X \sim Normal (\mu, \sigma^2)$, então $Z = \frac{X - \mu}{\sigma} \sim Normal (0,1)$.
+
+**(... cont.) Exemplo 2**: Se assumirmos $X \sim Normal(\mu, \sigma^2)$. Então conhecemos $f(x)$, $F(x)=?$, $E(X) = \mu$ e $V(X) = \sigma^2$, ... .
 
 
-<!-- ### 2. Valor Médio (ou Esperança da Variável) e variância (seção 6.3, Livro Bussab e Morettin) -->
-<!-- * Valor esperado/médio, esperança matemática ou simplesmente média - $E(X) = \sum_{ \forall x \in \Omega_X } x \times p(x)$; -->
-<!-- * Variância - $V(X) = \sum_{ \forall x \in \Omega_X } \left[ x - E(X) \right]^2 \times p(x)$; -->
-<!-- * Proprieadades, (*seção 6.4, Livro Bussab e Morettin*) -->
-<!--     + $E(aX + b) = a E(X) + b$ (*porque?*); -->
-<!--     + $V(aX + b) = a^2 V(X)$ (*?*). -->
-
-<!-- ### 3. Função de Distribuição (Acumulada) de Probabilidade (seção 6.5, Livro Bussab e Morettin) -->
-<!-- Definição **função de distribuição**: a função $F: \Omega_X \rightarrow  [0,1]$ tal que $F(x) = P(X \leq  x) = \sum_{ \forall y \leq x } P(x = y)  = \sum_{ \forall y \leq x } p(y)$ é denominada funçao de distribuição (acumulada). -->
-
-<!-- * Propriedades: $lim_{x \rightarrow \infty} F(x) = 1$ e $lim_{x \rightarrow - \infty} F(x) = 0$. -->
-
-
-<!-- ### Principais Modelos para V.A. Discretas (seção 6.6, Livro Bussab e Morettin) -->
-<!-- * Porque usar modelos de distribuição de probabilidades? Facilitam nos cálculos quando os problemas se encaixam em modelos (paramétricos); -->
-<!--     + **Parâmetros**: quando um modelo se "encaixa" em nosso problema, basta identificar os parâmetros do modelo; -->
-<!--     + então saberemos funções de probabilidade e distribuição, esperança, variância, ..., mais rapidamente. -->
-
-<!-- * Modelo Uniforme discreto, Modelo *Bernoulli* e *binomial*, modelo *hipergeométrico* e modelo *Poisson*. -->
-
-<!-- **(... cont.) Exemplo 3**: $X \sim Binomial(n, \pi)$. Então $p(x)= {n \choose \pi} \pi^x (1-\pi)^{n-x}$, $F(x)=?$, $E(X) = n \times \pi$ e $V(X) = n \times \pi \times (1-\pi)$. -->
+* Como verificar se modelos se ajustam ("encaixam") a dados reais?
+    + histograma, gráfico de probabilidade, *box-plot*, ...
+    + testes de aderência (não paramétricos), Kolmogorov-Smirnov, Shapiro-Wilks, ... (não veremos na disciplina).
 
 \vspace{0.5cm}
 
@@ -83,43 +90,62 @@ Definição **função densidade de probabilidade**: A função $f: \Omega_X \ri
 
 <!-- Definição **A.A.S**: Seja $X_1, X_2, \ldots, X_n$ uma a.a.s. de tamanho $n$ de $X \sim f(x; \theta)$, então $X_1 \sim f(x; \theta)$, ..., $X_n \sim f(x; \theta)$ e $X_i$ e $X_j$ são independentes para todo $i \neq j$. -->
 
-<!-- \vspace{0.5cm} -->
+\vspace{0.5cm}
 
-<!-- Exemplo: $X:$ número de peças perfeitas (P) em uma amostra de $n=3$ peças,  com probabilidade de sucesso, $p = 0,6$  (*slides 2-1, página 30*). -->
+Exemplo: (*slides 2-2, página 30*) Seja a v.a.
 
-<!-- No `R` os comandos `dbinom()`, `pbinom()` e `rbinom()` são utilizados para calcular a função de probabilidade, função de distribuição e gerar números aleatórios segundo uma distribuição binomial.  -->
+$X:$ tempo de duração de motores produzidos por uma fábrica de carros. 
 
-<!-- ```{r} -->
-<!-- n <- 3                  # num. de ensaios Bernoulli -->
-<!-- x <- 0:n                # possíveis valores de X -->
-<!-- p <- 0.6                # probabilidade de sucesso -->
-<!-- px <- dbinom(x, n, p)   # funcao de probabilidade de X  -->
-<!-- px -->
-<!-- ``` -->
-<!-- E em forma de gráfico   -->
-<!-- ```{r, fig.height=4, fig.width=4, fig.align='center'} -->
-<!-- plot(x, px, type = "h")            # grafico da distribuicao de probabilidade -->
-<!-- ``` -->
+* Do enunciado sabemos $E(X) = 150.000 km$, $V(X)=5.000^2 km$ e $X \sim Normal$;
+    + assim $X \sim Normal(\mu=150000, \sigma=50000)$.
 
-<!-- (*para a distribuição Hypergeométrica, `dhyper()`, `phyper()` e `rhyper()`, e para Poisson, `dpois()`, `ppois()` e `rpois()`*) -->
+No `R` os comandos `dnorm(x, media, desvio)`, `pnorm(x, media, desvio)`, `qnorm(x, media, desvio)` e `rnorm(n, media, desvio)` são utilizados para calcular a função densidade, função de distribuição, quantis e gerar números aleatórios segundo uma distribuição normal.
 
+a. $P(140000 \leq X \leq 160000) = F(160000) - F(140000)$ ou
+$$P(140000 \leq X \leq 160000) = P( \frac{140000 - 150000}{5000} \leq \frac{X - \mu}{\sigma} \leq \frac{160000 - 150000}{5000}) = P \left( -2 \leq Z \leq 2 \right) = \Phi(2) - \Phi(-2).$$
 
+```{r}
+media <- 150000         # media de X
+desvio <- 5000          # desvio padrao de X
+pnorm(160000, media, desvio) - pnorm(140000, media, desvio)
+```
+ou, usando `pnorm()` sem especificar `media` e `desvio` temos a normal padrão, 
+```{r}
+pnorm(2) - pnorm(-2)
+```
+E em forma de gráfico
+```{r, fig.height=3, fig.width=3, fig.align='center', echo=FALSE}
+x <- seq(-3, 3, 0.01)
+fx <- dnorm(x)
+plot(x, fx, type = "l", ylim = c(0.016, 0.4))   # grafico da distribuicao de probabilidade
+polygon(c(-2, x[abs(x) <= 2], 2), c(0, fx[abs(x) <= 2], 0), col="red")
+```
 
-<!-- Exercício 6 da Lista 1-2 e 1-3: -->
-<!-- ```{r exemplo2, fig.width=4, fig.height=3, fig.align='center'} -->
-<!-- x <- c(4, 5, 5, 6, 7, 8, 9, 17, 16, 10, 7, 9, 12, 14, 13, 8, 10, 6, 8, 15, 13, 17, 9, 5, 8, 4, 15, 17, 8, 11, 8, 10, 12, 13, 11, 8, 7, 6, 5, 16, 15, 9, 8, 9, 14, 13, 7, 8, 5, 8) -->
-<!-- table(x) -->
-<!-- barplot(table(x)) -->
-<!-- ``` -->
+b. $P(X \leq 170000) = P(Z \leq 4)$ ?
+```{r}
+media <- 150000         # media de X
+desvio <- 5000          # desvio padrao de X
+pnorm(170000, media, desvio)
+```
+E em forma de gráfico da normal padrão
+```{r, fig.height=3, fig.width=3, fig.align='center', echo=FALSE}
+x <- seq(-3, 4, 0.01)
+fx <- dnorm(x)
+plot(x, fx, type = "l", ylim = c(0.016, 0.4))   # grafico da distribuicao de probabilidade
+polygon(c(-3, x[abs(x) <= 4], 4), c(0, fx[abs(x) <= 4], 0), col="red")
+```
 
-<!-- **Exemplo 4**: Variável em estudo - gasto (em reais) em supermercado por pessoa (Slides 1-5, página 18). Qual o tipo de variável?   -->
+(*para a distribuição Uniforme, `dunif()`, `punif()`, `qunif()` e `runif()`, e para Exponencial, `dexp()`, `pexp()`, `qexp()` e `rexp()`*.)
 
-<!-- No `R` as funções `summary()` e `boxplot()` retornam o resumo de cinco números e o gráfico de caixas. -->
-
-<!-- ```{r exemplo2} -->
-<!-- x <- c(9.26, 10.81, 3.11, 85.76, 70.32, 82.70, 18.43, 19.54, 23.04, 24.47, 26.24, 26.26, 24.58, 28.38, 28.06, 28.08, 25.13, 27.65, 32.03, 36.37, 19.27, 19.50, 18.36, 52.75, 61.22, 86.37, 93.34, 22.22, 20.16, 20.59, 54.80, 59.07, 50.39, 45.40, 44.08, 44.67, 38.64, 42.97, 46.69, 48.65, 39.16, 41.02, 38.98, 15.62, 13.78, 15.23, 8.88, 12.69, 17.00, 17.39) -->
-<!-- summary(x) -->
-<!-- boxplot(x) -->
-<!-- ``` -->
-
+c. $P(X \leq ???) = 0,01$? ou $F(???) = 0,01$?
+```{r}
+qnorm(1-0.01, media, desvio)
+```
+E em forma de gráfico da normal padrão
+```{r, fig.height=3, fig.width=3, fig.align='center', echo=FALSE}
+x <- seq(-3, 3, 0.01)
+fx <- dnorm(x)
+plot(x, fx, type = "l", ylim = c(0.016, 0.4))   # grafico da distribuicao de probabilidade
+polygon( c( qnorm(1-0.01), qnorm(1-0.01), x[x > qnorm(1-0.01)], 3), c(0, dnorm(qnorm(1-0.01)), fx[x > qnorm(1-0.01)], 0), col="red")
+```
 <!-- Como incluir título e nomes nos eixos??? -->
