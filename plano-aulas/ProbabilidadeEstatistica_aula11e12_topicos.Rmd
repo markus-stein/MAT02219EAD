@@ -73,8 +73,9 @@ Definição **função de distribuição**: a função $F: \Omega_X \rightarrow 
 
 ### Principais Modelos para V.A. Discretas (seção 6.6, Livro Bussab e Morettin)
 * Porque usar modelos de distribuição de probabilidades? Facilitam nos cálculos quando os problemas se encaixam em modelos (paramétricos);
-    + **Parâmetros**: quando um modelo se "encaixa" em nosso problema, basta identificar os parâmetros do modelo;
-    + então saberemos funções de probabilidade e distribuição, esperança, variância, ..., mais rapidamente.
+    + **Parâmetros**: quando um modelo "encaixa" em nosso problema, basta identificar os parâmetros;
+    + saberemos funções de probabilidade e distribuição, esperança, variância, ..., mais rapidamente.
+    + **modelo** = **família de distribuições**, diferentes valores de parâmetros retornam diferentes distribuições.
 
 * Modelo Uniforme discreto, Modelo *Bernoulli* e *binomial*, modelo *hipergeométrico* e modelo *Poisson*.
 
