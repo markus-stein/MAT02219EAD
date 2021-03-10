@@ -48,8 +48,8 @@ Definição **$v.a.$ contínua**: quando o espaço amostral associado a uma $v.a
 ### 1. Função Densidade de Probabilidade  (f.d.p)
 Definição **função densidade de probabilidade**: a função $f: \Omega_X \rightarrow  [0,1]$ não negativa, $f(x) \geq 0$  para todo $x \in (- \infty, \infty)$, e $\int_{- \infty}^{ \infty} f(x) \: dx = 1$, é denominada função densidade de probabilidade.
 
-* Probabilidades estão associadas à áreas para v.a. contínuas.
-    + A probabilidade de uma v.a. contínua assumir um particular valor é igual a zero, $P(X=x) = 0$ para todos $X \in \Omega_X$.
+* Probabilidades estão associadas a áreas para v.a. contínuas.
+    + A probabilidade de uma v.a. contínua $X$ assumir um particular valor é igual a zero, $P(X=x) = 0$ para todos $X \in \Omega_X$.
 
 ### 2. Esperança e Variância (seção 7.2, Livro Bussab e Morettin)
 * Valor esperado, ou média - $E(X) = \int_{- \infty}^{ \infty} x \: f(x) \: dx$;
@@ -135,9 +135,9 @@ plot(x, fx, type = "l", ylim = c(0.016, 0.4))   # grafico da distribuicao de pro
 polygon(c(-3, x[abs(x) <= 4], 4), c(0, fx[abs(x) <= 4], 0), col="red")
 ```
 
-(*para a distribuição Uniforme, `dunif()`, `punif()`, `qunif()` e `runif()`, e para Exponencial, `dexp()`, `pexp()`, `qexp()` e `rexp()`*.)
+c. $P(X \leq ???) = 0,01$? ou $F(???) = 0,01$?  
+Usando a fun;'ao `qnorm(p, media, desvio)` diretamente
 
-c. $P(X \leq ???) = 0,01$? ou $F(???) = 0,01$?
 ```{r}
 qnorm(1-0.01, media, desvio)
 ```
@@ -146,6 +146,11 @@ E em forma de gráfico da normal padrão
 x <- seq(-3, 3, 0.01)
 fx <- dnorm(x)
 plot(x, fx, type = "l", ylim = c(0.016, 0.4))   # grafico da distribuicao de probabilidade
-polygon( c( qnorm(1-0.01), qnorm(1-0.01), x[x > qnorm(1-0.01)], 3), c(0, dnorm(qnorm(1-0.01)), fx[x > qnorm(1-0.01)], 0), col="red")
+z <- qnorm(1-0.01)
+polygon( c( z, z, x[x > z], 3), c(0, dnorm(z), fx[x > z], 0), col="red")
+text( x = z, y = dnorm(z) + 0.1, round( z, 3))
+abline( v = round( z, 3))
 ```
-<!-- Como incluir título e nomes nos eixos??? -->
+Assim, $X = z * \sigma + \mu = `r round( z, 3)` * `r desvio` + `r format( media, scientific=FALSE)` = `r format( round( z, 3) * desvio + media, scientific=FALSE)`$.
+
+(*para a distribuição Uniforme, `dunif()`, `punif()`, `qunif()` e `runif()`, e para Exponencial, `dexp()`, `pexp()`, `qexp()` e `rexp()`*.)

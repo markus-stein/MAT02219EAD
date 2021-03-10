@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.8)  8 MAR 2021 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.8)  10 MAR 2021 08:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -654,15 +654,15 @@ nk-7-1.pdf Graphic file (type pdf)
 <use ProbabilidadeEstatistica_aula13e14_topicos_files/figure-latex/unnamed-chun
 k-7-1.pdf>
 Package pdftex.def Info: ProbabilidadeEstatistica_aula13e14_topicos_files/figur
-e-latex/unnamed-chunk-7-1.pdf  used on input line 409.
+e-latex/unnamed-chunk-7-1.pdf  used on input line 406.
 (pdftex.def)             Requested size: 216.81938pt x 216.81938pt.
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 411.
+Package pdftex.def Info: logoIME.png  used on input line 414.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png  used on input line 411.
+Package pdftex.def Info: logoEAD.png  used on input line 414.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 
 Package fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -709,8 +709,8 @@ sy7.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/
 lm/lmtt10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/p
 ublic/lm/lmtti10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ProbabilidadeEstatistica_aula13e14_topicos.pdf (4 pages, 4102
-67 bytes).
+Output written on ProbabilidadeEstatistica_aula13e14_topicos.pdf (4 pages, 4110
+54 bytes).
 PDF statistics:
  169 PDF objects out of 1000 (max. 8388607)
  137 compressed objects within 2 object streams
