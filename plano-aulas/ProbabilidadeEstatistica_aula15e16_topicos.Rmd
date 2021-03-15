@@ -1,0 +1,102 @@
+---
+title: "Plano Aula 15 e 16"
+# author: "Markus Stein"
+# date: 158 March 2021"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm}
+\pagestyle{fancyplain} 
+\lhead{\includegraphics[height=1.5cm]{logoIME.png}}
+\rhead{\includegraphics[height=1.5cm]{logoEAD.png}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02219 - Probabilidade e Estatística - 2020/2
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Inferência Estatística
+
+## Distribuição amostral (Bussab e Morettin - Seção 10.7)
+
+* **Exemplo 1**: Média amostral, $\overline x = \frac{1}{n} \sum_{i=1}^n x_i$
+
+* **Exemplo 2**: Proporção amostral $p = \frac{1}{n} \sum_{i=1}^n x_i$ 
+
+### Teorema central do limite (Bussab e Morettin - Seção 10.8)
+
+* **Teorema 10.2** e **Corolário 10.1**  
+
+
+<!-- ### (cont... Variáveis Aleatórias) -->
+<!-- ## Variáveis aleatórias contínuas (capítulo 7, Livro Bussab e Morettin) -->
+<!-- Definição **$v.a.$ contínua**: quando o espaço amostral associado a uma $v.a.$ puder assumir valores reais, $\Omega_X \subseteq \mathbb{R}$, ou infinito, denominamos v.a. contínua. -->
+
+
+<!-- **Exemplo 1**: $X$: duração de vida de um tipo de lâmpada, $X \in (0, \infty)$. -->
+<!-- <!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$.   --> -->
+
+<!-- **Exemplo 2**: $X$: PIB do Brasil, $X \in \mathbb{R}$. -->
+<!-- <!-- , $X \sim Normal(\mu, \sigma^2)$. $E(X) = \mu$.   --> -->
+
+<!-- **Exemplo 3**: $Y$ (consumo) e $X$ (renda), ... -->
+<!-- <!-- $E(Y) = \alpha + \beta X$.   --> -->
+
+<!-- * Geralmente os espaços amostrais, $\Omega$, de experimentos envolvendo observação de v.a. contínuas coincidem com o espaço da própria v.a., $\Omega_X$. -->
+<!--     + No **exemplo 1**: $\Omega = \Omega_X = (0, \infty)$ -->
+<!--     + No **exemplo 2**: $\Omega = \Omega_X = \mathbb{R}$ -->
+
+<!-- * Como representar a distribuição de probabilidade de uma v.a. contínua? -->
+
+<!-- ### 1. Função Densidade de Probabilidade  (f.d.p) -->
+<!-- Definição **função densidade de probabilidade**: a função $f: \Omega_X \rightarrow  [0,1]$ não negativa, $f(x) \geq 0$  para todo $x \in (- \infty, \infty)$, e $\int_{- \infty}^{ \infty} f(x) \: dx = 1$, é denominada função densidade de probabilidade. -->
+
+<!-- * Probabilidades estão associadas a áreas para v.a. contínuas. -->
+<!--     + A probabilidade de uma v.a. contínua $X$ assumir um particular valor é igual a zero, $P(X=x) = 0$ para todos $X \in \Omega_X$. -->
+
+<!-- ### 2. Esperança e Variância (seção 7.2, Livro Bussab e Morettin) -->
+<!-- * Valor esperado, ou média - $E(X) = \int_{- \infty}^{ \infty} x \: f(x) \: dx$; -->
+<!-- * Variância - $V(X) =  E \left\{ \left[ x - E(X) \right]^2 \right\} = E(X^2) - \left[ E(X) \right]^2 = \int_{- \infty}^{ \infty} \left[ x - E(X) \right]^2 \: f(x) \: dx$; -->
+<!-- * Proprieadades: ... . -->
+
+<!-- ### 3. Função de Distribuição (Acumulada) de Probabilidade (seção 7.3, Livro Bussab e Morettin) -->
+<!-- Definição **função de distribuição**: a função $F: \Omega_X \rightarrow  [0,1]$ tal que $F(x) = P(X \leq  x) = \int_{- \infty}^{x} f(y) \: dy$ é denominada funçao de distribuição (acumulada). -->
+
+<!-- * Propriedades: $lim_{x \rightarrow \infty} F(x) = 1$ e $lim_{x \rightarrow - \infty} F(x) = 0$; -->
+<!--     + $P(a \leq X \leq b) = F(b) - F(a)$; -->
+<!--     + $F(x)$ existe para todos os números reais, diferente da f.d.p.. -->
+
+<!-- ### Principais Modelos para V.A. Contínuas (seção 7.4, Livro Bussab e Morettin) -->
+<!-- * Modelos? -->
+<!--     + Distribuição Uniforme, distribuição Exponencial e distribuição Normal. Na área 3 veremos a distribuição *t*, distribuição *qui quadrado* e a distribuição *F*. -->
+
+<!-- * **Modelo Normal** ou Distribuição de Gauss: -->
+<!--     + é uma das mais importantes distribuições de probabilidade em Estatística; -->
+<!--     + Como calcular probabilidades? Modelo **normal padrão**, usando **valores tabelados**; -->
+<!--     + **Padronização**: se $X \sim Normal (\mu, \sigma^2)$, então $Z = \frac{X - \mu}{\sigma} \sim Normal (0,1)$. -->
+
+<!-- **(... cont.) Exemplo 2**: Se assumirmos $X \sim Normal(\mu, \sigma^2)$. Então conhecemos $f(x)$, $F(x)=?$, $E(X) = \mu$ e $V(X) = \sigma^2$, ... . -->
+
+
+<!-- * Como verificar se modelos se ajustam ("encaixam") a dados reais? -->
+<!--     + histograma, gráfico de probabilidade, *box-plot*, ... -->
+<!--     + testes de aderência (não paramétricos), Kolmogorov-Smirnov, Shapiro-Wilks, ... (não veremos na disciplina). -->
+
+\vspace{0.5cm}
+
+***
+## Ler slides e ver vídeos da semana 8.
+## Fazer lista de exercícios 2-3.
+## Fazer o Quiz da semana 8 - VALE NOTA!!!
+***  
+
