@@ -1,0 +1,41 @@
+---
+title: "Marking open-ended questions wuth Topic modelling and LDA"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Text analysis/topic modelling
+* Open-ended questions questions are more eficient/complete assessments.
+* But are also harder to mark.
+    + we want to use here text/topic analyis/minning...
+* Text in `R` means a object `string`
+    + so we are doing string manipulation
+* *Moodle*, R/exams and open-ended questions...
+
+
+## String manipulation + general pattern analysis + grouping reponses
+
+### word cloud
+
+### *must have* words
+
+### Latent Dirichlet Allocation (dicriminat analysis...) to mark `string` text answers
+
+
+
+
+https://rpubs.com/Argaadya/topic_lda
+
+https://rstudio-pubs-static.s3.amazonaws.com/100936_ae4251bba3da438bbfb870d4b9431f04.html
+
+
+papers
+
+https://scholar.harvard.edu/files/dtingley/files/topicmodelsopenendedexperiments.pdf
+
+https://www.tandfonline.com/doi/full/10.1080/2573234X.2019.1590131
+
+file:///C:/Users/Markus/Downloads/information-11-00550.pdf

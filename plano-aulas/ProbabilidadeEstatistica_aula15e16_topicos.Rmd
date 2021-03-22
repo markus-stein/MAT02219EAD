@@ -28,7 +28,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # Inferência Estatística
 
 ## Distribuição amostral (Bussab e Morettin - Seção 10.7)
-*"Uma função de variáveis aleatórias (v.a.s) é aleatória."*
+*"Toda função de variáveis aleatórias (v.a.s) é aleatória."*
 
 ### Lembrando: Amostra aleatória simples (a.a.s.)  $=$ v.a. idependentes e identicamente distribuídas (i.i.d.)   
 Definição **A.A.S**: Seja $X_1, X_2, \ldots, X_n$ uma a.a.s. de tamanho $n$ de $X \sim f(x; \theta)$, então $X_1 \sim f(x; \theta)$, ..., $X_n \sim f(x; \theta)$ e $X_i$ e $X_j$ são independentes para todo $i \neq j$.
@@ -37,7 +37,11 @@ Definição **A.A.S**: Seja $X_1, X_2, \ldots, X_n$ uma a.a.s. de tamanho $n$ de
     + Média amostral $\overline X = \frac{X_1 + X_2 + \ldots + X_n}{n} = \frac{1}{n} \sum_{i=1}^n X_i$ é aleatória. 
     + Depois de observada a amostra $(X_1, \ldots, X_n) = (x_1, \ldots, x_n)$ escrevemos a estatística $\overline x = \frac{1}{n} \sum_{i=1}^n x_i$.
 
+Definição **Erro padrão**: é o desvio padrão de uma estatística. Por exemplo *erro padrão da média* $\sigma_{\overline X} = \sqrt{Var(\overline X)}$.
+
+
 * **Exemplo 2**: ... Proporção amostral $\hat p = \frac{1}{n} \sum_{i=1}^n X_i$, para $X_i \in \left\{ 0, 1 \right\}$. ...
+
 
 ### Teorema central do limite (Bussab e Morettin - Seção 10.8)
 *"Garante que uma média amostral se aproxima do seu valor esperado à medida que o tamanho da amostra aumenta (dadas algumas condições...)"*
@@ -64,7 +68,6 @@ hist( colMeans( replicate( n = 100, runif( n = 5, min = 0, max = 1))), main="Uni
 hist( colMeans( replicate( n = 100, runif( n = 10, min = 0, max = 1))), main="Uniforme(0,1), n=10")
 hist( colMeans( replicate( n = 100, runif( n = 50, min = 0, max = 1))), main="Uniforme(0,1), n=50")
 ```
-
 
 \vspace{0.5cm}
 
