@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.8)  22 MAR 2021 09:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.8)  22 MAR 2021 10:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -548,46 +548,33 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 113
 (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 138.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 138.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 138.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-48.
+35.
 (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 2478) in paragraph at lines 160--163
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 135.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 135.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 135.
+
+Underfull \hbox (badness 2478) in paragraph at lines 201--204
 []\T1/lmr/m/n/10 Depois de ob-ser-vada a amostra $\OT1/lmr/m/n/10 (\OML/lmm/m/i
 t/10 X[]; [] ; X[]\OT1/lmr/m/n/10 ) = (\OML/lmm/m/it/10 x[]; [] ; x[]\OT1/lmr/m
 /n/10 )$ \T1/lmr/m/n/10 es-creve-mos a es-tatís-tica
  []
 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-94.
-(c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-<ProbabilidadeEstatistica_aula15e16_topicos_files/figure-latex/unnamed-chunk-1-
-1.pdf, id=33, 433.62pt x 144.54pt>
-File: ProbabilidadeEstatistica_aula15e16_topicos_files/figure-latex/unnamed-chu
-nk-1-1.pdf Graphic file (type pdf)
-<use ProbabilidadeEstatistica_aula15e16_topicos_files/figure-latex/unnamed-chun
-k-1-1.pdf>
-Package pdftex.def Info: ProbabilidadeEstatistica_aula15e16_topicos_files/figur
-e-latex/unnamed-chunk-1-1.pdf  used on input line 214.
-(pdftex.def)             Requested size: 433.63878pt x 144.54623pt.
-<logoIME.png, id=34, 521.95pt x 226.8475pt>
+<logoIME.png, id=36, 521.95pt x 226.8475pt>
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 214.
+Package pdftex.def Info: logoIME.png  used on input line 231.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
-<logoEAD.png, id=35, 313.17pt x 154.77824pt>
+<logoEAD.png, id=37, 313.17pt x 154.77824pt>
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png  used on input line 214.
+Package pdftex.def Info: logoEAD.png  used on input line 231.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 
 Package fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -601,22 +588,29 @@ Package fancyhdr Warning: \headheight is too small (40.45274pt):
 ftex.map}
 
  <./logoIME.png> <./logoEAD.png>]
-<ProbabilidadeEstatistica_aula15e16_topicos_files/figure-latex/unnamed-chunk-2-
-1.pdf, id=64, 433.62pt x 144.54pt>
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+59.
+(c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 259.
+<ProbabilidadeEstatistica_aula15e16_topicos_files/figure-latex/unnamed-chunk-1-
+1.pdf, id=65, 433.62pt x 144.54pt>
 File: ProbabilidadeEstatistica_aula15e16_topicos_files/figure-latex/unnamed-chu
-nk-2-1.pdf Graphic file (type pdf)
+nk-1-1.pdf Graphic file (type pdf)
 <use ProbabilidadeEstatistica_aula15e16_topicos_files/figure-latex/unnamed-chun
-k-2-1.pdf>
+k-1-1.pdf>
 Package pdftex.def Info: ProbabilidadeEstatistica_aula15e16_topicos_files/figur
-e-latex/unnamed-chunk-2-1.pdf  used on input line 231.
+e-latex/unnamed-chunk-1-1.pdf  used on input line 281.
 (pdftex.def)             Requested size: 433.63878pt x 144.54623pt.
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 251.
+Package pdftex.def Info: logoIME.png  used on input line 283.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png  used on input line 251.
+Package pdftex.def Info: logoEAD.png  used on input line 283.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 
 Package fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -627,27 +621,55 @@ Package fancyhdr Warning: \headheight is too small (40.45274pt):
 (fancyhdr)                \addtolength{\topmargin}{-14.57195pt}.
 
 [2 <./ProbabilidadeEstatistica_aula15e16_topicos_files/figure-latex/unnamed-chu
-nk-1-1.pdf> <./ProbabilidadeEstatistica_aula15e16_topicos_files/figure-latex/un
-named-chunk-2-1.pdf>] (./ProbabilidadeEstatistica_aula15e16_topicos.aux)
+nk-1-1.pdf>]
+<ProbabilidadeEstatistica_aula15e16_topicos_files/figure-latex/unnamed-chunk-2-
+1.pdf, id=83, 433.62pt x 144.54pt>
+File: ProbabilidadeEstatistica_aula15e16_topicos_files/figure-latex/unnamed-chu
+nk-2-1.pdf Graphic file (type pdf)
+<use ProbabilidadeEstatistica_aula15e16_topicos_files/figure-latex/unnamed-chun
+k-2-1.pdf>
+Package pdftex.def Info: ProbabilidadeEstatistica_aula15e16_topicos_files/figur
+e-latex/unnamed-chunk-2-1.pdf  used on input line 302.
+(pdftex.def)             Requested size: 433.63878pt x 144.54623pt.
+File: logoIME.png Graphic file (type png)
+<use logoIME.png>
+Package pdftex.def Info: logoIME.png  used on input line 304.
+(pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
+File: logoEAD.png Graphic file (type png)
+<use logoEAD.png>
+Package pdftex.def Info: logoEAD.png  used on input line 304.
+(pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
+
+Package fancyhdr Warning: \headheight is too small (40.45274pt): 
+(fancyhdr)                Make it at least 55.02469pt, for example:
+(fancyhdr)                \setlength{\headheight}{55.02469pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-14.57195pt}.
+
+[3
+
+ <./ProbabilidadeEstatistica_aula15e16_topicos_files/figure-latex/unnamed-chunk
+-2-1.pdf>] (./ProbabilidadeEstatistica_aula15e16_topicos.aux)
 Package rerunfilecheck Info: File `ProbabilidadeEstatistica_aula15e16_topicos.o
 ut' has not changed.
-(rerunfilecheck)             Checksum: B551AA46FDFAC09A4B87F8EDA2997AF5;2279.
+(rerunfilecheck)             Checksum: E0E9419AA42BC85074F04FB5A0DDA041;2461.
  ) 
 Here is how much of TeX's memory you used:
- 10624 strings out of 480971
- 157701 string characters out of 5906169
- 469347 words of memory out of 5000000
- 27634 multiletter control sequences out of 15000+600000
- 453981 words of font info for 69 fonts, out of 8000000 for 9000
+ 10632 strings out of 480971
+ 157825 string characters out of 5906169
+ 468429 words of memory out of 5000000
+ 27638 multiletter control sequences out of 15000+600000
+ 454299 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,15n,74p,698b,416s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,15n,74p,698b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.
 enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-m
 athex.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/l
 m/lm-mathit.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/d
 vips/lm/lm-rm.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc
-/dvips/lm/lm-ts1.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/
-enc/dvips/lm/lm-mathsy.enc}<c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/
+/dvips/lm/lm-mathsy.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fon
+ts/enc/dvips/lm/lm-ts1.enc}<c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/
 fonts/type1/public/lm/lmbx10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf
 -dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX
 /texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/Users/Markus/AppData/Roaming/T
@@ -661,13 +683,14 @@ Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb>
 <c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri1
 0.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm
 /lmsy10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/pub
-lic/lm/lmtt10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/typ
-e1/public/lm/lmtti10.pfb>
-Output written on ProbabilidadeEstatistica_aula15e16_topicos.pdf (2 pages, 4086
-77 bytes).
+lic/lm/lmtk10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/typ
+e1/public/lm/lmtt10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fon
+ts/type1/public/lm/lmtti10.pfb>
+Output written on ProbabilidadeEstatistica_aula15e16_topicos.pdf (3 pages, 4351
+29 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
- 17 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 157 PDF objects out of 1000 (max. 8388607)
+ 127 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 
