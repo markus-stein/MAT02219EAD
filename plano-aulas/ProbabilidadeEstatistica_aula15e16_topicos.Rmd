@@ -29,7 +29,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Essa semana veremos resultados e extensões de Probabilidade que terão aplicação nas próximas semanas. 
 
 * Estatística descritica $\times$ inferência estatística;
-    + população e amostra.
+    + população e amostra: parâmetros ($\mu$, $\sigma^2$, $\pi$, ...) $\times$ estatísticas ($\overline x$, $s^2$, $p$, ...).
 
 Definição **Estatística**: é qualquer valor obtido em função da amostra. Exemplo, $\overline x$, $s^2$, $p$, ...
 
@@ -39,7 +39,7 @@ Definição **Estatística**: é qualquer valor obtido em função da amostra. E
 Definição **Distribuição Amostral**: é a distribuição de probabilidade de uma estatística.
 
 * **Exemplo 1**: Seja $X$ a v.a. que denota o número de livros que a população de monitores do curso 'Probabilidade e Estatística' lêem por semestre. Suponha que no último semestre foram lidos 5, 7, 4. Se não soubéssemos essa informação e decidíssemos observar uma amostra de tamanho $n=2$ para saber a média de livros lidos $\overline X$. 
-    + Quais as possíveis amostras? Cada amostra pode gerar um $\overline x$a média amostral diferente;
+    + Quais as possíveis amostras? Cada amostra pode gerar um $\overline x$ diferente;
     + Os valores de média calculados com cada amostra formam a distribuição amostral de $\overline X$.
 
 ### Lembrando: Amostra aleatória simples (a.a.s.)  $=$ v.a. idependentes e identicamente distribuídas (i.i.d.)   
