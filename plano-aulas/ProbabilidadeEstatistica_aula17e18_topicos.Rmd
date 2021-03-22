@@ -27,79 +27,141 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # (cont.) Inferência Estatística
 
-## Estmação (pontual) (Bussab e Morettin - Capítulo 11)
+**Exemplo 1**: Média amostral, $\overline X = \frac{1}{n} \sum_{i=1}^n X_i$, em que $X_1, \ldots, X_n$ uma amostra aleatória de $X_i \sim Normal(\mu, \sigma^2)$ e $\sigma^2$ conhecido:   
+a. Qual a distribuição amostral de $\overline X$?  
+b. $\overline X$ é um bom estimador para a média populacional $\mu$?  
+c. Como usar $Var(\overline X)$ para fornecer um grau de certeza sobre usarmos $\overline X$ para representar/estimar $\mu$?  
 
-* Parâmetro $\times$ Estatísticas
+## Estmação Pontual (Bussab e Morettin - Capítulo 11)
 
-* Estimador e Estimativa
+* Estatísticas: Estimador *versus* Estimativa.
 
 Definição (**Estimador**): Um estimador $T$ do parâmetro $\theta$ é qualquer função das observações da amostra, $T=g(X_1, \ldots, X_n)$.  
 
 Definição (**Estimativa**): Uma estimativa é um particular valor do estimador. Para uma amostra observada $x_1, \ldots, x_n$ uma estimativa $t$ do parâmetro $\theta$ é dada por $t=g(x_1, \ldots, x_n)$.  
 
+* Propriedades dos estimadores (Bussab e Morettin - Seção 11.2)
+    + **Viés** e o Erro Quadrático Médio ($EQM$); **Constistência** e **Eficiência**.
 
-### Propriedades dos estimadores (Bussab e Morettin - Seção 11.2)
-* **Viés** e o Erro Quadrático Médio ($EQM$);
-* **Constistência** e **Eficiência**.
+**(cont.) Exemplo 1**: E para a média amostral $\overline X = \frac{1}{n} \sum_{i=1}^n X_i$ se $\sigma^2$ desconhecido?
 
+**Exemplo 2**: Para a variância amostral $s^2 = \frac{1}{n-1} \sum_{i=1}^n (X_i - E(X))^2$? E para $\widehat \sigma^2 = \frac{1}{n} \sum_{i=1}^n (X_i - E(X))^2$?
+
+**Exemplo 3**: E para a proporção amostral $\hat p = \frac{1}{n} \sum_{i=1}^n X_i$?  
 
 ## Introdução à estimação intervalar
 
 Estimação pontual $\times$ estimação intervalar 
-
-* **Exemplo 1**: Média amostral, $\overline X = \frac{1}{n} \sum_{i=1}^n X_i$, em que $X_1, \ldots, X_n$ uma amostra aleatória de $X_i \sim Normal(\mu, \sigma^2)$ e $\sigma^2$ conhecido:
-a. Qual a distribuição amostral de $\overline X$? $\overline X$ é um bom estimador para a média populacional $\mu$?
-c. Como usar $Var(\overline X)$ para darmos um grau de certeza sobre usarmos $\overline X$ para estimar $\mu$?  
-
-* **Exemplo 2**: E para a média amostral $\overline X = \frac{1}{n} \sum_{i=1}^n X_i$ se $\sigma^2$ desconhecido?
-
-* **Exemplo 3**: E para a proporção amostral $\hat p = \frac{1}{n} \sum_{i=1}^n X_i$?  
-
 
 ### **Intervalos de Confiança (IC)** (Bussab e Morettin - Seção 11.6)  
 Definição (**Intervalo de confiança (IC)**): Seja $T$ um estimador para o parâmetro $\theta$, o IC ao nível $(1-\alpha) \times 100\%$ para $\theta$ será denotado pelo intervalo 
 $$IC(\theta; 1-\alpha) = \left( t_1(T) , t_2(T) \right),$$
 para dois valores $t_1(T)$ e $t_2(T)$ tais que $P [ t_1(T) < \theta < t_2(T) ] = 1 - \alpha$. (Se conhecida a distribuição amostral de $T$, será sempre possível achar $t_1(T)$ e $t_2(T)$). 
 
-\vspace{0.5cm}
-
 * Esse é um tipo de estimação intervalar (o mais popular em inferência paramétrica clássica)
-* Veremos todas as situações de intervalos nos **slides dessa e das próximas semanas**.
-    + Essa semana iniciaremos com o IC para uma média populacional $\mu$;
+    + Veremos todas as situações de intervalos nos **slides dessa semana**.
+
+
+### Erro padrão de um Estimador (Bussab e Morettin - Seção 11.7)
+
+Definição (**Erro padrão**): denominamos *erro padrão* do estimador $T$ (para o parâmetro $\theta$) a quantidade $EP(T) = \sqrt{Var(T)}$.
+
+<!-- * **...cont. Exemplo 1**: Média amostral $\overline X$. $EP(\overline X)$? -->
+<!-- * **...cont. Exemplo 3**: Proporção amostral $\hat p$. $EP(\hat p)$? -->
+
+<!-- \vspace{0.5cm} -->
+ 
+Definição (**Erro padrão estimado**): $ep(T) = \widehat{EP}(T) = \sqrt{\widehat{Var}(T)}$. 
+
+<!-- \vspace{0.2cm} -->
+
+* **...cont. Exemplo 1**: Média amostral $\overline X$. Calcular $EP(\overline X)$. E $ep(\overline X)$?
+* **...cont. Exemplo 3**: Proporção amostral $\hat p$. $EP(\hat p)$ e $ep(\hat p)$?
+
+## $IC$ para uma média populacional $\mu$ (supondo $\sigma^2$ conhecido ou $n>30$)
+Iniciaremos com o IC para uma média populacional $\mu$;
 * Resultado importante na construção de $IC$ para uma média populacional:
     + No **Exemplo 1**, supondo $\sigma^2$ conhecido (ou $n>30$), então
 $$ \overline X \sim Normal(\mu, \sigma^2 / n)$$
 se $X \sim Normal(\mu, \sigma^2)$. Também
 $$ Z = \frac{\overline X - \mu}{\sigma/\sqrt{n}} \sim Normal(0,1).$$
 
+## $IC$ para uma média populacional $\mu$ (supondo $\sigma^2$ desconhecido e $n \leq 30$)
 
-\vspace{0.5cm}
+### Estimação de $\sigma^2$  
+
+* Se desconhecemos a variância populacional, podemos estimá-la usando o estimador $S^2 = \frac{\sum_{i=1}^n (X_i - \overline X)^2}{n-1}$ (porquê?)
+
+* Nesse caso $S^2$ é uma variável aleatória (v.a.). (Sabemos qual a distribuição amostral de $S^2$?)
+
+* Qual a distribuição amostral da transformação $T = \frac{\overline X - \mu}{S/\sqrt{n}}$?
+$$ T = \frac{\overline X - \mu}{S/\sqrt{n}} \sim ?$$
+
+### Distribuição (de probabilidade) $t$ de Student (Bussab e Morettin - Seção 7.7.3)
+
+Teorema (**Distribuição $t$-Student, nossa versão**): Seja $X_1, \ldots, X_n$ uma amostra aleatória da v.a. $X \sim Normal(\mu,\sigma^2)$, então (dadas algumas outras suposições para $S$ que omitimos aqui) 
+$$ T = \frac{\overline X - \mu}{S/\sqrt{n}} \sim t_{(n-1)}.$$
+em que $t_{(n-1)}$ denota a distribuição de probabilidade $t$-Student com $n-1$ graus de liberdade (g.l.).
+
+* A distribuição $t$ de Student também possui **valores tabelados**, como a distribuição **normal padrão**. Qual a relação entra essas distribuições?
+* Como usar a distribuição $t$ de Student para construir um IC para $\mu$? Quais as suposições necessárias? Como interpretar os resultados?
+
+# Intervalo de confiança para a Variância
+* Suponha que agora queremos estimar uma variância populacional $\sigma^2$.
+* Exemplo: Estimar a variabilidade dos retornos de certa aplicação financeira.
+    + Qual o estimador pontual "natural" para o problema? E como calcular um IC para $\sigma^2$?
+    
+### (...continuação) Estimação de $\sigma^2$  
+* Se desconhecemos a variância populacional, podemos estimá-la usando o estimador $S^2 = \frac{\sum_{i=1}^n (X_i - \overline X)^2}{n-1}$ (porquê?)
+* Nesse caso $S^2$ é uma variável aleatória (v.a.). (Sabemos qual a distribuição amostral de $S^2$?)
+
+<!-- \vspace{0.5cm} -->
+
+### Distribuição (de probabilidade) $Qui-Quadradot$ (Bussab e Morettin - pág. 358)
+Teorema (**Distribuição Qui-Quadrado, nossa versão**): Seja $X_1, \ldots, X_n$ uma amostra aleatória da v.a. $X \sim Normal(\mu,\sigma^2)$ e $S^2 = \sum_{i=1}^n (X_i - \overline X)^2 / (n-1)$, então podemos escrever uma quantidade $Q$ tal que (dadas algumas outras suposições que omitimos aqui) 
+$$ Q = \frac{(n-1) S^2}{\sigma^2} \sim \chi^2_{(n-1)}.$$
+em que $\chi^2_{(n-1)}$ denota a distribuição de probabilidade Qui-Quadrado com $n-1$ graus de liberdade (g.l.).
+
+* A distribuição $\chi^2$ **valores tabelados**, assim como a distribuição **normal padrão** e a $t$. A diferença é que $Q$ só assume valores positivos.
+* Como usar a distribuição de $Q$ para construir um IC para $\sigma^2$? **Quais as suposições necessárias**? **Como interpretar os resultados**?
+
+<!-- \vspace{0.5cm} -->
 
 <!-- \clearpage -->
+## Intervalo para uma proporção (populacional)
+* Suponha que agora queremos estimar uma proporção populacional $\pi$.
+* **Exemplo**: Estimar a proporção de pessoas infectadas por um certo vírus numa população.   
+    + Qual o estimador pontual "natural" para o problema? E como calcular um IC para $\pi$?  
+* Quais as **suposições necessárias**? Como **interpretar os resultados**?
 
-### Erro padrão de um Estimador (Bussab e Morettin - Seção 11.7)
+<!-- \vspace{0.5cm} -->
+### Usando o teorema central do limite
+* $\frac{\overline X - \mu}{\sigma / \sqrt{n}} \sim Normal(0,1)$ se $X \sim Normal(\mu, \sigma^2)$, para $\sigma^2$ conhecido, ou
+* $\frac{\overline X - \mu}{S / \sqrt{n}} \sim Normal(0,1)$ se o tamanho amostral for grande, $n >> 30$. 
 
-Definição (**Erro padrão**): O *erro padrão* do estimador $T$ (para o parâmetro $\theta$) é a quantidade dada por 
-$$EP(T) = \sqrt{Var(T)}.$$
+**No caso da proporção amostral $X$ não será normal**
+Para uma  amostra aleatória $X_1, \ldots, X_n$ da v.a. $X \sim Bernoulli(\pi)$ temos que $\sum_{i=1}^n X_i \sim Binomial(n, \pi)$. Das propriedades da distribuição binomial sabemos que $E(\sum_{i=1}^n X_i) = np$ e $V(\sum_{i=1}^n X_i) = np(1-p)$.
 
-* **...cont. Exemplo 1**: Média amostral $\overline X$. $EP(\overline X)$?
-* **...cont. Exemplo 3**: Proporção amostral $\hat p$. $EP(\hat p)$?
+Assim, para um tamanho de amostra suficientemente grande ($n >> 30$)
+$$Z =  \frac{(\sum_{i=1}^n X_i) - np}{\sqrt{np(1-p)}} \sim Normal(0,1)$$
+ou ainda usando $p = \sum_{i=1}^n X_i / n$
+$$Z =  \frac{(\sum_{i=1}^n X_i/n) - p}{\sqrt{\frac{p(1-p)}{n}}} \sim Normal(0,1)$$
 
-\vspace{0.5cm}
- 
-Definição (**Erro padrão estimado**): $ep(T) = \widehat{EP}(T) = \sqrt{\widehat{Var}(T)}$. 
+<!-- \vspace{0.5cm} -->
 
-\vspace{0.2cm}
+## Dimensionamento do tamanho de amostra $n$
+Chamamos de erro de estimação a metade da amplitude do intervalo,
 
-* **...cont. Exemplo 1**: Média amostral $\overline X$. $ep(\overline X)$?
-* **...cont. Exemplo 3**: Proporção amostral $\hat p$. $ep(\hat p)$?
+* no caso de IC para $\mu$ com $\sigma^2$ conhecido, $E = z_{\alpha/2} \times \sigma / \sqrt{n}$,
+* no caso de IC para $\mu$ com $\sigma^2$ desconhecido e $n$ pequeno, $E = t_{(n-1); \alpha/2} \times s / \sqrt{n}$,
+* e no caso de IC para $\pi$, $E = z_{\alpha/2} \times \sqrt{p(1-p)/n}$.
 
-\vspace{0.5cm}
+Como calcular o **tamanho mínimo de uma amostra** para uma **confiança** $1-\alpha$ especificada e um **erro máximo** $E$ também fixado?
 
 ***
-## Ler slides e ver vídeos da semana 8.
-## Fazer lista de exercícios 2-3.
-## Fazer o Quiz da semana 8 - VALE NOTA!!!
+## Ler slides e ver vídeos da semana 9.
+## Fazer lista de exercícios 2-4.
+## Fazer o Quiz da semana 9 - VALE NOTA!!!
 ***  
 
 
