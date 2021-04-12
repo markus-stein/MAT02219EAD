@@ -1,0 +1,291 @@
+---
+title: "Plano Aula 23 e 24"
+# author: "Markus Stein"
+# date: 29 March 2021"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm}
+\pagestyle{fancyplain} 
+\lhead{\includegraphics[height=1.5cm]{logoIME.png}}
+\rhead{\includegraphics[height=1.5cm]{logoEAD.png}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02219 - Probabilidade e Estatística - 2020/2
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- # Testes de Hipóteses (Bussab e Morettin - capítulo 12) -->
+<!-- * Podemos utilizar **intervalos de confiança** para **tomar decisões**? Sim. -->
+<!--     + Decisões acerca de valores possíveis para parâmetros: médias, variâncias e proporções, ... -->
+
+<!-- * O **Teste de hipóteses** é uma "máquina" de decisões, um mecanismo para se construir hipóteses e decidir sobre afirmações acerca de possíveis valores para um parâmetro (usando uma regra probabilística e dados amostrais). -->
+
+<!-- * **Exemplo**: Devo manter ou não a linha de produção em operação com base em medidas das útlimas peças produzidas? -->
+<!--     + Qual o estimador pontual "natural" para o problema? E como construir um IC? -->
+<!--     + Como criar uma regra para tomar essa decisão? -->
+
+<!-- ## Hipóteses estatísticas -->
+<!-- * São **afirmações acerca de parâmetros**. -->
+<!--     + Exemplo: o salário médio, $\mu$, na empresa A é superior a 2 salários mínimos (s.m.), ou seja, em termos do parêmetro, $\mu \leq 2 s.m.$ ou $\mu > 2s.m.$. -->
+
+<!-- * Hipótese **nula** ($H_0$) *versus* hipótese **alternativa** ($H_1$ ou $H_A$). -->
+<!--     + Hipoteses são subconjuntos dos possíveis valores para um parâmetro de interesse $\theta$. -->
+<!--     + Devem ser complementares. *($H_0: \theta \leq \theta_0$ contra $H_1: \theta > \theta_0$, ou $H_0: \theta \geq \theta_0$ contra $H_1: \theta < \theta_0$ ou $H_0: \theta = \theta_0$ contra $H_1: \theta \neq \theta_0$)*. -->
+
+<!-- * Teste **unilateral** (quando $H_1: \theta < \theta_0$ ou $H_1: \theta > \theta_0$) *versus* **bilateral** ($H_1: \theta \neq \theta_0$).   -->
+<!-- **Como definir hipóteses para cada problema?** -->
+<!-- 1. A igualdade '=' vai sempre em $H_0$. -->
+<!-- 2. A hipótese de pesquisa irá sempre em $H_1$. -->
+
+<!-- ## Erros de decisão e procedimento do Teste (Bussab e Morettin - seção 12.3) -->
+<!-- * **Erro tipo I**: rejeitar $H_0$ quando $H_0$ for verdadeira.  -->
+<!--     + Exemplo: seria afirmar que o salário na empresa A é maior do que $2 s.m.$ com base na amostra, quando na realidade o salário médio é menor.  -->
+<!-- *(nesse caso tivemos o "azar" de ter coletado uma amostra extrema mesmo $H_0$ sendo verdade)* **É o erro que priorizamos**. -->
+<!-- * **Erro tipo II**: "aceitar" $H_0$ quando $H_0$ for falsa. -->
+
+<!-- ### Probabilidade de Erro  -->
+<!-- * $\alpha = P(Erro \: I) = P( \left.``rejeitar \: H_0" \right| ``H_0 \: verdadeiro")$, também denominado **nível de significância**; -->
+<!-- * $\beta = P(Erro \: II) = P( \left.``não \: rejeitar \: H_0" \right| ``H_0 \: falsa")$, também denominado **poder do teste**. -->
+<!--     + Na prática fixamos  $\alpha$ e geralmente $\beta$ é ignorado. *(Precisamos saber calcular $\beta$)* Assim -->
+<!-- 1. se não rejeitamos $H_0$, ou acertamos, ou erramos com probabilidade $\beta$ *(geralmente desconhecida)*.  -->
+<!-- 2. se rejeitamos $H_0$, afirmamos $H_1$, então acertamos ou erramos com probabilidade $\alpha$ *(geralmente escolhemos um valor muito pequeno)*. -->
+
+<!-- ### Região crítica (Região de rejeição) -->
+<!-- É o conjunto de valores para a estatística de teste em que rejeitaremos a hipótese nula.   -->
+
+<!-- * Por exemplo, $RC = \left\{ \overline X > \overline x_{crítico} \right\}$ se $H_0: \mu \leq 2s.m.$. -->
+<!-- * Depende das hipóteses e "vai na mesma direção" da hipótese alternativa. -->
+
+<!-- \vspace{0.5cm} -->
+
+<!-- ## Passo a passo para a construção de um Teste de hipóteses (Bussab e Morettin - seção 12.4) -->
+<!-- 1. **Definir hipóteses** acerca do parâmetro de interesse.   -->
+<!-- *($H_0: \theta = \theta_0$, $H_0: \theta \geq \theta_0$, ou $H_0: \theta \leq \theta_0$ )* -->
+<!-- 2. Escolher qual a **estatística de teste** adequada. *($z_{calc}$, $t_{calc}$, ...)* -->
+<!-- 3. Fixar $\alpha$ e construir a **região crítica**. -->
+<!-- 4. **Calcular a estatística de teste** usando os valores da amostra observada. -->
+<!-- 5. Tomar **decisão e conclusão** sobre o problema. -->
+
+<!-- \vspace{0.5cm} -->
+
+# (...cont.) Testes de Hipóteses para média(s)
+
+## Testes para a média de uma população (com variância conhecida) (Bussab e Morettin - seção 12.5)
+Sob $H_0$, supomos que $X_1, \ldots, X_n$ são uma amostra aleatória de $X \sim Normal(\mu_0, \sigma^2)$$ então
+$$Z_{calc} =  \frac{\overline X - \mu_0}{\sqrt{\frac{\sigma^2}{n}}} \sim Normal(0,1)$$
+
+* Como construir a região crítica $RC$?
+*(Depende das hipóteses, $H_1: \mu < \mu_0$, $H_1: \mu > \mu_0$ ou $H_1: \mu \neq \mu_0$)*
+
+* Para quais valores de $Z_{calc}$ rejeitamos $H_0$?
+*(Respectivamente $RC = \left\{ z_{calc} < -z_{tab} \right\}$, ou $RC = \left\{ z_{calc} > z_{tab} \right\}$ ou $RC = \left\{ \left| z_{calc} \right| > z_{tab} \right\}$)*
+
+* Como encontrar $z_{tab}$ para $\alpha$ fixado?
+
+### Testes para a média de uma população, com variância desconhecida
+Sob $H_0$, supomos que $X_1, \ldots, X_n$ são uma amostra aleatória de $X \sim Normal(\mu_0, \sigma^2)$ com $\sigma^2$ desconhecida, então
+$$T_{calc} =  \frac{\overline X - \mu_0}{\sqrt{\frac{S^2}{n}}} \sim t(n-1)$$
+
+
+<!-- \vspace{0.5cm} -->
+* Na semana passada vimos testes para a média de uma população
+    + com variância conhecida
+    + com variância desconhecida   
+
+
+* **Exemplo**: o salário médio, $\mu$, na empresa A é superior a 2 salários mínimos (s.m.), teste essas hipóteses ao nível de confiança 5%. *(Assuma que $X$ seja o salário de cada trabalhador e observamos uma amostra aleatória $X_1, \ldots, X_n$ de $X \sim Normal(\mu, 1)$, variância conhecida.)* 
+  + Nesse caso, $H_0: \mu \leq 2 s.m.$ contra $H_1: \mu > 2s.m.$.
+  + A região crítica é dada por  
+  
+ Região crítica usando $\overline X$|  ou usando $Z_{calc}$
+-------------- |-----------  
+$RC = \left\{ \overline X > \overline x_{crítico} \right\}$,  | $RC = \left\{ Z_{calc} > z_{tab} \right\}$,   
+para $\overline x_{crítico} = 2 + z_{tab} \cdot \frac{1}{\sqrt n}$  | para $Z_{calc} = \frac{\overline X - 2}{\frac{1}{\sqrt n}}$  
+
+
+```{r rc, echo=FALSE, fig.show="hold", out.width = '45%', fig.align='center'}
+library(ggplot2)
+set.seed(1)
+m <- 2
+s <- 1
+# test and sample
+n <- 25
+x <- rnorm(n, m+1, s)
+sxbarra <- s / sqrt(n)
+zcalc <- (mean(x) - m) / sxbarra
+alpha <- 0.05
+ztab <- qnorm(p = 1-alpha)
+xtab <- round(qnorm(p = 1-alpha, mean = m, sd = sxbarra), digits = 2)
+Z <- seq(-4, 4, 0.01)
+YZ <- dnorm(Z)
+X <- m + sxbarra * Z
+YX <- dnorm(X, m, sxbarra)
+gg   <- data.frame(Z,X,YZ,YX)
+ggplot(data = gg, mapping = aes(x = X, y = YX)) +
+  geom_linerange(data = gg[gg$X > xtab,],
+                 aes(X, ymin = 0, ymax = YX), colour="#E6205F") +
+  # geom_linerange(data = gg[gg$X > mean(x),],
+  #                aes(X, ymin = 0, ymax = Y), colour="yellow") +
+  geom_path(size = 1) +
+  labs(x = NULL, y = NULL) +
+  theme(axis.text.y = element_blank(), axis.ticks.y = element_blank(),
+        axis.line.y = element_blank()) +
+  geom_vline(xintercept = xtab, linetype = "dashed") +
+  # geom_vline(xintercept = mean(x), linetype = "solid", colour = "red") +
+  geom_hline(yintercept = 0) +
+  annotate("text", x = m - 3*sxbarra,
+           y = max(YX)/2,    #Y[which(grepl(m - s, X))],
+           label = paste(1-alpha, " (", (1-alpha)*100, "%) \n Área de 'aceitação'", sep="")) +
+    # annotate("text", x = m , y = max(YX)/2, label = text(paste( 
+    #   expression(bar(x) [crítico]), "=", xtab)) +
+    annotate("text", x = m + 3*sxbarra,
+           y = max(YX)/2,    #Y[which(grepl(m - s, X))],
+           label = paste(alpha, " (", alpha*100, "%) \n Área de rejeição", sep="")) +
+  scale_x_continuous(breaks = seq(m - 3*sxbarra, m + 3*sxbarra, sxbarra*1.5)) +
+  theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
+# figure 2
+ggplot(data = gg, mapping = aes(x = Z, y = YZ)) +
+  geom_linerange(data = gg[gg$Z > ztab,],
+                 aes(Z, ymin = 0, ymax = YZ), colour="#E6205F") +
+  geom_path(size = 1) +
+  labs(x = NULL, y = NULL) +
+  theme(axis.text.y = element_blank(), axis.ticks.y = element_blank(),
+        axis.line.y = element_blank()) +
+  geom_vline(xintercept = ztab, linetype = "dashed") +
+  geom_hline(yintercept = 0) +
+  annotate("text", x = -3, y = max(YZ)/2,    #Y[which(grepl(m - s, X))],
+           label = paste(1-alpha, " (", (1-alpha)*100, "%) \n Área de 'aceitação'", sep="")) +
+    annotate("text", x = 3, y = max(YZ)/2,    #Y[which(grepl(m - s, X))],
+           label = paste(alpha, " (", alpha*100, "%) \n Área de rejeição", sep="")) +
+  scale_x_continuous(breaks = seq(-3, 3, 1.5)) +
+  theme(panel.border = element_rect(colour = "black", fill=NA, size=1))
+```
+<!-- * **(cont.) Exemplo**: Suponha que $\overline x = 2,3$ para uma amostra de tamanho $n=15$, nesse caso não rejeitamos $H_0$, porque $\overline x < \overline x_{crítico}$, ou  -->
+
+<!-- ```{r rc2, echo=FALSE, fig.show="hold", out.width = '40%', fig.align='center'} -->
+<!-- ggplot(data = gg, mapping = aes(x = X, y = YX)) + -->
+<!--   geom_linerange(data = gg[gg$X > xtab,], -->
+<!--                  aes(X, ymin = 0, ymax = YX), colour="#E6205F") + -->
+<!--   # geom_linerange(data = gg[gg$X > mean(x),], -->
+<!--   #                aes(X, ymin = 0, ymax = YX), colour="yellow") + -->
+<!--   geom_path(size = 1) + -->
+<!--   labs(x = NULL, y = NULL) + -->
+<!--   theme(axis.text.y = element_blank(), axis.ticks.y = element_blank(), -->
+<!--         axis.line.y = element_blank()) + -->
+<!--   geom_vline(xintercept = xtab, linetype = "dashed") + -->
+<!--   geom_vline(xintercept = 2.3, linetype = "solid", colour = "red") + -->
+<!--   geom_hline(yintercept = 0) + -->
+<!--   annotate("text", x = m - 3*sxbarra, -->
+<!--            y = max(YX)/2,    #Y[which(grepl(m - s, X))], -->
+<!--            label = paste(1-alpha, " (", (1-alpha)*100, "%) \n Área de 'aceitação'", sep="")) + -->
+<!--     annotate("text", x = 2.1 , y = max(YX)/2, label = expression(bar(x))) + -->
+<!--     annotate("text", x = m + 3*sxbarra, -->
+<!--            y = max(YX)/2,    #Y[which(grepl(m - s, X))], -->
+<!--            label = paste(alpha, " (", alpha*100, "%) \n Área de rejeição", sep="")) + -->
+<!--   scale_x_continuous(breaks = seq(m - 3*sxbarra, m + 3*sxbarra, sxbarra*1.5)) + -->
+<!--   theme(panel.border = element_rect(colour = "black", fill=NA, size=1)) -->
+
+<!-- # figure 2 -->
+<!-- ggplot(data = gg, mapping = aes(x = Z, y = YZ)) + -->
+<!--   geom_linerange(data = gg[gg$Z > ztab,], -->
+<!--                  aes(Z, ymin = 0, ymax = YZ), colour="#E6205F") + -->
+<!--   geom_path(size = 1) + -->
+<!--   labs(x = NULL, y = NULL) + -->
+<!--   theme(axis.text.y = element_blank(), axis.ticks.y = element_blank(), -->
+<!--         axis.line.y = element_blank()) + -->
+<!--   geom_vline(xintercept = ztab, linetype = "dashed") + -->
+<!--   geom_hline(yintercept = 0) + -->
+<!--   annotate("text", x = -3, y = max(YZ)/2,    #Y[which(grepl(m - s, X))], -->
+<!--            label = paste(1-alpha, " (", (1-alpha)*100, "%) \n Área de 'aceitação'", sep="")) + -->
+<!--     annotate("text", x = 3, y = max(YZ)/2,    #Y[which(grepl(m - s, X))], -->
+<!--            label = paste(alpha, " (", alpha*100, "%) \n Área de rejeição", sep="")) + -->
+<!--   scale_x_continuous(breaks = seq(-3, 3, 1.5)) + -->
+<!--   theme(panel.border = element_rect(colour = "black", fill=NA, size=1)) -->
+<!-- ``` -->
+<!-- * **(cont.) Exemplo**: Suponha que $\overline x = 2,3$ para uma amostra observada, nesse caso não rejeitamos $H_0$, porque $\overline x < \overline x_{crítico}$ -->
+
+
+## Valor *p* (ou *p* valor) (Bussab e Morettin - seção 12.8)
+"É a probabilidade de observarmos um valor de estatística de teste mais extremo do que o observado na amostra coletada *(conforme as hipóteses definidas)*."
+
+* Região crítica $\times$ valor *p*
+
+
+
+
+
+
+## Testes para (comparação de) **duas médias** populacionais 
+
+### Amostras independentes (Bussab e Morettin - seção 13.3.1)
+
+
+### Amostras dependentes (Bussab e Morettin - seção 13.4.1)
+
+\vspace{1cm}
+
+## REFERÊNCIAS EXTRAS
+* Página 'Probabilidade e Estatística (EaD)' da UFRGS
+  + [Capítulo 5 - Inferência para dados numéricos](https://www.ufrgs.br/probabilidade-estatistica/livro/cpt5/ch5_inf_num.html#diferen%C3%A7a-entre-duas-m%C3%A9dias)   
+
+* **Excelente página com teoria, exemplos e diversos recursos, exercícios resolvidos, atividades, sobre testes da UFMG**
+  + https://pmg-dest-ufmg-exatas.shinyapps.io/teste_de_hipoteses/
+  
+\vspace{0.5cm}
+
+***
+## Ler slides e ver vídeos da semana 11.
+## Fazer lista de exercícios 3-1.
+## Fazer o Quiz da semana 11 - VALE NOTA!!!
+***  
+
+
+<!-- \clearpage -->
+
+<!-- \vspace{2.0cm} -->
+
+<!-- ## Exercícios resolvidos -->
+<!-- Pasta com slides de soluções de exercícios: em https://github.com/markus-stein/MAT02219EAD/tree/master/exercicios-resolvidos -->
+
+<!-- * Probabilidade e sorteio sequencial, sem reposição -->
+<!--     + slides: https://github.com/markus-stein/MAT02219EAD/blob/master/exercicios-resolvidos/exercicio-resolvido_sorteio-sequencial-caixas.pdf -->
+<!--     + video: https://youtu.be/G27cskmrTyw -->
+
+<!-- * Probabilidade condicional de dois eventos + BONUS -->
+<!--     + slides: https://github.com/markus-stein/MAT02219EAD/blob/master/exercicios-resolvidos/exercicio-resolvido_probabilidade-condicional-conceito-concurso+bonus.pdf -->
+<!--     + video: https://www.youtube.com/watch?v=RUqGhH3zuTg -->
+
+<!-- * Probabilidade Sorteio Condicional -->
+<!--     + slides: https://github.com/markus-stein/MAT02219EAD/blob/master/exercicios-resolvidos/exercicio-resolvido_probabilidade-sorteio-condicional-urna-duas-moedas.pdf -->
+<!--     + video: https://www.youtube.com/watch?v=Q84qK1hgM54 -->
+
+
+<!-- No `R` é possível gerar amostras, calcular a mádia de cada a mostra e plotar o histograma:   -->
+<!-- (*usamos `replicate` para gerar 100 amostras de tamanho n= 25, 50 e 100*) -->
+
+<!-- * a.a. de $X \sim Poisson(2)$ -->
+<!-- ```{R, fig.height=2, fig.width=6, fig.align='center'} -->
+<!-- par(mfrow=c(1,3)) -->
+<!-- hist( colMeans( replicate( n = 100, rpois( n = 5, lambda = 2))), main="Poisson(2), n=5") -->
+<!-- hist( colMeans( replicate( n = 100, rpois( n = 10, lambda = 2))), main="Poisson(2), n=10") -->
+<!-- hist( colMeans( replicate( n = 100, rpois( n = 50, lambda = 2))), main="Poisson(2), n=50") -->
+<!-- ``` -->
+
+<!-- * $X \sim Uniforme(0,1)$ -->
+<!-- ```{R, fig.height=2, fig.width=6, fig.align='center'} -->
+<!-- par(mfrow=c(1,3)) -->
+<!-- hist( colMeans( replicate( n = 100, runif( n = 5, min = 0, max = 1))), main="Uniforme(0,1), n=5") -->
+<!-- hist( colMeans( replicate( n = 100, runif( n = 10, min = 0, max = 1))), main="Uniforme(0,1), n=10") -->
+<!-- hist( colMeans( replicate( n = 100, runif( n = 50, min = 0, max = 1))), main="Uniforme(0,1), n=50") -->
+<!-- ``` -->
