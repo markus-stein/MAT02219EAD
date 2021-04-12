@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.8)  12 APR 2021 11:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.8)  12 APR 2021 12:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -678,7 +678,7 @@ Package fancyhdr Warning: \headheight is too small (40.45274pt):
 robabilidadeEstatistica_aula23e24_topicos.aux)
 Package rerunfilecheck Info: File `ProbabilidadeEstatistica_aula23e24_topicos.o
 ut' has not changed.
-(rerunfilecheck)             Checksum: 92EA9C8CDB119F728A1669EFEEC6FC99;3674.
+(rerunfilecheck)             Checksum: 7A39F3710C10FA35B6DCF0AA9442E342;3674.
  ) 
 Here is how much of TeX's memory you used:
  10713 strings out of 480971
@@ -712,7 +712,7 @@ blic/lm/lmsy10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/ty
 pe1/public/lm/lmsy5.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fon
 ts/type1/public/lm/lmsy7.pfb>
 Output written on ProbabilidadeEstatistica_aula23e24_topicos.pdf (2 pages, 4076
-97 bytes).
+95 bytes).
 PDF statistics:
  169 PDF objects out of 1000 (max. 8388607)
  140 compressed objects within 2 object streams

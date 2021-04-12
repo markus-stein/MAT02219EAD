@@ -245,9 +245,9 @@ ggplot(data = gg, mapping = aes(x = Z, y = YZ)) +
 \vspace{0.5cm}
 
 ***
-## Ler slides e ver vídeos da semana 11.
-## Fazer lista de exercícios 3-1.
-## Fazer o Quiz da semana 11 - VALE NOTA!!!
+## Ler slides e ver vídeos da semana 12.
+## Fazer lista de exercícios 3-2.
+## Fazer o Quiz da semana 12 - VALE NOTA!!!
 ***  
 
 
