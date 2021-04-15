@@ -1,0 +1,77 @@
+---
+title: "Conceitos no Livro de Notas do moodle"
+# author: "Markus Stein"
+# date: "30 November 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Como mostrar conceitos no moodle?
+
+* Usando `Escalas`? O problema é como configurar uma nova `Escala`... documentação não parece clara.
+
+* Nós fizemos uma cópia da coluna 'total do curso' (ou copiar a coluna que contém a média final)
+    + e então selecionamos a opção para mostrar `Letras`
+    + (é necessário definir `Letras` de acordo com os conceitos)
+    
+Iniciamos em configuraçãoo do livro de notas
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', paged.print=FALSE}
+knitr::include_graphics('G:/MAT02215-EstatisticaGeral2/ERE/moodle/howtomake_conceito_moodle.png')
+```
+
+No fim da página selecionamos adicionar novo item de nota.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', paged.print=FALSE}
+knitr::include_graphics('G:/MAT02215-EstatisticaGeral2/ERE/moodle/howtomake_conceito_moodle2.png')
+```
+
+O item deve ser de `Valor`, porém se clicarmos em 'mostrar mais...'
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', paged.print=FALSE}
+knitr::include_graphics('G:/MAT02215-EstatisticaGeral2/ERE/moodle/howtomake_conceito_moodle3.png')
+```
+
+podemos selecionar para o item ser apresentado como `Letra`.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', paged.print=FALSE}
+knitr::include_graphics('G:/MAT02215-EstatisticaGeral2/ERE/moodle/howtomake_conceito_moodle4.png')
+```
+
+
+Agora, para copiar os valores da média final voltamos às configurações do livro de notas, procuramos a linha referente ao conceito criado e clicar em editar cálculo.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', paged.print=FALSE}
+knitr::include_graphics('G:/MAT02215-EstatisticaGeral2/ERE/moodle/howtomake_conceito_moodle5.png')
+```
+
+Usando caixa de fórmulas definimos os valores que queremos copiar.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', paged.print=FALSE}
+knitr::include_graphics('G:/MAT02215-EstatisticaGeral2/ERE/moodle/howtomake_conceito_moodle6.png')
+```
+
+Por fim, temos uma cópia da coluna média final que apresenta `Letras` ao invés de valores.
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.width='100%', paged.print=FALSE}
+knitr::include_graphics('G:/MAT02215-EstatisticaGeral2/ERE/moodle/howtomake_conceito_moodle7.png')
+```
+
+
+
+*Obs.: Se utilizar arredondamentos para atingir próximo conceito fazer manualmente, ou modificar os limites para `Letras`.*
+
+
+
+### Referências
+
+* `Letras` - https://docs.moodle.org/310/en/Grade_letters
+
+* mais um pouco de `Letras` - https://www.umass.edu/it/support/moodle/letter-grades-moodle
+
+* Editar cálculos - https://docs.moodle.org/310/en/Grade_calculations
+
+* ??? `Escalas` - https://docs.moodle.org/310/en/Scales#Editing_a_scale
