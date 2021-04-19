@@ -16,14 +16,26 @@ knitr::opts_chunk$set(echo = TRUE)
 * *Moodle*, R/exams and open-ended questions...
 
 
-## String manipulation + general pattern analysis + grouping reponses
+## Text processing and analysis
+* String manipulation 
+* general pattern analysis 
+* key terms 
+* grouping ansewrs
 
-### word cloud
+### String manipulation
+```{r}
+# answers <- read.csv2("respostas_IC_conclusao-interpretacao.xml").
+# head(answers)
+```
 
-### *must have* words
+### word cloud 
+*for an overview on the answers
+
+### *must have* words 
+* to get marks for key words/sentences... and lose marks as well...
 
 ### Latent Dirichlet Allocation (dicriminat analysis...) to mark `string` text answers
-
+* to group students by similarities... to check for copying, cheating, ...
 
 
 
@@ -39,3 +51,10 @@ https://scholar.harvard.edu/files/dtingley/files/topicmodelsopenendedexperiments
 https://www.tandfonline.com/doi/full/10.1080/2573234X.2019.1590131
 
 file:///C:/Users/Markus/Downloads/information-11-00550.pdf
+
+### References
+* An Introduction to Text Processing and Analysis with R
+    + https://m-clark.github.io/text-analysis-with-R/string-theory.html#basic-text-functionality
+    
+* Text Processing in R
+    + http://www.mjdenny.com/Text_Processing_In_R.html

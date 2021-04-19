@@ -1,0 +1,137 @@
+---
+title: "Plano Aula 25 e 26"
+# author: "Markus Stein"
+# date: 19 April 2021"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm}
+\pagestyle{fancyplain} 
+\lhead{\includegraphics[height=1.5cm]{logoIME.png}}
+\rhead{\includegraphics[height=1.5cm]{logoEAD.png}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02219 - Probabilidade e Estatística - 2020/2
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Testes de Hipóteses para variância 
+
+* **Exemplo**: Estudar a variabilidade do diâmetro de peças produzidas em um dia de operações. Será que a variância dos diâmetros foi muito alta?
+
+* **Exemplo 2**: E se quisermos comparar a variabilidade dos diâmetros de peças produzidas por duas máquinas diferentes?
+
+
+### Uma população (Bussab e Morettin - seção 12.9)
+
+
+### Duas populações (Bussab e Morettin - seção 13.2)
+
+Teorema (**Distribuição *F*, nossa versão**): Seja $X_1, \ldots, X_{n_1}$ uma amostra aleatória da v.a. $X \sim Normal(\mu_1,\sigma_1^2)$ e $S_1^2 = \sum_{i=1}^{n_1} (X_i - \overline X)^2 / (n_1 - 1)$. Da mesma forma, suponha uma outra amostra $Y_1, \ldots, Y_{n_2}$ uma amostra aleatória da v.a. $Y \sim Normal(\mu_2,\sigma_2^2)$ e $S_2^2 = \sum_{i=1}^{n_2} (Y_i - \overline Y)^2 / (n_2 - 1)$. Então podemos escrever uma quantidade $F$ tal que (dadas algumas outras suposições que omitimos aqui) 
+$$ F = \frac{S_1^2}{S_2^2} \sim F{(n_1 - 1, n_2 - 1)}.$$
+* Sabiamos que (*plano aulas 09 e 10*) $Q_X = \frac{(n_1 - 1) S_1^2}{\sigma_1^2} \sim \chi^2_{(n_1 - 1)}$ e $Q_Y = \frac{(n_2 - 1) S_2^2}{\sigma_2^2} \sim \chi^2_{(n_2 - 1)}$, então $F = \frac{ \frac{Q_X}{(n_1 - 1)} }{ \frac{Q_Y}{(n_2 - 1)} }$.
+
+* A distribuição $F$ tem **valores tabelados**, assim como as distribuições **normal padrão**, $t$ e $\chi^2$. Assim como a $\chi^2$ a distribuição $F$ só assume valores positivos.
+
+* Como usar a distribuição de $F$ para testar variâncias de duas populações? **Quais as suposições necessárias**? **Como interpretar os resultados**?
+
+<!-- * **Exemplo**: o salário médio, $\mu$, na empresa A é superior a 2 salários mínimos (s.m.), teste essas hipóteses ao nível de confiança 5%. *(Assuma que $X$ seja o salário de cada trabalhador e observamos uma amostra aleatória $X_1, \ldots, X_n$ de $X \sim Normal(\mu, 1)$, variância conhecida.)*  -->
+<!--   + Nesse caso, $H_0: \mu \leq 2 s.m.$ contra $H_1: \mu > 2s.m.$. -->
+<!--   + A região crítica é dada por   -->
+
+<!--  Região crítica usando $\overline X$|  ou usando $Z_{calc}$ -->
+<!-- -------------- |-----------   -->
+<!-- $RC = \left\{ \overline X > \overline x_{crítico} \right\}$,  | $RC = \left\{ Z_{calc} > z_{tab} \right\}$,    -->
+<!-- para $\overline x_{crítico} = 2 + z_{tab} \cdot \frac{1}{\sqrt n}$  | para $Z_{calc} = \frac{\overline X - 2}{\frac{1}{\sqrt n}}$   -->
+
+
+
+<!-- ## Valor *p* (ou *p* valor) (Bussab e Morettin - seção 12.8) -->
+<!-- "É a probabilidade de observarmos um valor de estatística de teste mais extremo do que o observado na amostra coletada *(conforme as hipóteses definidas)*." -->
+
+<!-- * Região crítica $\times$ valor *p* -->
+
+
+
+
+\vspace{1cm}
+
+
+## Testes de hipóteses para a proporção
+
+* **Exemplo 3**: O percentual de desempregados no Brasil era de 11,2% em janeiro, com o período de pandemia uma pesquisa com 100 pessoas em idade para o trabalho revelou que 13,8% estavam desempregados em julho. Podemos afirmar que a pandemia aumentou o percentual de desemprego significativamente?
+
+* **Exemplo 4**: Se conseguissemos uma amostra de outro país, poderíamos comparar o percentual no Brasil contra de outro país. Será que tivemos um aumento significativo em relação ao outro país?
+
+
+### Uma população (Bussab e Morettin - seção 12.6)
+
+
+### Duas populações (Bussab e Morettin - seção 13.5)
+
+
+\vspace{0.5cm}
+
+***
+## Ler slides e ver vídeos da semana 13.
+## Fazer lista de exercícios 3-3.
+## Fazer o Quiz da semana 13 - VALE NOTA!!!
+***  
+
+\vspace{0.5cm}
+
+## REFERÊNCIAS EXTRAS
+* Página 'Probabilidade e Estatística (EaD)' da UFRGS
+  + [Capítulo 5 - Inferência para dados numéricos](https://www.ufrgs.br/probabilidade-estatistica/livro/cpt5/ch5_inf_num.html#diferen%C3%A7a-entre-duas-m%C3%A9dias)   
+
+* **Excelente página com teoria, exemplos e diversos recursos, exercícios resolvidos, atividades, sobre testes da UFMG**
+  + https://pmg-dest-ufmg-exatas.shinyapps.io/teste_de_hipoteses/
+
+<!-- \clearpage -->
+
+<!-- \vspace{2.0cm} -->
+
+<!-- ## Exercícios resolvidos -->
+<!-- Pasta com slides de soluções de exercícios: em https://github.com/markus-stein/MAT02219EAD/tree/master/exercicios-resolvidos -->
+
+<!-- * Probabilidade e sorteio sequencial, sem reposição -->
+<!--     + slides: https://github.com/markus-stein/MAT02219EAD/blob/master/exercicios-resolvidos/exercicio-resolvido_sorteio-sequencial-caixas.pdf -->
+<!--     + video: https://youtu.be/G27cskmrTyw -->
+
+<!-- * Probabilidade condicional de dois eventos + BONUS -->
+<!--     + slides: https://github.com/markus-stein/MAT02219EAD/blob/master/exercicios-resolvidos/exercicio-resolvido_probabilidade-condicional-conceito-concurso+bonus.pdf -->
+<!--     + video: https://www.youtube.com/watch?v=RUqGhH3zuTg -->
+
+<!-- * Probabilidade Sorteio Condicional -->
+<!--     + slides: https://github.com/markus-stein/MAT02219EAD/blob/master/exercicios-resolvidos/exercicio-resolvido_probabilidade-sorteio-condicional-urna-duas-moedas.pdf -->
+<!--     + video: https://www.youtube.com/watch?v=Q84qK1hgM54 -->
+
+
+<!-- No `R` é possível gerar amostras, calcular a mádia de cada a mostra e plotar o histograma:   -->
+<!-- (*usamos `replicate` para gerar 100 amostras de tamanho n= 25, 50 e 100*) -->
+
+<!-- * a.a. de $X \sim Poisson(2)$ -->
+<!-- ```{R, fig.height=2, fig.width=6, fig.align='center'} -->
+<!-- par(mfrow=c(1,3)) -->
+<!-- hist( colMeans( replicate( n = 100, rpois( n = 5, lambda = 2))), main="Poisson(2), n=5") -->
+<!-- hist( colMeans( replicate( n = 100, rpois( n = 10, lambda = 2))), main="Poisson(2), n=10") -->
+<!-- hist( colMeans( replicate( n = 100, rpois( n = 50, lambda = 2))), main="Poisson(2), n=50") -->
+<!-- ``` -->
+
+<!-- * $X \sim Uniforme(0,1)$ -->
+<!-- ```{R, fig.height=2, fig.width=6, fig.align='center'} -->
+<!-- par(mfrow=c(1,3)) -->
+<!-- hist( colMeans( replicate( n = 100, runif( n = 5, min = 0, max = 1))), main="Uniforme(0,1), n=5") -->
+<!-- hist( colMeans( replicate( n = 100, runif( n = 10, min = 0, max = 1))), main="Uniforme(0,1), n=10") -->
+<!-- hist( colMeans( replicate( n = 100, runif( n = 50, min = 0, max = 1))), main="Uniforme(0,1), n=50") -->
+<!-- ``` -->

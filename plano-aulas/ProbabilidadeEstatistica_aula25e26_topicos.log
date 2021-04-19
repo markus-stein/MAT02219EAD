@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.8)  19 APR 2021 08:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.3.8)  19 APR 2021 09:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**ProbabilidadeEstatistica_aula23e24_topicos.tex
-(./ProbabilidadeEstatistica_aula23e24_topicos.tex
+**ProbabilidadeEstatistica_aula25e26_topicos.tex
+(./ProbabilidadeEstatistica_aula25e26_topicos.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (c:/Users/Markus/AppData/Roaming/TinyTeX/texm
 f-dist/tex/latex/base/article.cls
@@ -364,69 +364,6 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen159
 \Gm@dimlist=\toks23
 )
-(c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.s
-ty
-Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
-\LTleft=\skip53
-\LTright=\skip54
-\LTpre=\skip55
-\LTpost=\skip56
-\LTchunksize=\count278
-\LTcapwidth=\dimen160
-\LT@head=\box49
-\LT@firsthead=\box50
-\LT@foot=\box51
-\LT@lastfoot=\box52
-\LT@cols=\count279
-\LT@rows=\count280
-\c@LT@tables=\count281
-\c@LT@chunks=\count282
-\LT@p@ftn=\toks24
-)
-(c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs
-.sty
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen161
-\lightrulewidth=\dimen162
-\cmidrulewidth=\dimen163
-\belowrulesep=\dimen164
-\belowbottomsep=\dimen165
-\aboverulesep=\dimen166
-\abovetopsep=\dimen167
-\cmidrulesep=\dimen168
-\cmidrulekern=\dimen169
-\defaultaddspace=\dimen170
-\@cmidla=\count283
-\@cmidlb=\count284
-\@aboverulesep=\dimen171
-\@belowrulesep=\dimen172
-\@thisruleclass=\count285
-\@lastruleclass=\count286
-\@thisrulewidth=\dimen173
-) (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count287
-\calc@Bcount=\count288
-\calc@Adimen=\dimen174
-\calc@Bdimen=\dimen175
-\calc@Askip=\skip57
-\calc@Bskip=\skip58
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count289
-\calc@Cskip=\skip59
-)
-(c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox
-.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count290
-)
-(c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote
-.sty
-Package: footnote 1997/01/28 1.13 Save footnotes around boxes
-\fn@notes=\box53
-\fn@width=\dimen176
-)
 (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx
 .sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
@@ -444,49 +381,49 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 )
-\Gin@req@height=\dimen177
-\Gin@req@width=\dimen178
+\Gin@req@height=\dimen160
+\Gin@req@width=\dimen161
 )
 (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr
 .sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
 rs
-\f@nch@headwidth=\skip60
-\f@nch@O@elh=\skip61
-\f@nch@O@erh=\skip62
-\f@nch@O@olh=\skip63
-\f@nch@O@orh=\skip64
-\f@nch@O@elf=\skip65
-\f@nch@O@erf=\skip66
-\f@nch@O@olf=\skip67
-\f@nch@O@orf=\skip68
+\f@nch@headwidth=\skip53
+\f@nch@O@elh=\skip54
+\f@nch@O@erh=\skip55
+\f@nch@O@olh=\skip56
+\f@nch@O@orh=\skip57
+\f@nch@O@elf=\skip58
+\f@nch@O@erf=\skip59
+\f@nch@O@olf=\skip60
+\f@nch@O@orf=\skip61
 )
 (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backe
 nd-pdftex.def
 File: l3backend-pdftex.def 2021-03-02 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count291
-\l__pdf_internal_box=\box54
-) (./ProbabilidadeEstatistica_aula23e24_topicos.aux)
-\openout1 = `ProbabilidadeEstatistica_aula23e24_topicos.aux'.
+\l__color_backend_stack_int=\count278
+\l__pdf_internal_box=\box49
+) (./ProbabilidadeEstatistica_aula25e26_topicos.aux)
+\openout1 = `ProbabilidadeEstatistica_aula25e26_topicos.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
 
 (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epst
 opdf-base.sty
@@ -499,7 +436,7 @@ pdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 81.
+Package hyperref Info: Link coloring OFF on input line 71.
 
 (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.
 sty
@@ -513,15 +450,15 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count292
+\c@section@level=\count279
 )
-LaTeX Info: Redefining \ref on input line 81.
-LaTeX Info: Redefining \pageref on input line 81.
-LaTeX Info: Redefining \nameref on input line 81.
-(./ProbabilidadeEstatistica_aula23e24_topicos.out) (./ProbabilidadeEstatistica_
-aula23e24_topicos.out)
+LaTeX Info: Redefining \ref on input line 71.
+LaTeX Info: Redefining \pageref on input line 71.
+LaTeX Info: Redefining \nameref on input line 71.
+(./ProbabilidadeEstatistica_aula25e26_topicos.out) (./ProbabilidadeEstatistica_
+aula25e26_topicos.out)
 \@outlinefile=\write3
-\openout3 = `ProbabilidadeEstatistica_aula23e24_topicos.out'.
+\openout3 = `ProbabilidadeEstatistica_aula25e26_topicos.out'.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -557,93 +494,69 @@ aula23e24_topicos.out)
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
 3.
 (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
 3.
 (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-83.
+73.
 (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-83.
+73.
 (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 83.
+(Font)              <12> on input line 73.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 83.
+(Font)              <8> on input line 73.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 83.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
+(Font)              <6> on input line 73.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
 
 (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
 
 (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 105.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 105.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 105.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-11.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
+2.
 (c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (6.00002pt too wide) in alignment at lines 160--169
- [] [] 
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 109.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 109.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 109.
+
+Underfull \hbox (badness 2828) in paragraph at lines 108--117
+\T1/lmr/m/n/10 Teorema (\T1/lmr/bx/n/10 Distribuição \T1/lmr/bx/it/10 F\T1/lmr/
+bx/n/10 , nossa ver-são\T1/lmr/m/n/10 ): Seja $\OML/lmm/m/it/10 X[]; [] ; X[]$ 
+\T1/lmr/m/n/10 uma amostra aleatória da v.a.
  []
 
-
-LaTeX Warning: Command \' invalid in math mode on input line 171.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 178.
-
-
-Overfull \hbox (6.00002pt too wide) in alignment at lines 169--184
- [] [] 
- []
-
-<ProbabilidadeEstatistica_aula23e24_topicos_files/figure-latex/rc-1.pdf, id=48,
- 469.755pt x 325.215pt>
-File: ProbabilidadeEstatistica_aula23e24_topicos_files/figure-latex/rc-1.pdf Gr
-aphic file (type pdf)
-<use ProbabilidadeEstatistica_aula23e24_topicos_files/figure-latex/rc-1.pdf>
-Package pdftex.def Info: ProbabilidadeEstatistica_aula23e24_topicos_files/figur
-e-latex/rc-1.pdf  used on input line 186.
-(pdftex.def)             Requested size: 211.3878pt x 146.3454pt.
-<ProbabilidadeEstatistica_aula23e24_topicos_files/figure-latex/rc-2.pdf, id=49,
- 469.755pt x 325.215pt>
-File: ProbabilidadeEstatistica_aula23e24_topicos_files/figure-latex/rc-2.pdf Gr
-aphic file (type pdf)
-<use ProbabilidadeEstatistica_aula23e24_topicos_files/figure-latex/rc-2.pdf>
-Package pdftex.def Info: ProbabilidadeEstatistica_aula23e24_topicos_files/figur
-e-latex/rc-2.pdf  used on input line 186.
-(pdftex.def)             Requested size: 211.3878pt x 146.3454pt.
-<logoIME.png, id=50, 521.95pt x 226.8475pt>
+<logoIME.png, id=44, 521.95pt x 226.8475pt>
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 186.
+Package pdftex.def Info: logoIME.png  used on input line 163.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
-<logoEAD.png, id=51, 313.17pt x 154.77824pt>
+<logoEAD.png, id=45, 313.17pt x 154.77824pt>
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png  used on input line 186.
+Package pdftex.def Info: logoEAD.png  used on input line 163.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 
 Package fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -659,11 +572,11 @@ ftex.map}
  <./logoIME.png> <./logoEAD.png>]
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 261.
+Package pdftex.def Info: logoIME.png  used on input line 206.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png  used on input line 261.
+Package pdftex.def Info: logoEAD.png  used on input line 206.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 
 Package fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -673,28 +586,26 @@ Package fancyhdr Warning: \headheight is too small (40.45274pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-14.57195pt}.
 
-[2 <./ProbabilidadeEstatistica_aula23e24_topicos_files/figure-latex/rc-1.pdf> <
-./ProbabilidadeEstatistica_aula23e24_topicos_files/figure-latex/rc-2.pdf>] (./P
-robabilidadeEstatistica_aula23e24_topicos.aux)
-Package rerunfilecheck Info: File `ProbabilidadeEstatistica_aula23e24_topicos.o
+[2] (./ProbabilidadeEstatistica_aula25e26_topicos.aux)
+Package rerunfilecheck Info: File `ProbabilidadeEstatistica_aula25e26_topicos.o
 ut' has not changed.
-(rerunfilecheck)             Checksum: 7A39F3710C10FA35B6DCF0AA9442E342;3674.
+(rerunfilecheck)             Checksum: E0D3616C68D2C1ADB1371666EE080506;2664.
  ) 
 Here is how much of TeX's memory you used:
- 10713 strings out of 480971
- 157857 string characters out of 5906169
- 471881 words of memory out of 5000000
- 27707 multiletter control sequences out of 15000+600000
- 457614 words of font info for 68 fonts, out of 8000000 for 9000
+ 10105 strings out of 480971
+ 148805 string characters out of 5906169
+ 457158 words of memory out of 5000000
+ 27124 multiletter control sequences out of 15000+600000
+ 451617 words of font info for 66 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,15n,74p,682b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.
-enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-m
-athit.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/l
-m/lm-mathsy.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/d
-vips/lm/lm-ts1.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/en
-c/dvips/lm/lm-rm.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/
-enc/dvips/lm/lm-mathex.enc}<c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/
+ 71i,15n,74p,411b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mat
+hsy.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/
+lm-mathit.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvi
+ps/lm/lm-ec.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/d
+vips/lm/lm-mathex.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts
+/enc/dvips/lm/lm-rm.enc}{c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fon
+ts/enc/dvips/lm/lm-ts1.enc}<c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/
 fonts/type1/public/lm/lmbx10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf
 -dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX
 /texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/Users/Markus/AppData/Roaming/
@@ -711,11 +622,11 @@ m/lmri10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/pu
 blic/lm/lmsy10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/ty
 pe1/public/lm/lmsy5.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fon
 ts/type1/public/lm/lmsy7.pfb>
-Output written on ProbabilidadeEstatistica_aula23e24_topicos.pdf (2 pages, 4077
-02 bytes).
+Output written on ProbabilidadeEstatistica_aula25e26_topicos.pdf (2 pages, 3762
+75 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
- 140 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 150 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
