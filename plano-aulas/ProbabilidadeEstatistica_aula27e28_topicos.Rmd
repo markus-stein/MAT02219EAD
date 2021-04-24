@@ -1,0 +1,187 @@
+---
+title: "Plano Aula 27 e 28"
+# author: "Markus Stein"
+# date: 26 April 2021"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm}
+\pagestyle{fancyplain} 
+\lhead{\includegraphics[height=1.5cm]{logoIME.png}}
+\rhead{\includegraphics[height=1.5cm]{logoEAD.png}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02219 - Probabilidade e Estatística - 2020/2
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Análise de Correlação e Regressão 
+Agora, nosso interesse será analisar o relacionamento entre **duas variáveis numéricas** de interesse.
+
+<!-- * **Exemplo 1**: O Índice de Desenvolvimento Humano (IDH) em países pode estar associado à carga tributária?   -->
+<!-- ![](IDH1.png){ width=60% }   -->
+
+<!-- Artigo de 2012: https://carodinheiro.blogfolha.uol.com.br/2012/12/14/pagamento-de-impostos-no-brasil-e-um-investimento-sem-retorno/ -->
+
+<!-- \vspace{0.5cm} -->
+
+* **Exemplo 1**: O valor do auxílio estudantil oferecido por uma universidade pode estar relacionado com a renda familiar dos estudantes?
+
+```{r college_aid, message=FALSE, echo=FALSE, warning=FALSE, fig.width=3, fig.height=2, fig.align='center'}
+library(ggplot2)
+library(openintro)
+data(COL)
+data(elmhurst)
+d <- elmhurst
+g <- lm(d$gift_aid ~ d$family_income)
+loss <- function(a, b, d) {
+  p <- a + b * d$family_income
+  sum(abs(d$gift_aid - p))
+}
+a      <- round(g$coef[1], 2) + seq(-0.5, 0.5, 0.001)
+b      <- round(g$coef[2], 3) + seq(-0.01, 0.01, 0.0001)
+mins   <- c(a[1], b[1])
+theMin <- loss(a[1], b[1], d)
+pb     <- txtProgressBar(1, length(a), style=3)
+for (i in 1:length(a)) {
+  for (j in 1:length(b)) {
+    hold <- loss(a[i], b[j], d)
+    if (hold < theMin) {
+      mins <- c(a[i],b[j])
+      theMin <- hold
+    }
+  }
+}
+# elmhurstScatterW2Lines
+ggplot(data = d, mapping = aes(family_income, gift_aid)) + 
+  theme(panel.border = element_rect(colour = "black", fill = NA, size = 1)) + 
+  geom_point(color = 'skyblue3') + 
+  labs(x = 'Renda Familiar ($1000s)', y = 'Auxílio da \nuniversidade ($1000s)') #+ 
+  # geom_abline(slope = mins[2], intercept = mins[1], linetype = 'dashed', size = 1) + 
+  # geom_smooth(formula = y ~ x, se = FALSE, method = 'lm', color = 'black')
+```
+
+## Associação entre Variáveis Quantitativas (Bussab e Morettin - seção 4.5)
+Para duas variáveis quantitativas também podemos estar interessados em verificar se existe associação (relação) entre elas.  
+
+### Gráfico de Dispersão
+
+* **... cont. exemplo 1**: 
+
+<!-- ```{r tabela1, echo=FALSE, warning=FALSE} -->
+<!-- library(knitr) -->
+<!-- tabela1 <- rbind(votos, abstencoes, habilitados) -->
+<!-- tabela1 <- cbind(tabela1, rowSums(tabela1)) -->
+<!-- rownames(tabela1) <- c("Votos", "Abstenções", "Total habilitados") -->
+<!-- colnames(tabela1) <- c("Docentes", "Técnicos", "Estudantes", "Total") -->
+<!-- kable(tabela1) -->
+<!-- ``` -->
+
+<!-- * **... cont. exemplo 2**:  -->
+
+<!-- ```{r tabela2, echo=FALSE, warning=FALSE} -->
+<!-- tabela2 <- rbind(chapa1, chapa2, chapa3, votos) -->
+<!-- tabela2 <- cbind(tabela2, rowSums(tabela2)) -->
+<!-- rownames(tabela2) <- c("Chapa 1", "Chapa 2", "Chapa 3", "Total votos válidos") -->
+<!-- colnames(tabela2) <- colnames(tabela1) -->
+<!-- kable(tabela2) -->
+<!-- ``` -->
+
+\vspace{0.3cm}
+Como resumir a informação dos gráficos acima em um só número?
+
+<!-- \vspace{0.5cm} -->
+
+### Coeficiente de correlação (linear) (de Pearson)
+
+*Relembrando sobre covariância em probabilidade:*  
+Definição (**covariância**): Sejam $X$ e $Y$ duas v.a. então $Cov(X,Y) = E \left\{ \left[ X - E(X) \right] \left[ Y - E(Y) \right] \right\}$. 
+
+\vspace{0.2cm}
+
+Definição (**covariância amostral**): Dados $n$ pares de valores observados $(x_1, y_1), \ldots, (x_n, y_n)$ (de duas v.a. $X$ e $Y$), chamaremos de covariância amostral antre X e Y a expressão
+$$cov(X,Y) = \frac{ \sum_{i=1}^n (x_i - \overline x) (y_i - \overline y)}{n}$$. 
+
+Assim, "padronizamos" a covariância para obtemos o coeficiente $corr(X,Y) = \frac{ cov(X,Y) }{s_x \cdot s_y}$, $-1 \leq corr(X,Y) \geq 1$.  
+
+Definição (**coeficiente de correlação**): Dados $n$ pares de valores observados $(x_1, y_1), \ldots, (x_n, y_n)$ (de duas v.a. $X$ e $Y$), chamaremos de covariância amostral antre X e Y a expressão
+$$corr(X,Y) = \frac{ 1 }{ n } \sum_{i=1}^n \frac{ (x_i - \overline x)}{s_x} \cdot \frac{ (y_i - \overline y)}{s_y}.$$  
+
+
+
+<!-- * Duas variáveis aleatórias $X$ e $Y$ são ditas *independentes* se e somente se a probabilidade conjunta é igual ao produto das probabilidades marginais -->
+<!-- $$P(X=i, Y=j) = P(X=i) \times P(Y=j),$$ -->
+<!-- para todo $i=1, \ldots, k$ e $j=1, \ldots, l$. -->
+
+<!-- * No teste de associação, a hipótese nula é dada por  -->
+<!-- $$H_0: \pi_{ij} = \pi_{i.} \pi_{.j} \text{  ou  } H_0: P(X=i, Y=j) = P(X=i) \times P(Y=j).$$ -->
+
+
+\vspace{0.2cm}
+
+Como usar os valores de cada observação para testar se existe correlação (associação)?
+
+\vspace{0.3cm}
+
+
+
+## Teste para o Coeficiente de Correlação (Bussab e Morettin - seção 14.5)
+* Hipóteses?  
+
+<!-- Seja $n_{ij}$ o número de observações pertencentes a categoria conjunta $(X=i, Y=j)$. -->
+
+<!-- * *proporções* (frequências relativas) **observadas** $p_{ij} = n_{ij} / n$ ou *frequências* observadas $o_{ij} = n_{ij}$;  -->
+<!-- * *proporções* **esperadas** $\pi_{ij}$ (sob $H_0$) ou *frequências* esperadas $e_{ij} = \frac{n_{i.} n_{.j}}{n}$. -->
+<!-- em que $n_{i.} = \sum_{i=1}^k n_{ij}$ é o número de elementos na categoria $i$ de $X$ e $n_{.j} = \sum_{j=1}^l n_{ij}$ na categoria $j$ de $Y$. -->
+  
+<!-- \vspace{0.2cm} -->
+
+<!-- Teorema (**Distribuição Qui-Quadrado 2, nossa versão 2**): Sob certas suposições   -->
+<!-- $$ Q = \sum_{i,j} \frac{ \left( o_{ij} - e_{ij} \right)^2 }{e_{ij}} \sim \chi^2_{(\nu)} $$ -->
+<!-- em que $i=1, \ldots, k$ é o índice da linha e $j=1, \ldots, l$ das colunas e $\nu = (k-1) \times (l-1)$ são os graus de liberdade. -->
+
+* Quais as suposições necessárias???
+
+
+\vspace{0.2cm}
+
+<!-- * o que são resíduos em correlação:::  -->
+<!-- O que as diferenças $o_{ij} - e_{ij}$ nos dizem sobre a associação entre $X$ e $Y$? -->
+
+<!-- * Os resíduos podem res vistos como o desvio de uma observação em relação ao seu valor esperado sob $H_0$. -->
+<!-- $$res_{ij} = \frac{o_{ij} - e_{ij}}{\sqrt{e_{ij}}}$$ -->
+
+
+<!-- \vspace{0.5cm} -->
+
+### Correlação espúria
+
+
+\vspace{0.5cm}
+
+## REFERÊNCIA EXTRA
+Página 'Probabilidade e Estatística (EaD)' da UFRGS  
+
+* [Capítulo 7 - Introdução à Regressão Linear](https://www.ufrgs.br/probabilidade-estatistica/livro/cpt7/ch7_reg_simples.html#pref%C3%A1cio)
+
+\vspace{0.5cm}
+
+...
+
+\vspace{0.5cm}
+
+***
+## Ler slides e ver vídeos da semana 14.
+## Fazer lista de exercícios 3-4.
+## Fazer o Quiz da semana 14 - VALE NOTA!!!
+***  
