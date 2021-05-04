@@ -98,7 +98,7 @@ Para duas variáveis quantitativas também podemos estar interessados em verific
 <!-- ``` -->
 
 \vspace{0.3cm}
-Como resumir a informação dos gráficos acima em um só número?
+Como resumir a informação do gráfico acima em um só número?
 
 <!-- \vspace{0.5cm} -->
 
@@ -131,29 +131,9 @@ $$corr(X,Y) = \frac{ 1 }{ n } \sum_{i=1}^n \frac{ (x_i - \overline x)}{s_x} \cdo
 
 Como usar os valores de cada observação para testar se existe correlação (associação)?
 
-\vspace{0.3cm}
-
-
-
 ## Teste para o Coeficiente de Correlação (Bussab e Morettin - seção 14.5)
-* Hipóteses?  
-
-<!-- Seja $n_{ij}$ o número de observações pertencentes a categoria conjunta $(X=i, Y=j)$. -->
-
-<!-- * *proporções* (frequências relativas) **observadas** $p_{ij} = n_{ij} / n$ ou *frequências* observadas $o_{ij} = n_{ij}$;  -->
-<!-- * *proporções* **esperadas** $\pi_{ij}$ (sob $H_0$) ou *frequências* esperadas $e_{ij} = \frac{n_{i.} n_{.j}}{n}$. -->
-<!-- em que $n_{i.} = \sum_{i=1}^k n_{ij}$ é o número de elementos na categoria $i$ de $X$ e $n_{.j} = \sum_{j=1}^l n_{ij}$ na categoria $j$ de $Y$. -->
-  
-<!-- \vspace{0.2cm} -->
-
-<!-- Teorema (**Distribuição Qui-Quadrado 2, nossa versão 2**): Sob certas suposições   -->
-<!-- $$ Q = \sum_{i,j} \frac{ \left( o_{ij} - e_{ij} \right)^2 }{e_{ij}} \sim \chi^2_{(\nu)} $$ -->
-<!-- em que $i=1, \ldots, k$ é o índice da linha e $j=1, \ldots, l$ das colunas e $\nu = (k-1) \times (l-1)$ são os graus de liberdade. -->
-
+* Hipóteses?
 * Quais as suposições necessárias???
-
-
-\vspace{0.2cm}
 
 <!-- * o que são resíduos em correlação:::  -->
 <!-- O que as diferenças $o_{ij} - e_{ij}$ nos dizem sobre a associação entre $X$ e $Y$? -->
@@ -161,22 +141,99 @@ Como usar os valores de cada observação para testar se existe correlação (as
 <!-- * Os resíduos podem res vistos como o desvio de uma observação em relação ao seu valor esperado sob $H_0$. -->
 <!-- $$res_{ij} = \frac{o_{ij} - e_{ij}}{\sqrt{e_{ij}}}$$ -->
 
+## Análise de Regressão 
+Agora, nosso interesse será em estimar uma relação **linear** entre **duas variáveis numéricas** de interesse.
+
+### Regressão Linear Simples (Bussab e Morettin - capítulo 16)
+
+* **cont. Exemplo 1**: O valor do auxílio estudantil oferecido por uma universidade pode estar relacionado com a renda familiar dos estudantes?
+
+```{r college_aid2, message=FALSE, echo=FALSE, warning=FALSE, fig.width=3, fig.height=2}
+library(ggplot2)
+library(openintro)
+data(COL)
+data(elmhurst)
+d <- elmhurst
+g <- lm(d$gift_aid ~ d$family_income)
+loss <- function(a, b, d) {
+  p <- a + b * d$family_income
+  sum(abs(d$gift_aid - p))
+}
+a      <- round(g$coef[1], 2) + seq(-0.5, 0.5, 0.001)
+b      <- round(g$coef[2], 3) + seq(-0.01, 0.01, 0.0001)
+mins   <- c(a[1], b[1])
+theMin <- loss(a[1], b[1], d)
+pb     <- txtProgressBar(1, length(a), style=3)
+for (i in 1:length(a)) {
+  for (j in 1:length(b)) {
+    hold <- loss(a[i], b[j], d)
+    if (hold < theMin) {
+      mins <- c(a[i],b[j])
+      theMin <- hold
+    }
+  }
+}
+# elmhurstScatterW2Lines
+ggplot(data = d, mapping = aes(family_income, gift_aid)) +
+  theme(panel.border = element_rect(colour = "black", fill = NA, size = 1)) +
+  geom_point(color = 'skyblue3') +
+  labs(x = 'Renda Familiar ($1000s)', y = 'Auxílio da \nuniversidade ($1000s)') +
+  geom_abline(slope = mins[2], intercept = mins[1], linetype = 'dashed', size = 1) +
+  geom_smooth(formula = y ~ x, se = FALSE, method = 'lm', color = 'black')
+```
+
+### Estimação dos parâmetros (Bussab e Morettin - seção 16.2)
+*Relembrando sobre esperança condicional em probabilidade...*   
+
+### Modelo populacional
+sejam $X$ e $Y$ duas v.a. queremos estimar a esperança condicional de $Y$ em função de (dado que) $X=x$,
+$$E(Y \vert X=x) = \alpha + \beta \cdot x,$$
+ou seja, queremos estimar os parâmetros $\alpha$ e $\beta$.  
+
+* Para uma amostra de tamanho $n$ podemos escrever que cada observação $(x_i, y_i)$, para $i = 1, \ldots, n$, segue o modelo
+$$y_i = \alpha + \beta \cdot x_i + e_i.$$  
+
+* chamamos $e_i$ de erro amostral e assumimos que:
+    + $E(e_i) = 0$, 
+    + $Var(e_i) = \sigma^2$, para todo $i,j = 1, \ldots, n$,
+    + $Cov(e_i, e_j) = 0$ para $i\neq j$.  
+
+* Assim $E(y_i) = \alpha + \beta \cdot x_i$, $Var(y_i)=\sigma^2$ e $Cov(y_i, y_j)=0$.
+    +  o parâmetro $\sigma^2$ também precisa ser estimado.
+    
+<!-- \vspace{0.2cm} -->
+
+### Método dos Mínimos Quadrados (Ordinários)
+Para estimar $\alpha$ e $\beta$ podemos pensar em minimizar os erros $e_i$, ou
+$$SQ(\alpha, \beta) = \sum_{i=1}^n e_i^2 = \sum_{i=1}^n \left[ y_i - (\alpha + \beta \cdot x_i) \right]^2$$
+
+* Derivando $SQ(\alpha, \beta)$ em relação a $\alpha$ e $\beta$, igualando a zero e resolvendo o sistema de equações temos
+    + $\widehat \alpha = ???$ e $\widehat \beta = ???$.  
+
+* Reta estimada (modelo ajustado): $\widehat y_i = \widehat \alpha + \widehat \beta \cdot x_i$
+    + Interpretação de $\widehat \alpha$ e $\widehat \beta$;
+    + **Prever**, para um dado valor $X=x$, quanto esperamos observar o valor de $Y$?
+
+\vspace{0.2cm}
+
+### Coeficiente de determinação $R^2$ (Bussab e Morettin - seção 16.3)
 
 <!-- \vspace{0.5cm} -->
 
+### Intervalos de Confiança e Testes de hipóteses (Bussab e Morettin - seção 16.4)
+### Para $\alpha$, $\beta$ e $\sigma^2$. (**suposições???**)
+Se adicionalmente assumimos $e_i \sim Normal$, então $y_i \sim Normal(\alpha + \beta \cdot x, \sigma^2)$.
+
+* Também $\widehat \alpha \sim Normal$ e $\widehat \beta \sim Normal$.
+
+### **Previsão** e **predição** (Bussab e Morettin - seção 16.4.4)
+* para o valor esperado $E(Y_i \vert x_i) = y_i$;
+* para uma futura (nova) observação $y_f$.
+
+
 ### Correlação espúria
 
-
-\vspace{0.5cm}
-
-## REFERÊNCIA EXTRA
-Página 'Probabilidade e Estatística (EaD)' da UFRGS  
-
-* [Capítulo 7 - Introdução à Regressão Linear](https://www.ufrgs.br/probabilidade-estatistica/livro/cpt7/ch7_reg_simples.html#pref%C3%A1cio)
-
-\vspace{0.5cm}
-
-...
+### Causalidade e correlação
 
 \vspace{0.5cm}
 
