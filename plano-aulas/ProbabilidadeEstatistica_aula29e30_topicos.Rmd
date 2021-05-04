@@ -1,0 +1,102 @@
+---
+title: "Plano Aula 29 e 30"
+# author: "Markus Stein"
+# date: 03 May 2021"
+output: pdf_document
+    # toc: yes
+header-includes:
+    - \usepackage{fancyhdr}
+always_allow_html: yes
+---
+\addtolength{\headheight}{1.0cm}
+\pagestyle{fancyplain} 
+\lhead{\includegraphics[height=1.5cm]{logoIME.png}}
+\rhead{\includegraphics[height=1.5cm]{logoEAD.png}}
+\chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
+INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
+DEPARTAMENTO DE ESTATÍSTICA \\
+\vspace{0.3cm}
+MAT02219 - Probabilidade e Estatística - 2020/2
+}
+\renewcommand{\headrulewidth}{0pt} 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Avaliação Parcial da Área 3
+
+Relembrar:
+
+* Testes de hipóteses
+    + definições e conceitos básicos, hipóteses;
+    + tipos de erro, probabilidade de erros;
+    + estatistica de teste, região crítica, valor *p*;
+* Testes para uma e duas médias populacionais;
+* Testes para proporções e variâncias;
+* Correlação Linear e Regressão linear simples.
+
+**Importante lembrar**:
+
+* Suposições necessárias para os testes de hipóteses, de correlação e regressão.
+* Decisão/Conclusão dos testes e interpretação de coeficientes.
+* Valor *p* para os testes.
+* Correlação espúria, causalidade e correlação
+
+\vspace{0.5cm}
+
+Usar o **formulário** para resolução das questões.
+
+\vspace{0.5cm}
+
+**Boa avaliação!!!**
+
+***
+## Rever planos de aula, slides e vídeos da area 3. 
+## Fazer o simulado para a prova 3 - VALE PONTO EXTRA!!!
+## Fazer a prova 1 até o dia 09/05.
+***  
+
+## (...continuação) Regressão Linear Simples (Bussab e Morettin - capítulo 16)
+### Tópicos importantes na prática:
+
+### Avaliação dos modelos  (Bussab e Morettin - seção 16.3)
+* ANOVA na regressão
+
+### **Análise dos resíduos** (Bussab e Morettin - seção 16.5)
+$e_i = y_i - \widehat y_i$ nos informa os desvios de $y_i$ que não são explicados pelo modelo $\widehat y_i$.
+
+* Quais as suposições para os resíduos $e_i$?
+* Como testar/verificar as suposições?
+
+### Modelos especiais
+* Modelos não lineares (Bussab e Morettin - seção 16.6.2)
+    + transformaçções nas variáveis para linearização.
+
+
+### Uso de software?
+* Códigos em `R` podem ser obtidos na página 'Probabilidade e Estatística (EaD)' da UFRGS.
+
+No `R`, o comando 'lm(y ~ x)' (de *linear model*) ajusta a reta de regressão 'y ~ x', para dois vetores 'y' e 'x', e fornece resultados dos testes.
+
+* ** (...continuação) Exemplo 1**: ...aula passada...
+
+```{r college_aid_lm, message=FALSE, echo=FALSE, warning=FALSE}
+library(openintro)
+data(COL)
+data(elmhurst)
+d <- elmhurst
+g <- lm(d$gift_aid ~ d$family_income)
+summary(g)
+```
+
+### Aplicativos na internet  
+
+* (*em inglês*) Apps do livro 'Statistics: The Art and Science of Learning from Data'
+    + https://artofstat.com/web-apps   
+Ver a seção 'Association, Correlation & Regression' 
+
+* (*em inglês*) Blog com diversas análises (https://www.statsandr.com/blog/)  
+Apps para Regressão: [clique aqui](https://www.statsandr.com/blog/a-shiny-app-for-simple-linear-regression-by-hand-and-in-r/)  
+App para Testes e intervalos: [clique aqui](https://www.statsandr.com/blog/a-shiny-app-for-inferential-statistics-by-hand/)
