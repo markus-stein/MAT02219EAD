@@ -58,3 +58,10 @@ file:///C:/Users/Markus/Downloads/information-11-00550.pdf
     
 * Text Processing in R
     + http://www.mjdenny.com/Text_Processing_In_R.html
+    
+    
+    
+* `latex rstudio sentence correction` google search
+    + The hunspell package: High-Performance Stemmer, Tokenizer, and Spell Checker for R - https://cran.r-project.org/web/packages/hunspell/vignettes/intro.html#Analyzing_Words
+    + Basics of Text Mining in R - Bag of Words - http://rstudio-pubs-static.s3.amazonaws.com/256588_57b585da6c054349825cba46685d8464.html#
+    + Smart Compose: Using Neural Networks to Help Write Emails - google AI blog - https://ai.googleblog.com/2018/05/smart-compose-using-neural-networks-to.html
