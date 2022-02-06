@@ -8,7 +8,7 @@ header-includes:
     - \usepackage{fancyhdr}
 always_allow_html: yes
 ---
-<!-- \addtolength{\headheight}{1.0cm}  -->
+\addtolength{\headheight}{1.0cm}
 \pagestyle{fancyplain} 
 \lhead{\includegraphics[height=1.5cm]{logoIME.png}}
 \rhead{\includegraphics[height=1.5cm]{logoEAD.png}}
@@ -16,7 +16,7 @@ always_allow_html: yes
 INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
 DEPARTAMENTO DE ESTATÍSTICA \\
 \vspace{0.3cm}
-MAT02219 - Probabilidade e Estatística - 2020/2
+MAT02219 - Probabilidade e Estatística - 2021/2
 }
 \renewcommand{\headrulewidth}{0pt} 
 
