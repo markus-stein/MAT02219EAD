@@ -16,7 +16,7 @@ always_allow_html: yes
 INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
 DEPARTAMENTO DE ESTATÍSTICA \\
 \vspace{0.3cm}
-MAT02219 - Probabilidade e Estatística - 2020/2
+MAT02219 - Probabilidade e Estatística - 2021/2
 }
 \renewcommand{\headrulewidth}{0pt} 
 
@@ -89,7 +89,7 @@ Pasta com slides de soluções de exercícios: em https://github.com/markus-stei
     + slides: https://github.com/markus-stein/MAT02219EAD/blob/master/exercicios-resolvidos/exercicio-resolvido_probabilidade-sorteio-condicional-urna-duas-moedas.pdf
     + video: https://www.youtube.com/watch?v=Q84qK1hgM54
 
-
+Mais em https://www.youtube.com/playlist?list=PLovxQRJ6ihilxl5QmzNA4-iQFLnQIWYOU
 <!-- * Probabilidade e sorteio sequencial, sem reposição -->
 <!--     + slides: https://github.com/markus-stein/MAT02219EAD/blob/master/exercicios-resolvidos/exercicio-resolvido_sorteio-sequencial-caixas.pdf -->
 <!--     + video: https://youtu.be/G27cskmrTyw -->
