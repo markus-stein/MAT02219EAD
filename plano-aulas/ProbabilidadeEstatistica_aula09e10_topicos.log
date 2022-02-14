@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.14)  14 FEB 2022 08:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.14)  14 FEB 2022 08:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -408,65 +408,65 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
 (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 93.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 94.
 (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 <logoIME.png, id=28, 521.95pt x 226.8475pt>
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 160.
+Package pdftex.def Info: logoIME.png  used on input line 161.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 <logoEAD.png, id=29, 313.17pt x 154.77824pt>
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png  used on input line 160.
+Package pdftex.def Info: logoEAD.png  used on input line 161.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (40.45274pt): 
 (fancyhdr)                Make it at least 55.02469pt, for example:
 (fancyhdr)                \setlength{\headheight}{55.02469pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-43.02469pt}.
+(fancyhdr)                \addtolength{\topmargin}{-14.57195pt}.
 
 [1{c:/Users/User/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
  <./logoIME.png> <./logoEAD.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 173.
+(Font)              <10> on input line 174.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 173.
+(Font)              <7> on input line 174.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 173.
+(Font)              <5> on input line 174.
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--186
+Underfull \hbox (badness 10000) in paragraph at lines 184--187
 []\T1/lmr/m/n/10 slides: []$https : / / github . com / markus -[] stein / MAT02219EAD / blob / master / exercicios -[] resolvidos /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--197
+Underfull \hbox (badness 10000) in paragraph at lines 195--198
 []\T1/lmr/m/n/10 slides: []$https : / / github . com / markus -[] stein / MAT02219EAD / blob / master / exercicios -[] resolvidos /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--208
+Underfull \hbox (badness 10000) in paragraph at lines 206--209
 []\T1/lmr/m/n/10 slides: []$https : / / github . com / markus -[] stein / MAT02219EAD / blob / master / exercicios -[] resolvidos /
  []
 
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 215.
+Package pdftex.def Info: logoIME.png  used on input line 216.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 File: logoEAD.png Graphic file (type png)
 <use logoEAD.png>
-Package pdftex.def Info: logoEAD.png  used on input line 215.
+Package pdftex.def Info: logoEAD.png  used on input line 216.
 (pdftex.def)             Requested size: 86.35376pt x 42.67868pt.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
+Package fancyhdr Warning: \headheight is too small (40.45274pt): 
 (fancyhdr)                Make it at least 55.02469pt, for example:
 (fancyhdr)                \setlength{\headheight}{55.02469pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-43.02469pt}.
+(fancyhdr)                \addtolength{\topmargin}{-14.57195pt}.
 
 [2
 
@@ -483,7 +483,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  60i,15n,63p,427b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}<c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb>
-Output written on ProbabilidadeEstatistica_aula09e10_topicos.pdf (2 pages, 285492 bytes).
+Output written on ProbabilidadeEstatistica_aula09e10_topicos.pdf (2 pages, 285504 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  75 compressed objects within 1 object stream

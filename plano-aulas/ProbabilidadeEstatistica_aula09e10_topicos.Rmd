@@ -8,7 +8,7 @@ header-includes:
     - \usepackage{fancyhdr}
 always_allow_html: yes
 ---
-<!-- \addtolength{\headheight}{1.0cm}  -->
+\addtolength{\headheight}{1.0cm}
 \pagestyle{fancyplain} 
 \lhead{\includegraphics[height=1.5cm]{logoIME.png}}
 \rhead{\includegraphics[height=1.5cm]{logoEAD.png}}
