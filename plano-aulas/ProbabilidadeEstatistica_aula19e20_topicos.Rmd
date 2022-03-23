@@ -105,3 +105,39 @@ Usar o **formulário** para resolução das questões.
 <!-- hist( colMeans( replicate( n = 100, runif( n = 10, min = 0, max = 1))), main="Uniforme(0,1), n=10") -->
 <!-- hist( colMeans( replicate( n = 100, runif( n = 50, min = 0, max = 1))), main="Uniforme(0,1), n=50") -->
 <!-- ``` -->
+
+
+
+
+## Resumo do encontro de dúvidas
+
+### Lista 2-2 
+Exercício **11(g)**
+
+* Dados do problema:
+    + $X$: taxa de albumina no sangue em pessoas sadias ou normais;
+    + $X \sim Normal(4,4; 0,6^2)$.
+
+* No item (e) pede "a taxa de albumina que é ultrapassada por 5% da população".
+    + Ver o fórum de dúvidas da área 2, nosso monitor Andrei resolveu o item (e). 
+    https://moodle.ufrgs.br/mod/forum/discuss.php?d=421833#p2229541
+
+* No item (g) pede "a taxa de albumina que não é ultrapassada por 10% da população".
+    + precisamos encontrar um valor $x^*$ da distribuição de $X$ tal que a área abaixo dele seja?!
+
+![lista2-2ex11g.png]()
+
+Assim segue o mesmo raciocínio do item (e)
+
+![lista2-2ex11g2.png]()
+
+
+### Quiz 2-2
+* Questão 1 e 2 necessitam encontrar valores da tabela `t` e qui-quadrado, porque em uma distribuição parece que procuramos valores unilaterais e em outra bilaterais, usamos $\alpha$ ou $\alpha/2$?  
+    + No video https://www.youtube.com/watch?v=v6BgWhAmV5I&t=42s a Profa. Lisiane fala dessa diferença nas tabelas que usamos.
+    + Importante é ter em mente que queremos encontrar valores de distribuições de probabilidade que deixam uma certa área acima ou abaixo deles.
+    
+* Questão 2 pede "intervalo de XX% de confiança para a variância populacional";
+    + O enunciado diz que a média populacional é desconhecida e fornece a média amostral e desvio padrão amostral;
+    + Nosso alvo aqui é o parâmetro **variância populacional**, então usaremos a estatística **variância amostral** para estimá-la;
+    + Nunca saberemos os valores dos **parâmetros** que são nosso alvo em inferência, assim usamos **estatísticas** e **intervalos de confiança** baseados nas estatísticas.
