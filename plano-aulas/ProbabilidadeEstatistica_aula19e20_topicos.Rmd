@@ -137,7 +137,7 @@ Assim segue o mesmo raciocínio do item (e)
 ![](lista2-2ex11g2.png)
 
 
-### Quiz 2-2
+### Quiz 2-4
 * Questão 1 e 2 precisam de valores da tabela `t` e qui-quadrado, porque em uma distribuição parece que procuramos valores unilaterais e em outra bilaterais, usamos $\alpha$ ou $\alpha/2$?      
 
     + No video https://www.youtube.com/watch?v=v6BgWhAmV5I&t=42s a Profa. Lisiane fala dessa diferença nas tabelas que usamos.      
