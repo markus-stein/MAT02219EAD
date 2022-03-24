@@ -150,4 +150,4 @@ Assim segue o mesmo raciocínio do item (e)
     
     + Nosso alvo aqui é o parâmetro **variância populacional**, então usaremos a estatística **variância amostral** para estimá-la;    
     
-    + Nunca saberemos os valores dos **parâmetros** que são nosso alvo em inferência, assim usamos **estatísticas** e **intervalos de confiança** baseados nas estatísticas na estimação.
+    + Nunca saberemos os valores dos **parâmetros** que são nosso alvo em inferência, assim usamos **estatísticas** e **intervalos de confiança** baseados nas estatísticas para estimação.
