@@ -16,7 +16,7 @@ always_allow_html: yes
 INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
 DEPARTAMENTO DE ESTATÍSTICA \\
 \vspace{0.3cm}
-MAT02219 - Probabilidade e Estatística - 2020/2
+MAT02219 - Probabilidade e Estatística - 2021/2
 }
 \renewcommand{\headrulewidth}{0pt} 
 
@@ -55,7 +55,7 @@ Usar o **formulário** para resolução das questões.
 ***
 ## Rever planos de aula, slides e vídeos da area 3. 
 ## Fazer o simulado para a prova 3 - VALE PONTO EXTRA!!!
-## Fazer a prova 1 até o dia 09/05.
+## Fazer a prova 3 até o dia 01/05.
 ***  
 
 ## (...continuação) Regressão Linear Simples (Bussab e Morettin - capítulo 16)
@@ -72,15 +72,15 @@ $e_i = y_i - \widehat y_i$ nos informa os desvios de $y_i$ que não são explica
 
 ### Modelos especiais
 * Modelos não lineares (Bussab e Morettin - seção 16.6.2)
-    + transformaçções nas variáveis para linearização.
+    + transformações nas variáveis para linearização, por exemplo $\log Y$.
 
 
 ### Uso de software?
 * Códigos em `R` podem ser obtidos na página 'Probabilidade e Estatística (EaD)' da UFRGS.
 
-No `R`, o comando 'lm(y ~ x)' (de *linear model*) ajusta a reta de regressão 'y ~ x', para dois vetores 'y' e 'x', e fornece resultados dos testes.
+No `R`, o comando `lm(y ~ x)` (de *linear model*) ajusta a reta de regressão $y \sim x$, para dois vetores $y$ e $x$, e fornece resultados dos testes.
 
-* ** (...continuação) Exemplo 1**: ...aula passada...
+* **(...continuação) Exemplo 1**: ...aula passada...
 
 ```{r college_aid_lm, message=FALSE, echo=FALSE, warning=FALSE}
 library(openintro)
