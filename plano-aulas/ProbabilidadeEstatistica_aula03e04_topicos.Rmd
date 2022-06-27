@@ -96,9 +96,7 @@ table(x)
 ## Cuidado para não ser enganado por gráficos (nem enganar)!
 Podemos usar nosso conhecimento para ajudar a não propagar representações gráficas que distorcem a comportamento real dos dados.
 
-
 \vspace{0.3cm}
-
 
 ***
 ## Ler slides e ver vídeos da semana 2.
