@@ -16,7 +16,7 @@ always_allow_html: yes
 INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
 DEPARTAMENTO DE ESTATÍSTICA \\
 \vspace{0.3cm}
-MAT02219 - Probabilidade e Estatística - 2021/2
+MAT02219 - Probabilidade e Estatística - 2022/1
 }
 \renewcommand{\headrulewidth}{0pt} 
 
@@ -60,7 +60,7 @@ Usar o **formulário** para resolução das questões.
 ***
 ## Rever planos de aula, slides e vídeos.
 ## Fazer o simulado para a prova 1 - VALE PONTO EXTRA!!!
-## Fazer a prova 1 até o dia 28/02.
+## Fazer a prova 1!!!
 ***  
 
 
