@@ -1,0 +1,150 @@
+---
+title: "Sumarização de Dados"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+library(e1071)
+```
+
+Declaração da função `moda`, para calcular a moda de um conjunto de observações
+
+```{r}
+moda <- function(variavel) {
+  z <- table(as.vector(variavel))
+  names(z)[z == max(z)]
+}
+```
+
+
+## Medidas resumo de variáveis qualitativas.
+
+
+### Medidas resumo para variáveis nominais.
+
+Primeiramente vamos calcular as medidas resumo de uma variável qualitativa nominal. A variável usada é chamada `vs` do banco de dados `mtcars`.
+
+Primeiro vamos fazer uma tabela de frequência simples da variável `vs`.
+```{r}
+table(mtcars$vs)
+```
+
+Agora iremos calcular a moda de `vs`.
+```{r}
+# Moda
+moda(mtcars$vs)
+```
+
+
+### Medidas resumo de variáveis ordinais.
+
+Agora iremos calcular as medidas resumo de uma variável qualitativa ordinal. A variável usada é chamada `cyl` do banco de dados `mtcars`.
+
+Vamos fazer uma tabela de frequência simples da variável `cyl`.
+```{r}
+table(mtcars$cyl)
+```
+
+Agora iremos calcular a moda de `cyl`
+```{r}
+# Moda
+moda(mtcars$cyl)
+```
+
+
+## Medidas resumo de variáveis quantitativas.
+
+
+### Medidas resumo de variáveis discretas.
+
+Vamos calcular as medidas resumo de uma variável quantitativa discreta. A variável usada é chamada `hp` do banco de dados `mtcars`.
+
+As primeiras medidas resumo que iremos calcular para a variável `hp` serão medidas separatrizes.
+```{r}
+summary(mtcars$hp)
+```
+
+Em seguida iremos calcular as medidas de posição, localização e tendência central da variável `hp`.
+```{r}
+# Media
+mean(mtcars$hp)
+
+# Moda
+moda(mtcars$hp)
+
+# Mediana
+median(mtcars$hp)
+
+```
+
+Agora calcularemos as medidas de variação e dispersão da variável `hp`.
+```{r}
+# Amplitude interquartilica
+IQR(mtcars$hp, na.rm = T)
+
+# Amplitude total
+max(mtcars$hp, na.rm = T)-min(mtcars$hp, na.rm = T)
+
+# Variância
+var(mtcars$hp, na.rm = T)
+
+# Desvio Padrão
+sd(mtcars$hp, na.rm = T)
+```
+
+Por fim iremos calcular as medidas de formato de `hp`
+```{r}
+# Assimetria 
+skewness(mtcars$hp, na.rm = T)
+# Curtose
+kurtosis(mtcars$hp, na.rm = T)
+```
+
+### Medidas resumo de variáveis contínuas.
+
+Agora iremos calcular as medidas resumo de uma variável quantitativa contínua. A variável usada é chamada `wt` do banco de dados `mtcars`.
+
+As primeiras medidas resumo que iremos calcular para a variável `wt` serão as medidas separatrizes.
+```{r}
+summary(mtcars$wt)
+```
+
+Em seguida iremos calcular as medidas de posição, localização e tendência central da variável `wt`.
+```{r}
+# Media
+mean(mtcars$wt)
+
+# Moda
+moda(mtcars$wt)
+
+# Mediana
+median(mtcars$wt)
+
+```
+
+Agora calcularemos as medidas de variação e dispersão da variável `wt`.
+```{r}
+# Amplitude interquartilica
+IQR(mtcars$wt, na.rm = T)
+
+# Amplitude total
+max(mtcars$wt, na.rm = T)-min(mtcars$wt, na.rm = T)
+
+# Variância
+var(mtcars$wt, na.rm = T)
+
+# Desvio Padrão
+sd(mtcars$wt, na.rm = T)
+```
+
+Por fim iremos calcular as medidas de formato de `wt`
+```{r}
+# Assimetria 
+skewness(mtcars$wt, na.rm = T)
+# Curtose
+kurtosis(mtcars$wt, na.rm = T)
+```
+
+<p style="text-align: center;"><img src=`r here("plano-aulas/logoEAD.png")` width="500" height="150"></p>

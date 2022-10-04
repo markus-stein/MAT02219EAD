@@ -1,0 +1,214 @@
+---
+title: "Tutorial: Gráficos em `R` usando o pacote `ggplot`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+```
+
+# Gráficos para visualização de dados.
+
+```{r, warning=FALSE}
+library(ggplot2)
+mtcars$am <- factor(mtcars$am)
+mtcars$vs <- factor(mtcars$vs)
+mtcars$cyl <- factor(mtcars$cyl)
+```
+
+Neste tutorial vamos criar gráficos para variáveis qualitativas ou quantitativas usando um pacote do software R chamado ggplot2. O pacote ggplot2 tem uma função principal chamada `ggplot`, dentro desta função nós declaramos o data frame que iremos usar juntamente de funções auxiliares que servirão para incrementar os nossos gráficos. Vamos em seguida explicar o funcionamento das funções usadas nos exemplos seguintes.   
+
+
+## Gráficos para variáveis nominais.
+
+Começaremos este tutorial com uma variável que podemos considerar como a do tipo mais simples: qualitativa nominal. A variável que usaremos será `vs` do banco de dados `mtcars`.
+
+O primeiro tipo de gráfico que podemos usar para representar váriaveis nominais será o de Colunas.
+
+```{r}
+ggplot(mtcars, aes(vs)) + # o argumento `aes` controla a estética do gráfico, aqui colocamos as váriveis que estamos interessados em estudar. 
+  geom_bar(fill = "lightgreen", colour = "darkgrey") +  # `geom_bar` é umas das funções auxiliares do pacote ggplot2, usamos `geom_bar` para declarar o formato que queremos nosso gráfico: em barras. usamos `fill` para declararmos a cor que será usada para preencher as barras e usamos `colour` para declarar a cor das linhas do gráfico.
+  labs(y="Frequência") + # `labs` é uma função auxiliar que adiciona legendas a um gráfico.
+  coord_flip() # `coord_flip` é uma função auxiliar que troca o eixo em que o gráfico será apresentado. Neste caso trocamos a apresentação do formato horizontal para o formato vertical.
+```
+
+O segundo tipo de gráfico que podemos usar para representar variáveis nominais é o gráfico de Setores, mais conhecido como gráfico de Pizza.
+
+```{r}
+  ggplot(mtcars, aes(x = factor(1), fill = factor(vs))) +
+  geom_bar(stat = "count", width = 1) +
+  coord_polar(theta = "y", start = 0) +
+  # `coord_polar` é uma função que faz com que nosso gráfico seja apresentado em coordenadas polares.
+  theme_void() +
+  # `theme` é uma função usada para fazer o gráfico apresentar temas, cores e formatos pré-programados (o tema pré-programado é chamado "void") 
+  guides(fill=guide_legend(title=NULL))
+  # Usamos a função acima para retirar todos titulos e legendas do gráfico  
+```
+
+
+## Gráficos para váriaveis ordinais.
+
+Agora usaremos outra váriavel qualitaiva para criarmos nossos gráficos. A variável escolhida é `cyl` do banco de dados `mtcars` e é do tipo qualitativa ordinal.
+
+O primeiro tipo de gráfico que podemos usar para representar variáveis ordinais será o de Barras.
+
+```{r}
+  ggplot(mtcars, aes(cyl)) + 
+  geom_bar( fill = "lightgreen", colour = "darkgrey") + 
+  labs(y="Frequência")
+```
+
+O segundo tipo de gráfico que podemos usar para representar variáveis ordinais será o de Setores (Pizza).
+
+```{r}
+  ggplot(mtcars, aes(x = factor(1), fill = factor(cyl))) +
+  geom_bar(stat = "count", width = 1) +
+  coord_polar(theta = "y", start = 0) +
+  theme_void() +
+  guides(fill=guide_legend(title=NULL))
+```
+
+
+## Gráficos para váriaveis discretas 
+
+Agora usaremos uma variável quantitativa para fazermos nossos gráficos. A variável usada é `carb` do banco de dados `mtcars` e é do tipo quantitativa discreta.
+
+O primeiro tipo de gráfico que podemos usar para representar variáveis discretas será o Histograma.
+
+```{r}
+  ggplot(mtcars, aes(x = carb)) + 
+  geom_histogram(fill = "lightgreen" ,colour = "darkgrey", binwidth = 0.1) +
+  # Usamos geom_histogram para declarar o formato que queremos nosso gráfico: em formato de histograma `binwidth` faz com que as barras do histograma tenham o tamanho específico : 0.1 .
+  ylab("Frequência")
+```
+
+O segundo tipo de gráfico que podemos usar para representar variáveis discretas será o de Densidade. 
+
+```{r}
+  ggplot(mtcars, aes(x = carb)) + 
+  geom_density(fill = "lightgreen" ,colour = "darkgrey") +
+  # Usamos geom_density para declarar o formato que queremos nosso gráfico: em formato de densidade.
+  ylab("Frequência relativa")
+```
+
+O terceiro tipo de gráfico que podemos usar para representar variáveis discretas será o Polígono de frequência
+
+```{r}
+  ggplot(mtcars, aes(x = carb, y = )) + 
+  geom_freqpoly(colour = "darkgrey", stat = "count") +
+  # Usamos geom_freqpoly para declarar o formato que queremos nosso gráfico: em formato de polígono de frequência.
+  ylab("Frequência")
+```
+
+Vale destacar que os gráficos do tipo Histograma, Densidade e Polígono de frequência tem uma base de construção semelhante mas, são finalizados com aparências e formatos notavelmente diferentes.
+
+O quarto tipo de gráfico que podemos usar para representar variáveis discretas é o Boxplot.
+```{r}
+  ggplot(mtcars, aes(x = "" , y = carb)) + 
+  geom_boxplot(fill = "lightgreen", colour = "darkgrey") +
+  # Usamos geom_boxplot para declarar o formato que queremos nosso gráfico: em formato de boxplot
+  xlab("")
+```
+
+O quinto tipo de gráfico que podemos usar para representar variáveis discretas é o de Distribuição Acumulada.
+
+```{r}
+  ggplot(mtcars, aes(carb)) + 
+  stat_ecdf(geom = "step", colour = "darkgrey") + 
+  # A função `stat_ecd` com o argumento geom = "step" cria um gráfico de linha com a soma acumulada da variável. 
+  ylab(expression(F[n]))
+```
+
+  
+## Gráficos para váriaveis contínuas. 
+
+Agora usaremos outras variável quantitativa para fazermos nossos gráficos. A variável usada é `wt` do banco de dados `mtcars` e é do tipo quantitativa contínua.
+
+
+O primeiro tipo de gráfico que podemos usar para representar variáveis contínuas é o Histograma.
+
+```{r}
+  nbins <- 6
+    
+  ggplot(mtcars, aes(x = wt)) + 
+  geom_histogram(fill = "lightgreen", colour = "darkgrey", bins = nbins) +
+  # bins é uma função que declara o número de colunas do gráfico
+  ylab("Frequência")
+```
+ou
+```{r}
+  breaks <- hist(mtcars$wt, plot = F)$breaks
+
+  ggplot(mtcars, aes(x = wt)) + 
+  geom_histogram(fill = "lightgreen", colour = "darkgrey", breaks = breaks) + 
+  # `break` é uma função que define o tamanho das classes em cada categoria do gráfico.
+  ylab("Frequência")
+```
+
+O segundo tipo de gráfico que podemos usar para representar variáveis contínuas é o de Densidade.
+
+```{r}
+  ggplot(mtcars, aes(x = wt)) + 
+  geom_density(fill = "lightgreen" ,colour = "darkgrey") +
+  # Usamos geom_density para declarar o formato que queremos nosso gráfico: em formato de densidade.
+  ylab("Frequência relativa")
+```
+
+O terceiro tipo de gráfico que podemos usar para representar variáveis contínuas é o Polígono de Frequência.
+
+```{r}
+  ggplot(mtcars, aes(x = wt, y = )) + 
+  geom_freqpoly(colour = "darkgrey", bins = 30) +
+  # Usamos geom_freqpoly para declarar o formato que queremos nosso gráfico: em formato de polígono de frequência.
+  ylab("Frequência")
+```
+
+O quarto tipo de gráfico que podemos usar para representar variáveis contínuas é o Boxplot.
+
+```{r}
+  ggplot(mtcars, aes(x = "", y = wt)) + 
+  geom_boxplot(fill = "lightgreen", colour = "darkgrey") + 
+  xlab("")
+```
+
+O quinto tipo de gráfico que podemos usar para representar variáveis discretas é o de Distribuição Acumulada.
+
+```{r}
+  ggplot(mtcars, aes(wt)) + 
+  stat_ecdf(geom = "step", colour = "darkgrey") + 
+  ylab(expression(F[n]))
+```
+
+# Gráficos para análise bivariada.
+
+  Estivemos até o momento trabalhando com funções univariadas. Agora iremos ver três diferentes situações para plotar gráficos bivariados: Qualitativo X Qualitativa, Qualitativo X Quantitativo, Quantitativo X Quantitativo. 
+
+
+  A primeira Situação que iremos ver é o gráfico bivariado Qualitativo X Qualitativo.
+
+```{r}
+  ggplot(mtcars, aes(x = vs, y = , fill = am)) + 
+  geom_bar(stat = "count", position = position_dodge()) +
+  ylab("Frequência")
+  
+```
+
+
+ Veremos agora um gráfico com um Boxplot para cada categoria de uma variável qualitativa.
+ 
+```{r}
+  ggplot(mtcars, aes(x = am, y = hp, group = am)) + 
+  geom_boxplot( fill = "lightgreen", colour = "darkgrey")
+```
+
+
+Por fim veremos um gráfico de dispersão para duas variáveis quantitativas.
+  
+```{r}
+  ggplot(mtcars, aes(x = wt, y = qsec)) + 
+  geom_point(stat = "identity")
+```
+
+
+<p style="text-align: center;"><img src=`r here("plano-aulas/logoEAD.png")` width="500" height="150"></p>

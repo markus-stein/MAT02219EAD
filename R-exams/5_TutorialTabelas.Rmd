@@ -1,0 +1,324 @@
+---
+title: "Tutorial para Gerar Tabelas em `R`"
+output: learnr::tutorial
+progressive: true
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(here)
+```
+
+# Tutorial para criação tabelas de frequência para variáveis qualitativas ou quantitativas.
+
+  Este tutorial tem o objetivo de apresentar quatro funções desenvolvidas com o software R que podem ser utilizadas para criação tabelas de contingência para 4 tipos diferentes de variáveis. A função `TabelaNominal` será usada para variáveis qualitativas nominais, a função `TabelaOrdinal` será aplicada em variáveis qualitativas ordinais, a função `TabelaQuantitativa` será usada em variáveis quantitativas e a função `TabelaFrequenciaSimples` será usada com o intuito de decidir qual das outras três funções vistas é mais adequada para produzir uma tabela de contingência para a variável testada, e então aplicar a função adequada. O código a seguir apresenta a implementação destas funções.
+
+### Declaração das funções que serão usadas.
+
+```{r}
+## Função Tabelaux
+Tabelaux <- function(variavel){
+  tabelaux   <-  table(variavel)
+  tabelaux <- cbind(tabelaux, round( tabelaux/length(variavel), 3))
+  colnames(tabelaux) <- c("f", "fr")
+  return(tabelaux)
+}
+
+## Função TabelaNominal
+
+#' @title Função TabelaNominal.
+#' @description Cria uma tabela de contingência para variáveis qualitativas nominais.
+#' @param Variavel deve ser do tipo fator e não-ordenada.
+#' @return Retorna uma tabela com a frequência e a frequência relativa.
+TabelaNominal <- function(variavel){
+  tabelanom   <-  Tabelaux(variavel)
+  total <- colSums(tabelanom)
+  tabelanom <- rbind(tabelanom, total)
+  tabelanom <- round(tabelanom,3)
+  return(tabelanom)
+}
+
+
+#  Função TabelaOrdinal
+
+#' @title Função TabelaOrdinal.
+#' @description Cria uma tabela de contingência para variáveis qualitativas ordinais.
+#' @param Variável deve ser do tipo fator e ordenada.
+#' @return Retorna uma tabela com a frequência, a frequência relativa, a frequência acumulada e a frequência relativa acumulada. 
+TabelaOrdinal <- function(variavel){
+  tabelaux <- Tabelaux(variavel)
+  tabelaord <- cbind(tabelaux, apply(tabelaux, 2, cumsum))
+  total <- c(colSums(tabelaux), "-", "-")
+  tabelaord <- rbind(tabelaord, total)
+  colnames(tabelaord)  <-  c("f", "fr", "F", "Fr")
+  return(print(tabelaord, quote = FALSE))
+}
+
+
+#  Função TabelaQuantitativa
+
+#' @title Função TabelaQuantitativa.
+# #' @description Cria uma tabela de contingência para variáveis qualitativas ordinais.
+#' @param variável deve ser do tipo numérico caso seja contínua ou inteiro caso seja discreta.
+#' @return Retorna uma tabela com a frequência, a frequência relativa, a frequência acumulada e a frequência relativa acumulada.
+TabelaQuantitativa <- function(variavel){
+  histvar <- hist(as.numeric(variavel), plot=F)
+  intervclasse <- cut(variavel, breaks = histvar$breaks, include.lowest=TRUE)
+  tabelaquanti <- TabelaOrdinal(intervclasse)
+  return(print(tabelaquanti, quote = FALSE))
+}
+
+
+#  Função TabelaFrequenciaSimples
+
+#'@title Função TabelaFrequenciaSimples
+#'@description Com base nos comandos is.ordered e is.factor, escolhe a função mais adequada para criar uma tabela de contigência de uma variável.
+# '@param Variável deve ser do tipo fator(ordenada ou não-ordenada), numerico ou inteiro.
+#'@return Retorna a função mais adequada para criar uma tabela de contigência para a variável testada.
+
+TabelaFrequenciaSimples <- function(variavel){
+    if (is.factor(variavel) & !is.ordered(variavel)){
+      TabelaNominal(variavel)
+  } else {
+    if (is.factor(variavel) & is.ordered(variavel)){
+      TabelaOrdinal(variavel)
+   } else {
+     if (nrow(table(variavel)) <= 15){
+       TabelaOrdinal(variavel)
+    } else { 
+        TabelaQuantitativa(variavel)}
+    } 
+  }
+}
+
+```
+
+## Criação de tabelas de contingência usando o banco de dados mtcars
+
+### Descrição do banco de dados
+
+  Neste tutorial vamos criar tabelas de contingência para variáveis qualitativas e quantitativas usando o banco de dados `mtcars`. Primeiramente vamos conhecer as variáveis do banco de dados usando o comando `head(mtcars)`, que irá mostrar as primeiras linhas de um banco de dados.  Podemos também usar o comando `?mtcars` para abrir uma descrição do banco de dados dentro do próprio R, o que nos ajudará na interpretação e classificação de cada variável. Primeiramente devemos estar cientes que o banco de dados `mtcars` é um objeto do tipo `data.frame` com 32 observações e 11 variáveis, são elas:
+  
+1. `mpg` e representa as milhas por galão que um veículo é capaz de percorrer. Milhas por galão é uma variável quantitativa, pois nas observações desta variável nota-se que os números apresentados no banco de dados representam quantidades numéricas: milhas. Pode-se também notar que milhas por galão é quantitativa contínua pois, os valores numéricos fracionários apresentados no banco de dados podem ser ordenados numa escala contínua;  
+   
+2. `cyl` representa o número de cilindros de um motor. A primeira vista podemos nos confundir dizendo que esta variável é quantitativa, porém não é, pois mesmo que `cyl` represente um número, não é no número de cilindros que estamos interessados e sim nos motores com 4, 6 ou 8 cilindros, logo `cyl` é qualitativa ordinal. Você pode ver no banco de dados que não tem nenhum motor com 1,2,3,5,7 ou 9 cilindros, então devemos, neste banco de dados e nesta variável, interpretar o números de cilindros como categorias e não quantidades. `cyl` é uma variável qualitativa ordinal pois, as categorias 4,6 e 8 cilindros de um motor podem ser ordenadas (6 é maior que 4, 8 é maior que 6);  
+  
+3. `disp` representa o volume total de todos os cilindros de um motor. `disp` é uma variável quantitativa contínua pois, volume que é um valor numérico com valores fracionários e que podem ser ordenados numa escala contínua;  
+  
+4. `hp` representa os cavalos de um motor. A potência que um motor é capaz de produzir é chamada cavalos. `hp` é uma variável quantitativa discreta pois, potência do motor, neste banco de dados, assume somente valores inteiros;  
+  
+5. `drat`, vem do inglês rear axle ratio, que é um dispositivo mecânico que conecta o eixo traseiro de um veículo ao câmbio e o câmbio ao motor. O que importa é que `drat` é uma representação do número de rotações que este dispositivo faz a cada girar de roda. `drat` é uma variável quantitativa contínua pois, o número de rotações de uma peça pode assumir valores fracionários que podem ser ordenados numa escala contínua;  
+  
+6. `wt` representa a massa em quilogramas de um veículo. `wt` é uma variável quantitativa contínua pois, quilogramas é uma medida que pode assumir valores fracionários que podem ser ordenados numa escala contínua;  
+  
+7. `qsec` representa a quantidade de tempo em segundos e milésimos que um veículo leva para andar ¼ (um quarto) de milha. `qsec` é uma variável quantitativa contínua pois, tempo é uma medida que pode assumir valores fracionários que podem ser ordenados numa escala contínua;  
+  
+8. `vs` representa o formato de um motor (0 caso o motor tenha formato em V ou 1 caso o motor tenha formato reto). `vs` é uma variável qualitativa nominal, pois 1 e 0 não representam números e sim categorias, e ainda assume-se (já que não há nenhuma informação que diga o contrário) que não existe ordenação entre um motor com formato em V ou formato reto;  
+  
+9. `am` representa o tipo de câmbio de um veículo (0 caso o veículo tenha câmbio automático ou 1 o veículo tenha câmbio manual). `am` é uma variável qualitativa nominal, pois 1 e 0 não representam números e sim categorias, e ainda assume-se (já que não há nenhuma informação que diga o contrário) que não existe ordenação entre um veículo com câmbio manual e um veículo com câmbio automático;  
+  
+10. `gear` representa o número de marchas de um veículo. `gear` é uma variável quantitativa discreta, pois o número de marchas é uma medida resultada de uma contagem que neste banco de dados somente assume valores inteiros. Porém vamos interpretar `gear` como uma variável qualitativa ordinal pois, neste data frame a contagem do número de marchas assume somente três valores distintos: 3,4 e 5;  
+  
+11. `carb` representa o número de carburadores de um veículo. `carb` é uma variável quantitativa discreta pois, o número de carburadores é uma medida resultada de uma contagem que neste banco de dados somente assume valores inteiros.
+
+```{r}
+head(mtcars)
+```
+
+Vamos escolher **quatro destas variáveis para criarmos tabelas de contingência. A primeira será uma qualitativa nominal. Já vimos que existem duas variáveis no banco de dados que são qualitativas nominais: `vs` e `am`. Usaremos a variável `am` para prosseguir com o exemplo. Neste banco de dados `am` é o tipo de câmbio do carro, 0 (zero) caso seja automático ou 1 (um) caso seja manual.
+  
+Neste caso criaremos uma tabela de contingência usando a função `TabelaNominal()`.
+
+```{r}
+TabelaNominal(mtcars$am)
+```
+
+Analisando a tabela percebe-se que a coluna nomeada "f" representa a contagem do número de vezes que o objeto apareceu na variável `am` e "fr" é a proporção ou seja, a contagem do número de vezes que o objeto apareceu na variável dividido pelo número de observações na variável `am`.
+
+Agora escolheremos a segunda variável que será de tipo qualitativa ordinal. Também vimos que existem duas variáveis desde tipo: `cyl` e `gear`. Usaremos a variável `cyl` para prosseguir com o exemplo. Neste banco de dados `cyl` representa a quantidade de cilindros de um motor.
+  
+Agora criaremos uma tabela de contingência usando a função `TabelaOrdinal()`.
+  
+```{r}
+TabelaOrdinal( factor(mtcars$cyl))
+```
+
+Analisando a tabela resultante da função para variáveis ordinais percebe-se que além das colunas f e fr temos agora F e Fr. F é a soma acumulada de f: olhando-se para a segunda linha podemos dizer que 18 modelos de carro tem motores com até 6 cilindros, e Fr é a soma acumulada de fr: olhando-se para segunda linha podemos dizer que mais da metade dos veículos tem 4 ou 6 cilindros.
+  
+  
+Iremos então escolher a terceira variável que será uma quantitativa discreta. Já vimos anteriormente que existem duas variáveis quantitativa discretas: `hp` e `carb`. Para prosseguirmos com o exemplo usaremos a variável `carb`.
+
+Antes de testarmos nossa função para variáveis discretas estabeleceremos uma "regra" para que consigamos fazer tabelas que fazem mais sentido. Primeiramente devemos pensar que ao gerarmos uma tabela para variáveis discretas iremos criar uma tabela onde as variáveis são divididas em classes. Então com o intuito de não perdermos informação podemos estabelecer que:
+
+I. Variáveis discretas com 15 categorias ou menos gerarão tabelas como as das ordinais (sem intervalos de classe), evitando assim a perda de informação.
+II. Variáveis discretas com mais de 15 categorias gerarão tabelas com intervalos de classe, sacrificando um pouco de informação em troca de uma tabela que seja mais fácil de interpretar e encontrar padrões.
+
+Agora criaremos uma tabela de contingência usando a função `TabelaQuantitativa`.
+  
+```{r}
+TabelaQuantitativa(mtcars$carb)
+```
+
+Pode-se notar que a função para variáveis quantitativas gera uma tabela de contingência com intervalos de classe para a variável `carb` o que não recomendável já que, `carb` tem menos de 15 categorias.
+
+```{r}
+numcatcarb <- nrow(table(mtcars$carb))
+numcatcarb
+```
+
+Pode-se notar também que a tabela gerada tem linhas com valores iguais a zero, ou seja: perda de informação. Devemos então interpretar `carb` como se fosse uma variável ordinal.
+
+```{r}
+TabelaOrdinal(mtcars$carb)
+```
+
+Analisando a tabela podemos notar que não temos mais problemas com perda de informação, todas linhas tem valores e a tabela continua fácil de ser interpretada.
+
+Iremos escolher a quarta e última variável que será uma quantitativa contínua. Já vimos que existem cinco variáveis deste tipo: `mpg`, `disp`, `drat`, `wt` e `qsec`. Usaremos a variável `wt` para prosseguirmos com o exemplo. Neste banco de dados `wt` representa a massa em libras.
+  
+Agora criaremos outra tabela de contingência usando a função `TabelaQuantitativa()`.
+
+```{r}
+TabelaQuantitativa(mtcars$wt)
+```
+
+### Função `TabelaFrequenciaSimples()` 
+A função `TabelaFrequenciaSimples()` combina as funções anteriores e retorna a configuração de tabela mais adequada para a variável testada. A função `TAbelaFrequenciaSimples` funciona com variáveis declaradas como `factor` ,`ordered`, `integer `ou` númeric`. Vale lembrar que o R não diferencia variáveis declarando-as como quantitativa ou qualitativa no momento que ele a vê, portanto vamos usar uma forma alternativa de classificar variáveis de forma que o R interprete que uma variável é nominal, ordinal, discreta ou contínua. 
+
+Primeiramente devemos entender o que uma variável classificada como `factor`, `ordered`, `integer` ou `numeric` significa. `factor` ou em português "fator" é uma declaração de que uma não tem um valor numérico, mas sim categórico. `ordered` ou em português "ordenado" é uma declaração de que uma variável faz sentido ser ordenada. `integer` ou em português "inteiro" é uma declaração de que uma variável assume somente valores inteiros. `numeric` ou em português "numérico"  é uma declaração de que uma variável assume somente valores numéricos.
+
+Agora vamos declarar cada variável quanto ao seu tipo. Primeiro as variáveis qualitativas nominais.
+
+```{r}
+mtcars$vs <- factor(mtcars$vs, ordered = FALSE)
+mtcars$am <- factor(mtcars$am, ordered = FALSE)
+```
+
+Em seguida declaramos as variáveis qualitativas ordinais.
+
+```{r}
+mtcars$cyl <- factor(mtcars$cyl, ordered = TRUE)
+mtcars$gear <- factor(mtcars$gear, ordered = TRUE)
+```
+
+Agora declaramos as variáveis quantitativas discretas.
+
+```{r}
+numcathp <- nrow(table(mtcars$hp))
+numcathp
+```
+
+A variável "hp" tem 22 categorias então é preferível que a tabela para "hp" tenha intervalos de classe.
+
+```{r}
+mtcars$hp <- as.integer(mtcars$hp)
+```
+
+A variável "carb" tem 6 categorias então é preferível que a tabela para "carb" não apresente intervalos de classe. 
+
+```{r}
+numcatcarb <- nrow(table(mtcars$carb))
+numcatcarb
+```
+
+Devemos declarar "carb"" como se fosse uma variável qualitativa ordinal.
+
+```{r}
+mtcars$carb <- factor(mtcars$carb, ordered = TRUE)
+```
+
+Por fim declaramos as variáveis quantitativas contínuas.
+
+```{r}
+mtcars$mpg <- as.numeric(mtcars$mpg)
+
+mtcars$disp <- as.numeric(mtcars$disp)
+
+mtcars$drat <- as.numeric(mtcars$drat)
+
+mtcars$wt <- as.numeric(mtcars$wt)
+
+mtcars$qsec <- as.numeric(mtcars$qsec)
+```
+
+Agora vamos testar três variáveis que sabemos que nossa função interpretará como nominal, ordinal ou quantitativa para ver se o que fizemos deu certo.
+
+Primeiro testamos `am` que declaramos como uma variável qualitativa nominal.
+
+```{r}
+TabelaFrequenciaSimples(mtcars$am)
+```
+
+Como pode ver o R retorna uma tabela de contingência com frequência e frequência relativa que é exatamente a tabela que é gerada com a função `TabelaNominal` 
+
+Agora testaremos `cyl` que declaramos como uma variável qualitativa ordinal.
+
+```{r}
+TabelaFrequenciaSimples(mtcars$cyl)
+```
+
+Como pode ver o R retorna uma tabela de contingência com frequência, frequência relativa, frequência acumulada e frequência acumulada relativa que é exatamente a tabela que é gerada com a função `TabelaOrdinal`.
+
+Por fim testaremos a função para a variável`wt` que declaramos como uma variável quantitativa contínua.
+
+```{r}
+TabelaFrequenciaSimples(mtcars$wt)
+```
+
+Como pode ver o R retorna uma tabela de contingência com intervalos em cada linha que é exatamente a tabela que é gerada com a função `TabelaQuantitativa`.
+  
+### Exercícios para compreensão.
+
+Vamos agora criar tabelas adequadas para novas variáveis de novos bancos de dados. Analise os bancos de dados e escolha 4 variáveis de 4 tipos diferentes. Classifique-as conforme seu tipo para depois construir tabelas usando o comando `TabelaFrequenciaSimples`. Ao final do exercício você devera ter 4 tabelas para 4 variáveis.
+  
+  
+Dica: Use o comando `?Theoph` para compreender melhor o banco de dados.
+```{r}
+data("Theoph")
+head(Theoph)
+```
+  
+Declare a(s) variável(eis) que você prefere trabalhar.
+```{r Theoph, exercise = TRUE}
+```
+
+
+Dica: Use o comando `?trees` para compreender melhor o banco de dados.
+```{r}
+data("trees")
+
+head(trees)
+```
+
+Declare a(s) variável(eis) que você prefere trabalhar.
+```{r trees, exercise = TRUE}
+
+```
+
+
+Dica: Use o comando `?airquality` para compreender melhor o banco de dados.
+```{r}
+data("airquality")
+
+head(airquality)
+```
+
+Declare a(s) variável(eis) que você prefere trabalhar.
+```{r airquality, exercise = TRUE}
+
+```
+
+Use o comando `TabelaFrequenciaSimples()` para cada uma das quatro variáveis que você escolheu.
+```{r Criacao_de_4_tabelas, exercise = TRUE}
+TabelaFrequenciaSimples()
+```
+
+Para exportar e tabelas, figuras, `latex`, ... ver funções... em construção...
+
+<!-- <p style="text-align: center;"><img src=`r here("plano-aulas/logoEAD.png")` width="500" height="150"></p> -->
+
+<!-- \begin{figure}[h] -->
+<!--     \centering -->
+<!--     \includegraphics[width=08cm, height=08cm]{./plano-aulas/logoEAD.png} -->
+<!-- \end{figure} -->

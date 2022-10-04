@@ -1,0 +1,126 @@
+---
+title: "Importação de Dados"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+```
+
+## Como importar dados no RStudio?
+<p style="text-align: justify;">Importar dados para R é um passo necessário que, às vezes, pode se tornar demorado. Para facilitar essa tarefa, o RStudio inclui novos recursos para importação de dados como: arquivos csv, xls, xlsx, sav, dta, por, sas e stata.</p>
+
+
+<p style="text-align: center;"><img src="https://support.rstudio.com/hc/en-us/article_attachments/206277618/data-import-overview.gif" width="600" height="600"></p>
+
+
+<p style="text-align: justify;">Os recursos de importação de dados podem ser acessados na aba "Environment" (ambiente), que fica no painel mais à direita da tela; na aba "Tools" (ferramentas) ou na aba "File" (arquivo) do menu, isso depende da sua versão do RStudio. Os importadores são agrupados em 3 categorias: dados delimitados, dados do Excel e dados estatísticos. Para acessar esse recurso, use a opção "Import Dataset" (importar conjunto de dados) na aba "Environment":</p>
+
+
+<p style="text-align: center;"><img src="https://support.rstudio.com/hc/en-us/article_attachments/206327917/data-import-environment.png" width="300" height="300"></p>
+
+
+<p style="text-align: justify;">Ou através do menu "Tools" ou "File", seguido pelo submenu "Import dataset":</p>
+
+
+<p style="text-align: center;"><img src="https://support.rstudio.com/hc/en-us/article_attachments/206277868/data-import-menu.png" width="300" height="300"></p>
+
+
+## Importando dados de arquivos CSV
+
+O importador CSV fornece suporte para:
+
+- Importar do sistema de arquivos ou de uma URL
+- Alterar os tipos de dados da coluna
+- Ignorar ou incluir colunas apenas
+- Renomeie o conjunto de dados
+- Pule as primeiras N linhas
+- Use a linha de cabeçalho para os nomes das colunas
+- Apare espaços em nomes
+- Alterar o delimitador de coluna
+- Seleção de codificação
+- Selecione citações e comentários
+
+<p style="text-align: justify;">Por exemplo, pode-se importar com facilidade um formato csv data.gov, colando esta URL <https://data.montgomerycountymd.gov/api/views/6rqk-pdub/rows.csv?accessType=DOWNLOAD> e selecionando "import".</p>
+
+
+<p style="text-align: center;"><img src="https://support.rstudio.com/hc/en-us/article_attachments/206277598/Screen_Shot_2016-04-08_at_2.47.27_PM.png" width="400" height="400"></p>
+
+
+## Importando dados de arquivos do Excel
+
+O importador do Excel fornece suporte para:
+
+- Importar do sistema de arquivos ou de uma URL
+- Alterar os tipos de dados da coluna
+- Ignorar colunas
+- Renomear o conjunto de dados
+- Selecionar uma planilha específica do Excel
+- Pular as primeiras N linhas
+
+<p style="text-align: justify;">Por exemplo, pode-se importar com facilidade um arquivo xls do data.gov, colando esta URL <http://www.fns.usda.gov/sites/default/files/pd/slsummar.xls> e selecionando "import". Observe que esse arquivo contém tabelas e, portanto, requer que as primeiras linhas sejam removidas.</p>
+
+
+<p style="text-align: center;"><img src="https://support.rstudio.com/hc/en-us/article_attachments/206278038/Screen_Shot_2016-04-08_at_3.12.13_PM.png" width="400" height="400"></p>
+
+
+<p style="text-align: justify;">Podemos limpar isso pulando 6 linhas desse arquivo e desmarcando a caixa de seleção "First row as names".</p>
+
+
+<p style="text-align: center;"><img src="https://support.rstudio.com/hc/en-us/article_attachments/206278068/Screen_Shot_2016-04-08_at_3.12.21_PM.png" width="400" height="400"></p>
+
+
+<p style="text-align: justify;">O arquivo está com uma aparência melhor, mas algumas colunas estão sendo exibidas como palavras quando elas são claramente dados numéricos. Podemos corrigir isso selecionando "numeric" na lista da coluna (character, double...). Para finalizar, basta clicar em "import" para executar o código em "Code Preview" e importar os dados para o RStudio.</p>
+
+## Importando dados de arquivos SPSS, SAS e Stata
+
+<p style="text-align: justify;">O importador SPSS, SAS e Stata fornece suporte para:</p>
+
+- Importar do sistema de arquivos ou de uma URL
+- Renomear o conjunto de dados
+- Especificar um arquivo como modelo
+
+## Comando read.table()
+
+<p style="text-align: justify;">Se os dados já estão disponíveis em formato eletrônico, isto é, já foram digitados em outro programa, você pode importar os dados para o R sem a necessidade de digitá-los novamente. A forma mais fácil de fazer isto é usar dados em formato texto (arquivo do tipo ASCII). Por exemplo, se seus dados estão disponíveis em uma planilha eletrônica como EXCEL ou similar, voce pode na planilha escolher a opção <SALVAR COMO> e gravar os dados em um arquivo em formato texto. No R usa-se **scan()** mencionada anteriormente, ou então a função mais flexível **read.table()** para ler os dados de um arquivo texto e armazenar no formato de uma data-frame (O data.frame é talvez o formato de dados mais importante do R. No data.frame cada coluna representa uma variável e cada linha uma observação. Essa é a estrutura ideal para quando você tem muitas variáveis de classes diferentes em um banco de dados).</p>
+
+<p style="text-align: justify;">Como primeiro exemplo, considere importar para o R os dados deste arquivo texto. Clique no link para visualizar o arquivo. Agora copie o arquivo para sua área de trabalho (working directory do R). Para importar este arquivo usamos:</p>
+
+  >ex01 <- read.table("gam01.txt") 
+  
+  >ex01
+  
+<p style="text-align: justify;">Como segundo exemplo, considere importar para o R os dados deste arquivo texto. Clique no link para visualizar o arquivo. Agora copie o arquivo para sua área de trabalho (working directory do R). Note que este arquivo difere do anterior em um aspecto: os nomes das variáveis estão na primeira linha. Para que o R considere isto corretamente temos que informá-lo disto com o argumento **head = TRUE**. Portanto para importar este arquivo usamos:</p>
+
+  >ex02 <- read.table("exemplo02.txt", head=TRUE) 
+  
+  >ex02
+  
+<p style="text-align: justify;">Como terceiro exemplo, considere importar para o R os dados deste arquivo texto. Clique no link para visualizar o arquivo. Agora copie o arquivo para sua área de trabalho (working directory do R). Note que este arquivo difere dos outros em alguns aspectos: além dos nomes das variáveis estarem na primeira linha, os campos agora não são mais separados por tabulação e sim por **:**. Alm disto os caracteres decimais estão separados por vírgula, sendo que o R usa ponto pois é um programa escrito em língua inglesa. Portanto para importar corretamente este arquivo usamos então os argumentos **sep** e **dec**:</p>
+
+  >ex03 <- read.table("dadosfic.csv", head=TRUE, sep=":", dec=",") 
+  
+  >ex03
+  
+<p style="text-align: justify;">Para maiores informações consulte a documentação desta função com **?read.table**.</p>
+
+### Algumas dicas 
+
+<p style="text-align: justify;">Em vez de tentar importar arquivos SPSS ou Excel diretamente no R, é recomendável primeiro exportar/salvar os arquivos originais do SPSS ou do Excel como texto ".txt" arquivos - tanto o SPSS quanto o Excel têm opções para fazer isso. Em seguida, depois de exportar os dados para um arquivo .txt, você poderá lê-los no R usando **read.table ()**. Se você tentar exportar um arquivo do Excel para um arquivo de texto, é uma boa ideia limpar o arquivo o máximo possível, por exemplo, excluindo colunas desnecessárias, certificando-se de que todas as colunas numéricas tenham dados numéricos, certificando-se de que os nomes das colunas sejam simples (ou seja, palavras únicas sem espaços ou caracteres especiais). Se houver algo "sujo" no arquivo, R ainda poderá ter problemas para lê-lo, mesmo depois de exportá-lo para um arquivo de texto.</p>
+
+<p style="text-align: justify;">Se você absolutamente precisa ler um arquivo que não seja texto em R, verifique o pacote chamado **foreign** (install.packages ("foreign")). Este pacote tem funções para importar arquivos Stata, SAS e SPSS diretamente para o R. Para ler arquivos do Excel, tente o pacote **xlsx** (install.packages ("xlsx")). Mas, novamente, é sempre melhor converter esses arquivos em arquivos de texto simples primeiro e depois lê-los em R com read.table().</p>
+
+
+#### Referências
+
+Para mais informações, seguem as referências utilizadas para a criação deste arquivo:
+
+- <https://support.rstudio.com/hc/en-us>
+
+- <https://bookdown.org/ndphillips/YaRrr/>
+
+- <https://fernandomayer.github.io/ce083-2016-2/04_Entrada_de_dados.html>
+
+
+<p style="text-align: center;"><img src=`r here("plano-aulas/logoEAD.png")` width="500" height="150"></p>
