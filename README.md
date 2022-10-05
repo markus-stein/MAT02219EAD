@@ -6,6 +6,16 @@ Disciplina "Probabilidade e Estatística" no formato à distância (EAD).
 Morettin: em [MAT002219EAD/plano-aulas](plano-aulas).
     + Para leitura baixar os arquivos `.pdf`.
 
+* o material utilizado na disciplina pode ser acessado na plataforma "Probabilidade e Estatística (EAD)": 
+    + **slides** em https://www.ufrgs.br/probabilidade-estatistica/slides/index.html 
+    + **vídeos** em https://www.ufrgs.br/probabilidade-estatistica/videos/index.html 
+    + e **listas de exercícios** em https://www.ufrgs.br/probabilidade-estatistica/listas/index.html
+  
+
+* **Exercícios resolvidos** no canal "Probabilidade e Estatística (EAD)": 
+    + vídeos em https://www.youtube.com/c/ProbabilidadeeEstat%C3%ADsticaUFRGS/featured
+    + resoluções em [MAT002219EAD/exercicios-resolvidos](exercicios-resolvidos).
+
 ### Quer aprender a programar em `R`?
 * Primeiro contato com o software `R`: 
     + como baixar e iniciar o `R`? Arquivo em [MAT02219EAD/R-exams/1_TutorialR.html](https://htmlpreview.github.io/?https://github.com/markus-stein/MAT02219EAD/blob/master/R-exams/1_TutorialR.html)
@@ -15,8 +25,7 @@ Morettin: em [MAT002219EAD/plano-aulas](plano-aulas).
     + tabelas no `R` com `leanrR`. Arquivo em [MAT02219EAD/R-exams/5_TutorialTabelas.html](https://htmlpreview.github.io/?https://github.com/markus-stein/MAT02219EAD/blob/master/R-exams/5_TutorialTabelas.html)
 
 
-* **Exercícios resolvidos** do material de MAT02219-EAD: em [MAT002219EAD/exercicios-resolvidos](exercicios-resolvidos).
-    + vídeos em https://www.youtube.com/channel/UCbbBdGI6oYpnLVpDaxdnJPA/videos
+
 
 
 *Agradecemos toda(o)s monitores (passados, presentes e futuros) pela contribuição na construção desse trabalho.*
