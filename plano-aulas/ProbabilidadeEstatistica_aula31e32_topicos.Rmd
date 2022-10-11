@@ -43,6 +43,8 @@ Para quem ainda não atingiu média ponderada das avaliações (ler plano de ens
     + probabilidade condicional e independência;
     + teoremas da probabilidade total e de Bayes.
 
+\vspace{1.0cm}
+
 ### Avaliação Parcial de Área 2
 * Variáveis Aleatórias: definição, discretas e contínuas;
     + distribuição de probabilidade e função de distribuição, propriedades;
@@ -56,6 +58,8 @@ Para quem ainda não atingiu média ponderada das avaliações (ler plano de ens
     + para uma variância populacional $\sigma^2$;
     + para uma proporção populacional $\pi$.
 
+\vspace{1.0cm}
+
 ### Avaliação Parcial da Área 3
 * Testes de hipóteses: definições e conceitos básicos, hipóteses;
     + tipos de erro, probabilidade de erros;
@@ -64,7 +68,7 @@ Para quem ainda não atingiu média ponderada das avaliações (ler plano de ens
 * Testes para proporções e variâncias;
 * Correlação Linear e Regressão linear simples.
 
-\vspace{0.5cm}
+\vspace{3.0cm}
 
 * Refazer as avaliações.
 
@@ -75,6 +79,6 @@ Para quem ainda não atingiu média ponderada das avaliações (ler plano de ens
 \vspace{1.0cm}
 
 ***
-### Boas férias aos já aprovados!
-### Bom exame aos ainda não aprovados!
+### Boas férias a(o)s já aprovada(o)s!
+### Bom exame a(o)s ainda não aprovada(o)s!
 *** 

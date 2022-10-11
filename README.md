@@ -11,7 +11,6 @@ Morettin: em [MAT002219EAD/plano-aulas](plano-aulas).
     + **vídeos** em https://www.ufrgs.br/probabilidade-estatistica/videos/index.html 
     + e **listas de exercícios** em https://www.ufrgs.br/probabilidade-estatistica/listas/index.html
   
-
 * **Exercícios resolvidos** no canal "Probabilidade e Estatística (EAD)": 
     + vídeos em https://www.youtube.com/c/ProbabilidadeeEstat%C3%ADsticaUFRGS/featured
     + resoluções em [MAT002219EAD/exercicios-resolvidos](exercicios-resolvidos).
