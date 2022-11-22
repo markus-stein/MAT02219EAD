@@ -16,7 +16,7 @@ always_allow_html: yes
 INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
 DEPARTAMENTO DE ESTATÍSTICA \\
 \vspace{0.3cm}
-MAT02219 - Probabilidade e Estatística - 2022/1
+MAT02219 - Probabilidade e Estatística - 2022/2
 }
 \renewcommand{\headrulewidth}{0pt} 
 
