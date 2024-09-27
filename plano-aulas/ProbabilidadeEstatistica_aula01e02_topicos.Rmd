@@ -101,7 +101,7 @@ Veremos critérios para calcular tamanhos de amostras ao longo da dsiciplina.
 ***
 ## Ler slides e ver vídeo da semana 1.
 ## Fazer lista de exercícios 1-1.
-## Fazer o Quiz da semana 1 - VALE NOTA!!!
+<!-- ## Fazer o Quiz da semana 1 - VALE NOTA!!! -->
 ***
 
 ## Referências e Links interessantes
