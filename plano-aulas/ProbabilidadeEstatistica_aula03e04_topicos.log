@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.24)  1 OCT 2024 16:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.24)  1 OCT 2024 16:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -448,12 +448,12 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 <logoIME.png, id=4, 521.95pt x 226.8475pt>
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 234.
+Package pdftex.def Info: logoIME.png  used on input line 216.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 <image_probest.png, id=5, 201.75375pt x 151.56625pt>
 File: image_probest.png Graphic file (type png)
 <use image_probest.png>
-Package pdftex.def Info: image_probest.png  used on input line 234.
+Package pdftex.def Info: image_probest.png  used on input line 216.
 (pdftex.def)             Requested size: 56.81082pt x 42.67877pt.
 
 Package fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -468,11 +468,11 @@ Package fancyhdr Warning: \headheight is too small (40.45274pt):
 
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 309.
+Package pdftex.def Info: logoIME.png  used on input line 316.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 File: image_probest.png Graphic file (type png)
 <use image_probest.png>
-Package pdftex.def Info: image_probest.png  used on input line 309.
+Package pdftex.def Info: image_probest.png  used on input line 316.
 (pdftex.def)             Requested size: 56.81082pt x 42.67877pt.
 
 Package fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -485,17 +485,17 @@ Package fancyhdr Warning: \headheight is too small (40.45274pt):
 <ProbabilidadeEstatistica_aula03e04_topicos_files/figure-latex/exemplo2-1.pdf, id=52, 289.08pt x 216.81pt>
 File: ProbabilidadeEstatistica_aula03e04_topicos_files/figure-latex/exemplo2-1.pdf Graphic file (type pdf)
 <use ProbabilidadeEstatistica_aula03e04_topicos_files/figure-latex/exemplo2-1.pdf>
-Package pdftex.def Info: ProbabilidadeEstatistica_aula03e04_topicos_files/figure-latex/exemplo2-1.pdf  used on input line 311.
+Package pdftex.def Info: ProbabilidadeEstatistica_aula03e04_topicos_files/figure-latex/exemplo2-1.pdf  used on input line 324.
 (pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
 
 
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 315.
+Package pdftex.def Info: logoIME.png  used on input line 328.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 File: image_probest.png Graphic file (type png)
 <use image_probest.png>
-Package pdftex.def Info: image_probest.png  used on input line 315.
+Package pdftex.def Info: image_probest.png  used on input line 328.
 (pdftex.def)             Requested size: 56.81082pt x 42.67877pt.
 
 Package fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -513,13 +513,13 @@ L3 programming layer <2024-09-10>
 Here is how much of TeX's memory you used:
  11835 strings out of 475538
  185237 string characters out of 5775789
- 609053 words of memory out of 5000000
+ 601102 words of memory out of 5000000
  34272 multiletter control sequences out of 15000+600000
  609382 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 89i,15n,93p,9594b,510s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,15n,93p,888b,591s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ProbabilidadeEstatistica_aula03e04_topicos.pdf (3 pages, 221916 bytes).
+Output written on ProbabilidadeEstatistica_aula03e04_topicos.pdf (3 pages, 221922 bytes).
 PDF statistics:
  155 PDF objects out of 1000 (max. 8388607)
  120 compressed objects within 2 object streams
