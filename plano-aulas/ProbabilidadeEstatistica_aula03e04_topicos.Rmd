@@ -114,7 +114,7 @@ Podemos usar nosso conhecimento para ajudar a não propagar representações gr�
 ***
 ## Ler slides e ver vídeos da semana 2.
 ## Fazer lista de exercícios 1-2 e 1-3.
-## Fazer o Quiz da semana 2 - VALE NOTA!!!
+## Fazer o questionário 1 da área 1 - VALE NOTA!!!
 ***
 
 <!-- Definição **A.A.S**: Seja $X_1, X_2, \ldots, X_n$ uma a.a.s. de tamanho $n$ de $X \sim f(x; \theta)$, então $X_1 \sim f(x; \theta)$, ..., $X_n \sim f(x; \theta)$ e $X_i$ e $X_j$ são independentes para todo $i \neq j$. -->

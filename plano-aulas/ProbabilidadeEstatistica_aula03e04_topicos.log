@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.24)  1 OCT 2024 16:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.24)  8 OCT 2024 19:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -512,14 +512,14 @@ L3 programming layer <2024-09-10>
  ) 
 Here is how much of TeX's memory you used:
  11835 strings out of 475538
- 185237 string characters out of 5775789
- 601102 words of memory out of 5000000
+ 185265 string characters out of 5775789
+ 601112 words of memory out of 5000000
  34272 multiletter control sequences out of 15000+600000
  609382 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  89i,15n,93p,888b,591s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ProbabilidadeEstatistica_aula03e04_topicos.pdf (3 pages, 221922 bytes).
+Output written on ProbabilidadeEstatistica_aula03e04_topicos.pdf (3 pages, 221665 bytes).
 PDF statistics:
  155 PDF objects out of 1000 (max. 8388607)
  120 compressed objects within 2 object streams
