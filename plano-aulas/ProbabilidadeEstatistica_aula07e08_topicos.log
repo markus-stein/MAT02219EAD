@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.24)  15 OCT 2024 21:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.24)  15 OCT 2024 21:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -472,11 +472,11 @@ Package fancyhdr Warning: \headheight is too small (40.45274pt):
 
 File: logoIME.png Graphic file (type png)
 <use logoIME.png>
-Package pdftex.def Info: logoIME.png  used on input line 303.
+Package pdftex.def Info: logoIME.png  used on input line 299.
 (pdftex.def)             Requested size: 98.19987pt x 42.67917pt.
 File: image_probest.png Graphic file (type png)
 <use image_probest.png>
-Package pdftex.def Info: image_probest.png  used on input line 303.
+Package pdftex.def Info: image_probest.png  used on input line 299.
 (pdftex.def)             Requested size: 56.81082pt x 42.67877pt.
 
 Package fancyhdr Warning: \headheight is too small (40.45274pt): 
@@ -492,18 +492,18 @@ L3 programming layer <2024-09-10>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 11331 strings out of 475538
- 176579 string characters out of 5775789
- 577224 words of memory out of 5000000
- 33771 multiletter control sequences out of 15000+600000
+ 11327 strings out of 475538
+ 176488 string characters out of 5775789
+ 577161 words of memory out of 5000000
+ 33769 multiletter control sequences out of 15000+600000
  609064 words of font info for 78 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  89i,15n,93p,1110b,528s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/Users/Markus/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ProbabilidadeEstatistica_aula07e08_topicos.pdf (3 pages, 232311 bytes).
+Output written on ProbabilidadeEstatistica_aula07e08_topicos.pdf (3 pages, 231009 bytes).
 PDF statistics:
- 179 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 500000)
- 107 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 173 PDF objects out of 1000 (max. 8388607)
+ 132 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 99 words of extra memory for PDF output out of 10000 (max. 10000000)
 
