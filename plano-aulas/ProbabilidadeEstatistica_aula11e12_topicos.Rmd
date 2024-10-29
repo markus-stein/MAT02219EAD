@@ -11,12 +11,12 @@ always_allow_html: yes
 \addtolength{\headheight}{1.0cm}
 \pagestyle{fancyplain} 
 \lhead{\includegraphics[height=1.5cm]{logoIME.png}}
-\rhead{\includegraphics[height=1.5cm]{logoEAD.png}}
+\rhead{\includegraphics[height=1.5cm]{image_probest.png}}
 \chead{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL \\
 INSTITUTO DE MATEMÁTICA E ESTATÍSTICA \\
 DEPARTAMENTO DE ESTATÍSTICA \\
 \vspace{0.3cm}
-MAT02219 - Probabilidade e Estatística - 2022/2
+MAT02219 - Probabilidade e Estatística - 2024/2
 }
 \renewcommand{\headrulewidth}{0pt} 
 
@@ -89,7 +89,7 @@ Definição **função de distribuição**: a função $F: \Omega_X \rightarrow 
 ***
 ## Ler slides e ver vídeos da semana 6.
 ## Fazer lista de exercícios 2-1.
-## Fazer o Quiz da semana 6 - VALE NOTA!!!
+<!-- ## Fazer o Quiz da semana 6 - VALE NOTA!!! -->
 ***  
 
 <!-- Definição **A.A.S**: Seja $X_1, X_2, \ldots, X_n$ uma a.a.s. de tamanho $n$ de $X \sim f(x; \theta)$, então $X_1 \sim f(x; \theta)$, ..., $X_n \sim f(x; \theta)$ e $X_i$ e $X_j$ são independentes para todo $i \neq j$. -->
